@@ -1,5 +1,13 @@
 # Arch Install
 
+## Settings
+
+- i3-gaps - WM
+- rofi
+- urxvt - Terminal Emulator
+- i3lock - Lockscreen
+
+
 ## Base Instructions
 
 ```bash
@@ -69,5 +77,45 @@ pacman -S sudo
 
 visudo
 
-pacman -S networkmanager git
+pacman -S networkmanager
+
+systemctl enable NetworkManager
+```
+
+## Aftermath
+```bash
+# Find graphics card
+lspci -k | grep -A 2 -E "(VGA|3D)"
+
+# Install Graphics drivers and some Display server
+# 'nvidia'               Graphics drivers
+# 'xorg' && 'xorg-xinit' Display server
+# 'nitrogen'             X11 wallpaper setter
+# 'picom'                Compositor
+# 'chromium'             Browser
+# 'git'                  Version Control System
+# 'base-devel'           (Needed for package buildinng)
+# 'rxvt-unicode'         Terminal Emulator
+sudo pacman -S nvidia xorg xorg-xinit nitrogen urxvt chromium git base-devel rxvt-unicode
+
+# Install AUR
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git
+makepkg -si
+cd ..
+yes | rm -r yay-git
+
+# Install Window Manager
+yay -S i3-gaps
+
+# Copy default xinit config to home 
+cp /etc/X11/xinit/xinitrc /home/kb/.xinitrc
+# Edit .xinitrc to start i3 instead of X11 default WM twm and xterm
+
+startx
+```
+
+## Ricing
+```bash
+yay -S rofi
 ```
