@@ -9,10 +9,15 @@
 
 
 # File Format 
-# tag path/to/dir
+# 'tag path/to/dir'
 HOMES=~/.config/homes/config
 
-function sethome 
+# Create Homes file if not exists
+[ ! -f "$HOMES" ] &&        \
+mkdir -p ~/.config/homes && \
+touch $HOMES
+
+function sethome
 {
 	if [ ! -z "$1" ]; then
 
@@ -22,7 +27,6 @@ function sethome
 
 		while read l; do
 			IFS=' ' read -ra tmp_arr <<< $l
-			#echo ${tmp_arr[0]}
 			if [ $1 == ${tmp_arr[0]} ]; then
 				echo "Home already exists"
 				return

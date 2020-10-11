@@ -1,6 +1,6 @@
-# LinuxScripts
+# LinuxUtils
 
-Respoitory dedicated to bash scripts, dotfiles and my personal standards / guidelines
+Respoitory dedicated to bash scripts, dotfiles, my personal standards / guidelines and markdown manuals
 
 ## Plans
 
