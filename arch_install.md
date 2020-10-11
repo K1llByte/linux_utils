@@ -117,6 +117,11 @@ cp /etc/X11/xinit/xinitrc /home/kb/.xinitrc
 # Edit .xinitrc to start i3 instead of X11 default WM twm and xterm
 
 startx
+
+# Install Audio drivers
+yay -S alsa-utils
+
+alsamixer
 ```
 
 ## Ricing
