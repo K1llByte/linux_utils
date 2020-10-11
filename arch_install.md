@@ -6,6 +6,10 @@
 - rofi
 - urxvt - Terminal Emulator
 - i3lock - Lockscreen
+- feh - Image viewer
+- chromium - Browser
+- [None] - Resources Manager (CPU etc ...)
+
 
 
 ## Base Instructions
@@ -119,3 +123,21 @@ startx
 ```bash
 yay -S rofi
 ```
+
+
+## AUX
+
+### Config files
+
+
+#### i3
+~/.config/i3/config
+
+#### i3blocks
+~/.config/i3blocks/config
+
+#### urxvt
+~/.Xresources
+
+#### rofi
+~/.config/rofi/
