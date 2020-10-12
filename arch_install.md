@@ -2,13 +2,24 @@
 
 ## Index
 
+1. [TODO](#todo)
+2. [Settings](#settings)
+3. [Base Install](#base-install)
+4. [Aftermath](#aftermath)
+5. [Config Files](#config-files)
+
+___
 
 ## TODO
 
-- Install and configure polybar
 - Configure VSCode
+- Configure greeter
+- Configure thunar
+- Install and configure Polybar
+- Configure multiple monitors
 - Configure Urxvt
 
+___
 
 ## Settings
 
@@ -21,9 +32,9 @@
 - [None] - Resources Manager (CPU etc ...)
 - picom - Compositor
 
+___
 
-
-## Base Instructions
+## Base Install
 
 ```bash
 # Load PT keyboard layout
@@ -135,13 +146,7 @@ yay -S alsa-utils
 alsamixer
 ```
 
-## Ricing
-```bash
-yay -S rofi
-```
-
-
-
+___
 
 ## Config files
 
@@ -160,3 +165,8 @@ yay -S rofi
 
 ### picom
 `/etc/xdg/picom.conf`
+
+### neofetch
+`~/.config/neofetch/`
+
+### vscode
