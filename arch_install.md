@@ -1,5 +1,15 @@
 # Arch Install
 
+## Index
+
+
+## TODO
+
+- Install and configure polybar
+- Configure VSCode
+- Configure Urxvt
+
+
 ## Settings
 
 - i3-gaps - WM
@@ -9,6 +19,7 @@
 - feh - Image viewer
 - chromium - Browser
 - [None] - Resources Manager (CPU etc ...)
+- picom - Compositor
 
 
 
@@ -130,19 +141,22 @@ yay -S rofi
 ```
 
 
-## AUX
-
-### Config files
 
 
-#### i3
-~/.config/i3/config
+## Config files
 
-#### i3blocks
-~/.config/i3blocks/config
 
-#### urxvt
-~/.Xresources
+### i3
+`~/.config/i3/config`
 
-#### rofi
-~/.config/rofi/
+### i3blocks
+`~/.config/i3blocks/config`
+
+### urxvt
+`~/.Xresources`
+
+### rofi
+`~/.config/rofi/`
+
+### picom
+`/etc/xdg/picom.conf`

@@ -16,6 +16,7 @@ function setwall
 {
     if [ ! -z "$1" ]; then
         cp $1 ~/.config/i3/wallpaper
+        i3-msg -q restart
     else
 		echo "error: setwall [img_path]"
 	fi
