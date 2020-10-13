@@ -12,18 +12,17 @@ ___
 
 ## TODO
 
-- Configure greeter
 - Configure thunar
 - Install and configure Polybar
-- Configure multiple monitors
+- Set all config files to config folder (and make installer)
 - Configure Urxvt
 - Configure rofi (discover its potencial)
 - Fill Keybinds file
+- Configure multiple monitors
 - Alias to open keybinds file with a light pdf reader
-- Set all config files to config folder
 - VSCode add to status bar editing file full path
-- Create commands.md and start registing usefull commands / alias
-- Configure VSCode
+- Learn bash
+- Fill Commands file
 
 ___
 

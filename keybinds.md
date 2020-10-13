@@ -1,14 +1,22 @@
 # Keybinds
 
+Manual for my keybinds (some correspond to the default ones)
+
+#### Index
+
 - [i3-gaps](#i3-gaps)
 - [VSCode](#VSCode)
 - [Discord](#Discord)
+- [Chrome](#Chrome)
 
 
 # i3-gaps
 
 - [Change Workspace](#Change-Workspace)
 - [Launch Rofi](#Launch-Rofi)
+
+## Close App
+`Mod` + `Shift` + `Q`
 
 ## Close App
 `Mod` + `Shift` + `Q`
@@ -28,6 +36,7 @@
 - [Toggle Side Bar](#Toggle-Side-Bar)
 - [Toggle Activity Bar](#Toggle-Activity-Bar)
 - [Toggle Status Bar](#Toggle-Status-Bar)
+- [View Markdown/PDF](#View-Markdown/PDF)
 - [Delete line](#Delete-line)
 - [Command Palette](#Command-Palette)
 - [Open File](#Open-File)
