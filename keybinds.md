@@ -22,11 +22,14 @@
 - [Color Scheme](#Color-Scheme)
 - [VSCode Settings](#VSCode-Settings)
 - [Open/Close Terminal](#Open/Close-Terminal)
-- [Toggle Explorer](#Toggle-Explorer)
-- [Toggle Bar](#Toggle-Bar)
+- [Toggle Side Bar](#Toggle-Side-Bar)
+- [Toggle Activity Bar](#Toggle-Activity-Bar)
+- [Toggle Status Bar](#Toggle-Status-Bar)
+- [Delete line](#Delete-line)
+
 
 ## Color Scheme
-`Ctrl` + `K` `Ctrl` + `T`
+`Ctrl` + `K` | `Ctrl` + `T`
 
 ## VSCode Settings
 `Ctrl` + `,`
@@ -34,11 +37,20 @@
 ## Open/Close Terminal
 `Ctrl` + `Q`
 
-## Toggle Explorer
+## Toggle Side Bar
 `Ctrl` + `B`
 
-## Toggle Bar
-`RShift` + `º`
+## Toggle Activity Bar
+`Shift` + `º`
+
+## Toggle Status Bar
+`Alt` + `S`
+
+## View Markdown/PDF
+`Ctrl` + `K` | `V`
+
+## Delete line
+`Ctrl` + `Shift` + `K`
 
 
 # Discord
@@ -72,4 +84,4 @@
 `Ctrl` + `Tab`
 
 ## Previous Tab
-`Ctrl` + `LShift` + `Tab`
+`Ctrl` + `Shift` + `Tab`

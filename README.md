@@ -2,7 +2,7 @@
 
 Respoitory dedicated to bash scripts, dotfiles, my personal standards / guidelines and markdown manuals
 
-## Plans
+## ScriptsPlans
 
 - [x] Auto Scripts Installer
 - [ ] Firewall Network IP automate

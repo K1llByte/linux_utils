@@ -2,11 +2,11 @@
 
 ## Index
 
-1. [TODO](#todo)
-2. [Settings](#settings)
-3. [Base Install](#base-install)
-4. [Aftermath](#aftermath)
-5. [Config Files](#config-files)
+- [TODO](#todo)
+- [Settings](#settings)
+- [Base Install](#base-install)
+- [Aftermath](#aftermath)
+- [Config Files](#config-files)
 
 ___
 
@@ -18,6 +18,12 @@ ___
 - Install and configure Polybar
 - Configure multiple monitors
 - Configure Urxvt
+- Configure rofi (discover its potencial)
+- Fill Keybinds file
+- Alias to open keybinds file with a light pdf reader
+- Set all config files to config folder
+- VSCode add to status bar editing file full path
+- Create commands.md and start registing usefull commands / alias
 
 ___
 
@@ -170,3 +176,4 @@ ___
 `~/.config/neofetch/`
 
 ### vscode
+`~/.config/Code\ -\ OSS/User/keybindings.json`
