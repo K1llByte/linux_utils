@@ -10,6 +10,9 @@
 - [Change Workspace](#Change-Workspace)
 - [Launch Rofi](#Launch-Rofi)
 
+## Close App
+`Mod` + `Shift` + `Q`
+
 ## Change Workspace
 `Mod` + `Number`
 
@@ -26,6 +29,7 @@
 - [Toggle Activity Bar](#Toggle-Activity-Bar)
 - [Toggle Status Bar](#Toggle-Status-Bar)
 - [Delete line](#Delete-line)
+- [Command Palette](#Command-Palette)
 
 
 ## Color Scheme
@@ -52,6 +56,8 @@
 ## Delete line
 `Ctrl` + `Shift` + `K`
 
+## Command Palette
+`Ctrl` + `Shift` + `P`
 
 # Discord
 
