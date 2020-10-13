@@ -30,6 +30,10 @@
 - [Toggle Status Bar](#Toggle-Status-Bar)
 - [Delete line](#Delete-line)
 - [Command Palette](#Command-Palette)
+- [Open File](#Open-File)
+- [Close Window](#Close-Window)
+- [Next Tab](#Next-Tab)
+- [Previous Tab](#Previous-Tab)
 
 
 ## Color Scheme
@@ -59,6 +63,19 @@
 ## Command Palette
 `Ctrl` + `Shift` + `P`
 
+## Open File
+`Ctrl` + `P`
+
+## Close Window
+`Ctrl` + `W`
+
+## Next Tab
+`Ctrl` + `Tab`
+
+## Previous Tab
+`Ctrl` + `Shift` + `Tab`
+
+
 # Discord
 
 - [Super Find Chat](#Super-Find-Chat)
@@ -76,6 +93,8 @@
 - [Select Search Bar](#Select-Search-Bar)
 - [Go Back](#open-terminal)
 - [Go Forward](#open-terminal)
+- [Next Tab](#Next-Tab)
+- [Previous Tab](#Previous-Tab)
 
 ## Select Search Bar
 `Ctrl` + `K`

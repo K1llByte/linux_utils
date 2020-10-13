@@ -12,7 +12,6 @@ ___
 
 ## TODO
 
-- Configure VSCode
 - Configure greeter
 - Configure thunar
 - Install and configure Polybar
@@ -24,6 +23,7 @@ ___
 - Set all config files to config folder
 - VSCode add to status bar editing file full path
 - Create commands.md and start registing usefull commands / alias
+- Configure VSCode
 
 ___
 
