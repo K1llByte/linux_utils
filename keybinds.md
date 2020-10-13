@@ -41,7 +41,7 @@
 
 ## VSCode Settings
 `Ctrl` + `,`
-Close Window
+
 ## Open/Close Terminal
 `Ctrl` + `Q`
 
