@@ -40,3 +40,10 @@ wc -w [filename]
 # chars -m
 # lines -l
 ```
+
+### watch
+```bash
+# Watch the output of a command time to time
+# -n<sec> execute every <sec> seconds
+watch -n1 [command]
+```
