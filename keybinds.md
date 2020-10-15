@@ -84,6 +84,12 @@ Manual for my keybinds (some correspond to the default ones)
 ## Previous Tab
 `Ctrl` + `Shift` + `Tab`
 
+## Line Comment
+`Ctrl` + `Shift` + `7`
+
+## Multi Line Comment
+`Ctrl` + `Shift` + `A`
+
 
 # Discord
 
@@ -100,6 +106,7 @@ Manual for my keybinds (some correspond to the default ones)
 # Chrome
 
 - [Select Search Bar](#Select-Search-Bar)
+- [New Tab](#New-Tab)
 - [Go Back](#open-terminal)
 - [Go Forward](#open-terminal)
 - [Next Tab](#Next-Tab)
@@ -107,6 +114,9 @@ Manual for my keybinds (some correspond to the default ones)
 
 ## Select Search Bar
 `Ctrl` + `K`
+
+## New Tab
+`Ctrl` + `T`
 
 ## Go Back
 `Alt` + `Left Arrow`

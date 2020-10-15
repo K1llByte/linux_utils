@@ -16,13 +16,16 @@ ___
 - Install and configure Polybar
 - Set all config files to config folder (and make installer)
 - Configure Urxvt
-- Configure rofi (discover its potencial)
+- Configure rofi
 - Fill Keybinds file
 - Configure multiple monitors
 - Alias to open keybinds file with a light pdf reader
 - VSCode add to status bar editing file full path
 - Learn bash
 - Fill Commands file
+- Turn VSync on in linux 
+- Printscreen tool
+- Config floating windows max size to screen
 
 ___
 
