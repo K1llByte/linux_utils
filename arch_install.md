@@ -11,6 +11,8 @@ ___
 
 ## Settings
 
+### Software
+
 - i3-gaps - Windows Manager
 - rofi - App Launcher
 - urxvt - Terminal Emulator
@@ -19,6 +21,13 @@ ___
 - chromium - Browser
 - htop - Resources Manager (CPU etc ...)
 - picom/compton - Compositor
+- Xarchiver - Unified archives zipper and unzipper
+
+### Extensions
+
+- Thunar: tumbler - Extension for file thumbnails preview
+- Thunar: thunar-archive-plugin - Extension for extract and compress
+- Thunar: gvfs - Extension for trash support, mounting removable media, and remote filesystems
 
 ___
 

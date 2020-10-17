@@ -8,26 +8,69 @@ Manual for my keybinds (some correspond to the default ones)
 - [VSCode](#VSCode)
 - [Discord](#Discord)
 - [Chrome](#Chrome)
+- [Thunar](#Thunar)
 
-
+___
 # i3-gaps
 
+- [Open Terminal](#Open-Terminal)
+- [Close App](#Close-App)
+- [Open Rofi](#Open-Rofi)
 - [Change Workspace](#Change-Workspace)
-- [Launch Rofi](#Launch-Rofi)
+- [Change Window Focus](#Change-Window-Focus)
+- [Move Focused Window](#Move-Focused-Window)
+- [Move Workspace to other monitor](#Move-Workspace-to-other-monitor)
+- [Split Horizontal](#Split-Horizontal)
+- [Split Vertical](#Split-Vertical)
+- [Toggle Fullscreen](#Toggle-Fullscreen)
+- [Toggle Floating mode](#Toggle-Floating-mode)
+- [Reload i3](#Reload-i3)
+- [Restart i3](#Restart-i3)
+- [Exit i3](#Exit-i3)
+
+## Open Terminal
+`Mod` + `Enter`
 
 ## Close App
 `Mod` + `Shift` + `Q`
 
-## Close App
-`Mod` + `Shift` + `Q`
+## Open Rofi
+`Mod` + `D`
 
 ## Change Workspace
 `Mod` + `Number`
 
-## Launch Rofi
-`Mod` + `D`
+## Change Window Focus
+`Mod` + `Arrow Keys`
 
+## Move Focused Window
+`Mod` + `Shift` + `Arrow Keys`
 
+## Move Workspace to other monitor
+`Mod` + `M`
+
+## Split Horizontal
+`Mod` + `H`
+
+## Split Vertical
+`Mod` + `V`
+
+## Toggle Fullscreen
+`Mod` + `F`
+
+## Toggle Floating mode
+`Mod` + `Shift` + `Space`
+
+## Reload i3
+`Mod` + `Shift` + `C`
+
+## Restart i3
+`Mod` + `Shift` + `R`
+
+## Exit i3
+`Mod` + `Shift` + `E`
+
+___
 # VSCode
 
 - [Color Scheme](#Color-Scheme)
@@ -90,7 +133,7 @@ Manual for my keybinds (some correspond to the default ones)
 ## Multi Line Comment
 `Ctrl` + `Shift` + `A`
 
-
+___
 # Discord
 
 - [Super Find Chat](#Super-Find-Chat)
@@ -102,7 +145,7 @@ Manual for my keybinds (some correspond to the default ones)
 ## Toggle Mute
 `Ctrl` + `M`
 
-
+___
 # Chrome
 
 - [Select Search Bar](#Select-Search-Bar)
@@ -129,3 +172,11 @@ Manual for my keybinds (some correspond to the default ones)
 
 ## Previous Tab
 `Ctrl` + `Shift` + `Tab`
+
+___
+# Thunar
+
+- [Toggle Side Bar](#Toggle-Side-Bar)
+
+## Toggle Side Bar
+`Ctrl` + `B`
