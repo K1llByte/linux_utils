@@ -47,3 +47,9 @@ wc -w [filename]
 # -n<sec> execute every <sec> seconds
 watch -n1 [command]
 ```
+
+### htop
+```bash
+# Resource manager (CPU,MEMORY)
+htop
+```

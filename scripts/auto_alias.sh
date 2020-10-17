@@ -15,9 +15,7 @@ source $HOME/.scripts/utils.sh
 
 ALIASES=~/.config/aliases.sh
 
-if [ ! -f "$ALIASES" ]; then
-    mkfile $ALIASES
-fi
+[ ! -f "$ALIASES" ] && mkfile $ALIASES
 
 source $ALIASES
 
@@ -52,10 +50,7 @@ function delalias
 function aliases
 {
     if [ -z $1]; then
-        while read p; do
-            echo "$p" | cut -d' ' -f 2 | cut -d'=' -f 1
-            break
-        done < $ALIASES
+        cat $ALIASES | awk '{print $2}' | cut -d'=' -f 1
     else
         # TODO: show alias command
         return

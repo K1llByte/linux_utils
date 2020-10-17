@@ -11,13 +11,13 @@ ___
 
 ## Settings
 
-- i3-gaps - WM
-- rofi
+- i3-gaps - Windows Manager
+- rofi - App Launcher
 - urxvt - Terminal Emulator
 - i3lock - Lockscreen
 - feh - Image viewer
 - chromium - Browser
-- [None] - Resources Manager (CPU etc ...)
+- htop - Resources Manager (CPU etc ...)
 - picom/compton - Compositor
 
 ___
