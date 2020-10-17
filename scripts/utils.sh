@@ -38,3 +38,13 @@ function battery
     cat $BATTERIES | awk -v n=$(wc -w $BATTERIES | awk '{n=$1} END {print n}') '{s+=$1} END {printf "%.0f%\n", s/n}'
     unset BATTERIES
 }
+
+function screenshot
+{
+    # Dependes on 'maim'
+    [ ! -z $1 ] && [ "$1" == "-s" ] 
+    FILENAME="$(date +%s).png"
+    maim $1 ~/Pictures/Screenshots/$FILENAME && \
+    cat ~/Pictures/Screenshots/$FILENAME | xclip -selection clipboard -t image/png
+    unset FILENAME
+}

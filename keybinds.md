@@ -180,3 +180,15 @@ ___
 
 ## Toggle Side Bar
 `Ctrl` + `B`
+
+## Toggle Status Bar
+`Alt` + `S`
+
+## Toggle Menu Bar
+`Alt` + `M`
+
+## Toggle Locator bar
+`Ctrl` + `Q`
+
+## Select Locator
+`Ctrl` + `K`

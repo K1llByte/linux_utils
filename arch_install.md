@@ -22,6 +22,7 @@ ___
 - htop - Resources Manager (CPU etc ...)
 - picom/compton - Compositor
 - Xarchiver - Unified archives zipper and unzipper
+- maim - Screenshot tool
 
 ### Extensions
 
@@ -168,3 +169,10 @@ ___
 
 ### vscode
 `~/.config/Code\ -\ OSS/User/keybindings.json`
+
+### GTK
+`~/.gtkrc-2.0`
+`~/.gtkrc-2.0.mine`
+
+### Thunar
+`~/.config/Thunar/accels.scm`
