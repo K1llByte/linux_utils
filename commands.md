@@ -53,3 +53,13 @@ watch -n1 [command]
 # Resource manager (CPU,MEMORY)
 htop
 ```
+
+___
+## Simple commands
+```bash
+# Time counting
+time <command>
+
+# Sleep
+sleep [seconds]
+```
