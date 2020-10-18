@@ -70,6 +70,25 @@ ___
 ## Exit i3
 `Mod` + `Shift` + `E`
 
+<!-- 
+| Keybind                        | Description                     |
+| :----------------------------: | :-----------------------------: |
+| `Mod` + `Enter`                | Open Terminal                   |
+| `Mod` + `Shift` + `Q`          | Close App                       |
+| `Mod` + `D`                    | Open Rofi                       |
+| `Mod` + `Number`               | Change Workspace                |
+| `Mod` + `Arrow Keys`           | Change Window Focus             |
+| `Mod` + `Shift` + `Arrow Keys` | Move Focused Window             |
+| `Mod` + `M`                    | Move Workspace to other monitor |
+| `Mod` + `H`                    | Split Horizontal                |
+| `Mod` + `V`                    | Split Vertical                  |
+| `Mod` + `F`                    | Toggle Fullscreen               |
+| `Mod` + `Shift` + `Space`      | Toggle Floating mode            |
+| `Mod` + `Shift` + `C`          | Reload i3                       |
+| `Mod` + `Shift` + `R`          | Restart i3                      |
+| `Mod` + `Shift` + `E`          | Exit i3                         |
+-->
+
 ___
 # VSCode
 
