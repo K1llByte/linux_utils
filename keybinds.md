@@ -152,6 +152,27 @@ ___
 ## Multi Line Comment
 `Ctrl` + `Shift` + `A`
 
+<!--
+| Keybind                      | Description         |
+| :--------------------------: | :-----------------: |
+| `Ctrl` + `K` \| `Ctrl` + `T` | Color Scheme        |
+| `Ctrl` + `,`                 | VSCode Settings     |
+| `Ctrl` + `Q`                 | Open/Close Terminal |
+| `Ctrl` + `B`                 | Toggle Side Bar     |
+| `Shift` + `º`                | Toggle Activity Bar |
+| `Alt` + `S`                  | Toggle Status Bar   |
+| `Ctrl` + `K` \| `V`          | View Markdown/PDF   |
+| `Ctrl` + `Shift` + `K`       | Delete line         |
+| `Ctrl` + `Shift` + `P`       | Command Palette     |
+| `Ctrl` + `P`                 | Open File           |
+| `Ctrl` + `W`                 | Close Window        |
+| `Ctrl` + `Tab`               | Next Tab            |
+| `Ctrl` + `Shift` + `Tab`     | Previous Tab        |
+| `Ctrl` + `Shift` + `7`       | Line Comment        |
+| `Ctrl` + `Shift` + `A`       | Multi Line Comment  |
+
+-->
+
 ___
 # Discord
 
@@ -164,13 +185,20 @@ ___
 ## Toggle Mute
 `Ctrl` + `M`
 
+<!--
+| Keybind      | Description     |
+| :----------: | :-------------: |
+| `Ctrl` + `K` | Super Find Chat |
+| `Ctrl` + `M` | Toggle Mute     |
+-->
+
 ___
 # Chrome
 
 - [Select Search Bar](#Select-Search-Bar)
 - [New Tab](#New-Tab)
 - [Go Back](#open-terminal)
-- [Go Forward](#open-terminal)
+- [Go Forward](#Go-Forward)
 - [Next Tab](#Next-Tab)
 - [Previous Tab](#Previous-Tab)
 
@@ -192,6 +220,17 @@ ___
 ## Previous Tab
 `Ctrl` + `Shift` + `Tab`
 
+<!--
+| Keybind                  | Description       |
+| :----------------------: | :---------------: |
+| `Ctrl` + `K`             | Select Search Bar |
+| `Ctrl` + `T`             | New Tab           |
+| `Alt` + `Left Arrow`     | Go Back           |
+| `Alt` + `Right Arrow`    | Go Forward        |
+| `Ctrl` + `Tab`           | Next Tab          |
+| `Ctrl` + `Shift` + `Tab` | Previous Tab      |
+-->
+
 ___
 # Thunar
 
@@ -206,8 +245,18 @@ ___
 ## Toggle Menu Bar
 `Alt` + `M`
 
-## Toggle Locator bar
+## Toggle Locator Bar
 `Ctrl` + `Q`
 
 ## Select Locator
 `Ctrl` + `K`
+
+<!--
+| Keybind      | Description        |
+| :----------: | :----------------: |
+| `Ctrl` + `B` | Toggle Side Bar    |
+| `Alt` + `S`  | Toggle Status Bar  |
+| `Alt` + `M`  | Toggle Menu Bar    |
+| `Ctrl` + `Q` | Toggle Locator Bar |
+| `Ctrl` + `K` | Select Locator     |
+-->
