@@ -51,13 +51,12 @@ function aliases
 {
     case "$1" in
 
-    "-c" | "--command")
+    "-f" | "--f")
         cat $ALIASES | cut -c7- | tr = ' '2
     ;;
 
     "")
         cat $ALIASES | awk '{print $2}' | cut -d'=' -f 1
-        #cat $ALIASES | awk '{print $2}' | cut -d'=' -f 1
     ;;
 
     *)
