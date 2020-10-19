@@ -49,10 +49,19 @@ function delalias
 
 function aliases
 {
-    if [ -z $1]; then
+    case "$1" in
+
+    "-c" | "--command")
+        cat $ALIASES | cut -c7- | tr = ' '2
+    ;;
+
+    "")
         cat $ALIASES | awk '{print $2}' | cut -d'=' -f 1
-    else
-        # TODO: show alias command
-        return
-    fi
+        #cat $ALIASES | awk '{print $2}' | cut -d'=' -f 1
+    ;;
+
+    *)
+        cat $ALIASES | grep "^alias ${1}.*$"
+    ;;
+    esac
 }

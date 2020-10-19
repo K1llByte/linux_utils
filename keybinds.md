@@ -2,7 +2,7 @@
 
 Manual for my keybinds (some correspond to the default ones)
 
-#### Index
+## Index
 
 - [i3-gaps](#i3-gaps)
 - [VSCode](#VSCode)
