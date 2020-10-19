@@ -61,7 +61,7 @@ function aliases
     ;;
 
     *)
-        cat $ALIASES | grep "^alias ${1}.*$"
+        cat $ALIASES | grep -i "^alias ${1}.*$"
     ;;
     esac
 }
