@@ -12,7 +12,7 @@ Manual for my keybinds (some correspond to the default ones)
 
 ___
 # i3-gaps
-
+<!-- 
 - [Open Terminal](#Open-Terminal)
 - [Close App](#Close-App)
 - [Open Rofi](#Open-Rofi)
@@ -69,8 +69,8 @@ ___
 
 ## Exit i3
 `Mod` + `Shift` + `E`
-
-<!-- 
+-->
+ 
 | Keybind                        | Description                     |
 | :----------------------------: | :-----------------------------: |
 | `Mod` + `Enter`                | Open Terminal                   |
@@ -87,11 +87,11 @@ ___
 | `Mod` + `Shift` + `C`          | Reload i3                       |
 | `Mod` + `Shift` + `R`          | Restart i3                      |
 | `Mod` + `Shift` + `E`          | Exit i3                         |
--->
 
 ___
 # VSCode
 
+<!--
 - [Color Scheme](#Color-Scheme)
 - [VSCode Settings](#VSCode-Settings)
 - [Open/Close Terminal](#Open/Close-Terminal)
@@ -151,8 +151,8 @@ ___
 
 ## Multi Line Comment
 `Ctrl` + `Shift` + `A`
+-->
 
-<!--
 | Keybind                      | Description         |
 | :--------------------------: | :-----------------: |
 | `Ctrl` + `K` \| `Ctrl` + `T` | Color Scheme        |
@@ -171,11 +171,9 @@ ___
 | `Ctrl` + `Shift` + `7`       | Line Comment        |
 | `Ctrl` + `Shift` + `A`       | Multi Line Comment  |
 
--->
-
 ___
 # Discord
-
+<!--
 - [Super Find Chat](#Super-Find-Chat)
 - [Toggle Mute](#Toggle-Mute)
 
@@ -184,17 +182,16 @@ ___
 
 ## Toggle Mute
 `Ctrl` + `M`
+-->
 
-<!--
 | Keybind      | Description     |
 | :----------: | :-------------: |
 | `Ctrl` + `K` | Super Find Chat |
 | `Ctrl` + `M` | Toggle Mute     |
--->
 
 ___
 # Chrome
-
+<!--
 - [Select Search Bar](#Select-Search-Bar)
 - [New Tab](#New-Tab)
 - [Go Back](#open-terminal)
@@ -219,8 +216,8 @@ ___
 
 ## Previous Tab
 `Ctrl` + `Shift` + `Tab`
+-->
 
-<!--
 | Keybind                  | Description       |
 | :----------------------: | :---------------: |
 | `Ctrl` + `K`             | Select Search Bar |
@@ -229,11 +226,11 @@ ___
 | `Alt` + `Right Arrow`    | Go Forward        |
 | `Ctrl` + `Tab`           | Next Tab          |
 | `Ctrl` + `Shift` + `Tab` | Previous Tab      |
--->
+
 
 ___
 # Thunar
-
+<!-- 
 - [Toggle Side Bar](#Toggle-Side-Bar)
 
 ## Toggle Side Bar
@@ -250,8 +247,8 @@ ___
 
 ## Select Locator
 `Ctrl` + `K`
+-->
 
-<!--
 | Keybind      | Description        |
 | :----------: | :----------------: |
 | `Ctrl` + `B` | Toggle Side Bar    |
@@ -259,4 +256,3 @@ ___
 | `Alt` + `M`  | Toggle Menu Bar    |
 | `Ctrl` + `Q` | Toggle Locator Bar |
 | `Ctrl` + `K` | Select Locator     |
--->

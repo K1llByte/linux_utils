@@ -23,6 +23,7 @@ ___
 - picom/compton - Compositor
 - Xarchiver - Unified archives zipper and unzipper
 - maim - Screenshot tool
+- notify-send - Notification applet
 
 ### Extensions
 
