@@ -14,6 +14,7 @@ ___
 ### Software
 
 - i3-gaps - Windows Manager
+- NetworkManager (nmtui and nm-connection-editor)
 - rofi - App Launcher
 - urxvt - Terminal Emulator
 - i3lock - Lockscreen
@@ -24,6 +25,7 @@ ___
 - Xarchiver - Unified archives zipper and unzipper
 - maim - Screenshot tool
 - notify-send - Notification applet
+
 
 ### Extensions
 

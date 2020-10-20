@@ -11,6 +11,16 @@ fdisk -l
 fdisk /dev/[device name]
 ```
 
+### NetworkManager
+```bash
+# Terminal GUI for editing connections (normal connections)
+nmtui
+
+# GUI for editing connections (usually WPA-EAP)
+nm-connection-editor
+```
+
+
 ### grep
 ```bash
 # Ignore case
