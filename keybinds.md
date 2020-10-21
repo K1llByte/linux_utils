@@ -52,6 +52,7 @@ ___
 | `Ctrl` + `Shift` + `A`       | Multi Line Comment  |
 | `Ctrl` + `Shift` + `T`       | Reopen Closed File  |
 | `Alt` + `Z`                  | Toggle Word Wrap    |
+| `Ctrl` + `Shift` + `H`       | Find and Replace    |
 
 ___
 # Discord

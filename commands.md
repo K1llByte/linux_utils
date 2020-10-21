@@ -64,6 +64,12 @@ watch -n1 [command]
 htop
 ```
 
+### jq
+```bash
+# JSON Parser
+jq '.'
+```
+
 ___
 ## Simple commands
 ```bash

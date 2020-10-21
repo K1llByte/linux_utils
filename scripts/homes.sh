@@ -20,20 +20,13 @@ function sethome
 {
     if [ ! -z "$1" ]; then
 
-        if [[ ! -e $HOMES ]]; then
-            touch $HOMES
-        fi
+        [[ ! -e $HOMES ]] && touch $HOMES
+        
+        # Check if home tag exists
+        [ $(cat $HOMES | awk -v key="$1" '{ if($1 == key) print $1 }') ] && \
+        echo "Home already exists" && return
 
-        while read l; do
-            IFS=' ' read -ra tmp_arr <<< $l
-            if [ $1 == ${tmp_arr[0]} ]; then
-                echo "Home already exists"
-                return
-            fi
-        done <$HOMES
-
-        DIR=$(pwd)
-        echo "$1 $DIR" >> $HOMES
+        echo "$1 $(pwd)" >> $HOMES
         echo "Home set"	
 
     else
@@ -50,15 +43,15 @@ function homes
 
     case "$1" in
 
-    "-f" | "--full")
+    "-f" | "--full") # List homes and paths
         cat $HOMES
     ;;
 
-    "")
+    "") # List homes
         cat $HOMES | awk '{print $1}'
     ;;
 
-    *)
+    *) # Find home by name
         cat $HOMES | grep -i "^${1}.*$"
     ;;
     esac
@@ -71,15 +64,13 @@ function home
         return
     fi
 
-    while read l; do
-        IFS=' ' read -ra tmp_arr <<< $l
-
-        if [ $1 == ${tmp_arr[0]} ]; then
-            cd ${tmp_arr[1]}
-            return
-        fi
-    done <$HOMES
-    echo "error: home not found"
+    local VAL=$(cat $HOMES | awk -v key="$1" '{ if($1 == key) print $2 }')
+    if [ $VAL ]; then
+        cd $VAL
+    else
+        echo "error: home not found"
+    fi
+    
 }
 
 function delhome
@@ -98,13 +89,10 @@ function work
         return
     fi
 
-    while read l; do
-        IFS=' ' read -ra tmp_arr <<< $l
-
-        if [ $1 == ${tmp_arr[0]} ]; then
-            code ${tmp_arr[1]}
-            return
-        fi
-    done <$HOMES
-    echo "error: home not found"
+    local VAL=$(cat $HOMES | awk -v key="$1" '{ if($1 == key) print $2 }')
+    if [ $VAL ]; then
+        code $VAL
+    else
+        echo "error: home not found"
+    fi
 }
