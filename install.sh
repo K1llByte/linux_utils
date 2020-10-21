@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Brief: Why is this brainlet monkey installing scripts
+# in an hidden folder instead of moving them to a dir 
+# in the PATH var. Well that's because i want to source 
+# the files, not executing them (shell global vars go brrrrrr)
+
+# Because they're in WIP or testing
+BLACKLIST=("auto_firewall.sh")
+
 SCRIPTS=~/.scripts/
 
 # temporary var containing scripts call string 
@@ -14,6 +22,11 @@ fi
 [ ! -d "$SCRIPTS" ] && mkdir $SCRIPTS && echo "Created $SCRIPTS"
 
 # Copy all scripts to default scripts folder
-cp -rf scripts/* $SCRIPTS && echo "Installed scripts on $SCRIPTS"
+cp -rf scripts/* $SCRIPTS
 
-unset INSTANCE
+# Remove blacklist scripts
+for file in $BLACKLIST; do
+    rm $SCRIPTS/$file
+done
+
+echo "Installed scripts on $SCRIPTS"

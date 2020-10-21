@@ -68,6 +68,32 @@ htop
 ```bash
 # JSON Parser
 jq '.'
+# .                         unchanged input
+# .foo, .foo.bar, .foo?     value at key
+# .[], .[]?, .[2], .[10:15] array operation
+# [], {}                    array/object construction
+# length                    length of a value
+# keys                      keys in an array
+# ,                         feed input into multiple filters
+# |                         pipe output of one filter to the next filter
+# select(foo)               input unchanged if foo returns true
+# map(foo)                  invoke filter foo for each input
+# if-then-else-end          conditionals
+# \(foo)                    string interpolation
+```
+
+### source and execute
+
+**Sourcing** a script will run the commands in the _current_ shell process. <br/>
+**Executing** a script will run the commands in a _new_ shell process.
+
+```bash
+# Sourcing
+source script
+. script
+
+# Executing
+./script
 ```
 
 ___
