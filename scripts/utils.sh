@@ -6,10 +6,17 @@
 # battery             \ Prints battery percentage
 
 function gitall {
-    if [ ! -z "$1" ]; then
+    foo()
+    {
         git add .; git commit -m "$1"; git push
+    }
+
+    if [ ! -z "$1" ]; then
+        #git add .; git commit -m "$1"; git push
+        foo $1
     else
-        git add .; git commit -m "General commit"; git push
+        foo "General commit"
+        #git add .; git commit -m "General commit"; git push
     fi
 }
 
@@ -34,9 +41,8 @@ function mkfile
 
 function battery
 {
-    BATTERIES=$(ls /sys/class/power_supply/BAT*/capacity)
+    local BATTERIES=$(ls /sys/class/power_supply/BAT*/capacity)
     cat $BATTERIES | awk -v n=$(wc -w $BATTERIES | awk '{n=$1} END {print n}') '{s+=$1} END {printf "%.0f%\n", s/n}'
-    unset BATTERIES
 }
 
 function screenshot

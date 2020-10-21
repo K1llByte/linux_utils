@@ -107,4 +107,7 @@ sleep [seconds]
 
 # Translate or delete characters
 tr A B # Changes all A's to B's
+
+# Shift arguments
+shift [n]
 ```

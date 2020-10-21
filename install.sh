@@ -30,3 +30,18 @@ for file in $BLACKLIST; do
 done
 
 echo "Installed scripts on $SCRIPTS"
+
+for i in "$@"; do
+    case $i in
+        --help)
+            usage
+            shift
+            ;;
+        *)
+            echo "flag provided but not defined: ${i%%=*}"
+            echo "See '$0 --help'."
+            exit 0
+        ;;
+    esac
+done
+
