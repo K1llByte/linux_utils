@@ -6,17 +6,11 @@
 # battery             \ Prints battery percentage
 
 function gitall {
-    foo()
-    {
-        git add .; git commit -m "$1"; git push
-    }
 
     if [ ! -z "$1" ]; then
-        #git add .; git commit -m "$1"; git push
-        foo $1
+        git add .; git commit -m "$1"; git push
     else
-        foo "General commit"
-        #git add .; git commit -m "General commit"; git push
+        git add .; git commit -m "General commit"; git push
     fi
 }
 
@@ -35,7 +29,7 @@ function mkfile
     if [ -z $1 ]; then
         echo "error: mkfile [file_path]"
     else
-		mkdir -p "$(dirname "$1")" || return; touch "$1"
+		mkdir -p "$(dirname "$1")" && touch "$1"
 	fi
 }
 
