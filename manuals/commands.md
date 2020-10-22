@@ -105,6 +105,9 @@ time <command>
 # Sleep
 sleep [seconds]
 
+# TODO
+cut
+
 # Translate or delete characters
 tr A B # Changes all A's to B's
 

@@ -26,11 +26,15 @@ function sethome
         [ $(cat $HOMES | awk -v key="$1" '{ if($1 == key) print $1 }') ] && \
         echo "Home already exists" && return
 
-        echo "$1 $(pwd)" >> $HOMES
-        echo "Home set"	
+        DIR=$(pwd)
+
+        [ -f "$2" ] && DIR=$(realpath $(dirname $2))
+        [ -d "$2" ] && DIR=$(realpath $2)
+        echo "$1 $DIR" >> $HOMES
+        echo "Home set: $DIR"
 
     else
-        echo "error: sethome [tag]"
+        echo "error: sethome [tag] ([dir])"
     fi
 }
 
