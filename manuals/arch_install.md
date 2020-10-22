@@ -152,13 +152,13 @@ ___
 ## Config files
 
 
-### i3
-`~/.config/i3/config`
+### i3 [Copied]
+`~/.config/i3/`
 
-### i3blocks
-`~/.config/i3blocks/config`
+### i3blocks [Copied]
+`~/.config/i3blocks/`
 
-### urxvt
+### urxvt 
 `~/.Xresources`
 `~/.config/Xresources/urxvt`
 
