@@ -162,7 +162,7 @@ ___
 `~/.Xresources`
 `~/.config/Xresources/urxvt`
 
-### rofi
+### rofi [Copied]
 `~/.config/rofi/`
 
 ### picom
