@@ -113,4 +113,10 @@ tr A B # Changes all A's to B's
 
 # Shift arguments
 shift [n]
+
+# Find file (filename may use wildcards)
+find /path/to/dir -name "filename"
+
+# Find pattern in any file of the directory
+grep -rnw '/path/to/dir' -e 'pattern'
 ```
