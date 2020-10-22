@@ -160,6 +160,7 @@ ___
 
 ### urxvt
 `~/.Xresources`
+`~/.config/Xresources/urxvt`
 
 ### rofi
 `~/.config/rofi/`
@@ -179,3 +180,6 @@ ___
 
 ### Thunar
 `~/.config/Thunar/accels.scm`
+
+### X Server
+`~/.xinitrc`
