@@ -171,7 +171,7 @@ ___
 ### neofetch [Copied]
 `~/.config/neofetch/`
 
-### vscode [Copied]
+### vscode
 `~/.config/Code\ -\ OSS/User/keybindings.json`
 
 ### GTK
