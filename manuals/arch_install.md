@@ -158,7 +158,7 @@ ___
 ### i3blocks [Copied]
 `~/.config/i3blocks/`
 
-### urxvt 
+### urxvt [Copied]
 `~/.Xresources`
 `~/.config/Xresources/urxvt`
 
@@ -168,17 +168,17 @@ ___
 ### picom
 `/etc/xdg/picom.conf`
 
-### neofetch
+### neofetch [Copied]
 `~/.config/neofetch/`
 
-### vscode
+### vscode [Copied]
 `~/.config/Code\ -\ OSS/User/keybindings.json`
 
 ### GTK
 `~/.gtkrc-2.0`
 `~/.gtkrc-2.0.mine`
 
-### Thunar
+### Thunar [Copied]
 `~/.config/Thunar/accels.scm`
 
 ### X Server
