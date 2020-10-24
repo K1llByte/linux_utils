@@ -36,14 +36,23 @@ install_scripts()
         rm $SCRIPTS/$file
     done
 
-    echo "Installed scripts on $SCRIPTS"
+    echo "Installed scripts in $SCRIPTS"
 }
 
 
 install_configs()
 {
     CONFIGS=~/.config/
-    echo "Installed configs on $CONFIGS"
+    eval "$(awk '/[ ]*#.*/{} /[^:]*:[ ]+[^ ]+[ ]+[^ ]+/{print "cp -r",$2,$3,"&& echo \"Installed ",$2,"\" config files"}' configs_tests.txt)"
+    echo "Installed configs in $CONFIGS"
+}
+
+testing()
+{
+    local STR="to/example/file.txt"
+    local PATH_TO_CREATE=$STR
+    [ -f $STR ] && PATH_TO_CREATE="$(dirname  $(realpath $STR))"
+    mkdir -p $PATH_TO_CREATE
 }
 
 
@@ -69,6 +78,10 @@ do
         install_configs
     ;;
     
+    "test")
+        testing
+    ;;
+
     *)
         echo "error: Tag doesn't exists"
 
@@ -77,3 +90,5 @@ do
     esac
     exit 1
 done
+
+# jq -r '.configs[] | "\(map(.from)[]) \(map(.to)[])"' config/configs.json

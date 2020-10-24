@@ -1,0 +1,100 @@
+align=center
+separator=false
+color=#dddddd
+separator_block_width=20
+markup=pango
+
+# [mediaplayer]
+# command=playerctl metadata --format "{{ artist }} - {{ title }}"
+# interval=2
+# label=<span color="#a9e185"> </span>
+
+# [arch-update]
+# command=checkupdates | wc -l
+# interval=once
+# label=<span color="#1793D1"> </span>
+
+[focused_window]
+command=id=$(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}') && xprop -id $id | awk '/_NET_WM_NAME/{$1=$2="";print}' | cut -d'"' -f2
+interval=repeat
+
+[battery]
+command=BATTERIES=$(ls /sys/class/power_supply/BAT*/capacity); cat $BATTERIES | awk -v n=$(wc -w $BATTERIES | awk '{n=$1} END {print n}') '{s+=$1} END {printf "%.0f%\n", s/n}' ; unset BATTERIES
+interval=1
+label=<span color="#f0b40e"> </span>
+
+# [wifi]
+# command=iwgetid -r | tr '\n' ' ' && grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i%\n", int($3 * 100 / 70) }'
+# instance=wlp11s0f3u1
+# interval=5
+# label=<span color="#ffb86c"> </span>
+
+# [new-vpn]
+# command=~/.config/i3blocks/blocks/openvpn/openvpn
+# interval=1
+# label=<span color="#8be9fd"> </span>
+
+# [home]
+# command=df -h /home | awk 'FNR==2{print $4}'
+# interval=3
+# label=<span color="#a9e185"> </span>
+
+[root]
+command=df -h / | awk 'FNR==2{print $4}'
+interval=3
+label=<span color="#f0b40e"> </span>
+# ff79c6
+
+#[gpu-load]
+#command=~/.config/i3blocks/blocks/gpu-load/gpu-load | awk 'FNR==1{ printf "%s %s\n", $1, $2 }'
+#label=<span color="#ffb86c"> </span>
+#interval=2
+
+# [gpu-temperature]
+# command=~/.config/i3blocks/blocks/temperature/temperature
+# interval=2
+# SENSOR_CHIP="k10temp-pci-00c3"
+# label=<span color="#ffb86c"> </span>
+
+# [cpu_usage]
+# command=~/.config/i3blocks/blocks/cpu_usage/cpu_usage
+# interval=2
+# label=<span color="#8be9fd"> </span>
+
+# [cpu-temperature]
+# command=~/.config/i3blocks/blocks/temperature/temperature
+# interval=2
+# SENSOR_CHIP="jc42-i2c-0-1a"
+# label=<span color="#8be9fd"> </span>
+
+[memory]
+command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
+interval=2
+label=<span color="#f0b40e"> </span>
+# a9e185
+
+# [volume]
+# command=pulseaudio-ctl full-status | awk '{ printf "%i%\n", $1 }'
+# interval=2
+# label=<span color="#ff79c6"> </span>
+
+[date]
+command=date '+%e %b'
+interval=60
+label=<span color="#f0b40e"> </span>
+# 8be9fd
+
+[time]
+command=date '+%H:%M '
+interval=1
+label=<span color="#f0b40e"> </span>
+# ffb86c
+
+# [shutdown_menu]
+# full_text=<span color="#a9e185"> </span>
+# command=~/.config/i3blocks/blocks/shutdown_menu/shutdown_menu
+# ROFI_TEXT=Menu:
+# ROFI_OPTIONS=-no-config -location 3 -yoffset 29 -width 5 -xoffset 5 -bw 0 -border 0 -theme ~/.config/rofi/menu.rasi
+# ENABLE_CONFIRMATIONS=true
+# LAUNCHER=rofi
+# LOCKSCRIPT=betterlockscreen -l dimblur

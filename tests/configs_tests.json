@@ -1,0 +1,44 @@
+{
+    "configs" :
+    {
+        "i3" :
+        [
+            {
+                "from" : "from/i3/",
+                "to" : "to/i3/"
+            }
+        ],
+        "i3blocks" :
+        [
+            {
+                "from" : "from/i3blocks/",
+                "to" : "to/i3blocks/"
+            }
+        ],
+        "urxvt" :
+        [
+            {
+                "from" : "from/urxvt/Xresources",
+                "to" : "to/.Xresources"
+            },
+            {
+                "from" : "from/urxvt/urxvt",
+                "to" : "to/Xresources.d/urxvt"
+            }
+        ],
+        "rofi" :
+        [
+            {
+                "from" : "from/rofi/",
+                "to" : "to/rofi/"
+            }
+        ],
+        "Thunar" :
+        [
+            {
+                "from" : "from/Thunar/accels.scm",
+                "to" : "to/Thunar/accels.scm"
+            }
+        ]
+    }
+}

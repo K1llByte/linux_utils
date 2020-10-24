@@ -153,6 +153,7 @@ ___
 
 
 ### i3 [Copied]
+This config file depends on the [X Server](#X-Server) config files
 `~/.config/i3/`
 
 ### i3blocks [Copied]
@@ -160,12 +161,14 @@ ___
 
 ### urxvt [Copied]
 `~/.Xresources`
+
 `~/.config/Xresources/urxvt`
 
 ### rofi [Copied]
 `~/.config/rofi/`
 
 ### picom
+This config file depends on the [X Server](#X-Server) config files
 `/etc/xdg/picom.conf`
 
 ### neofetch [Copied]
@@ -175,10 +178,13 @@ ___
 `~/.config/Code\ -\ OSS/User/keybindings.json`
 
 ### GTK
-`~/.gtkrc-2.0`
+`~/.gtkrc-2.0` 
+
 `~/.gtkrc-2.0.mine`
 
 ### Thunar [Copied]
+This config file depends on the [GTK](#GTK) config files
+
 `~/.config/Thunar/accels.scm`
 
 ### X Server

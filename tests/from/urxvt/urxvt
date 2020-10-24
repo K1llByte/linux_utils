@@ -1,0 +1,144 @@
+!                                           $$\     
+!                                           $$ |    
+! $$\   $$\  $$$$$$\ $$\   $$\ $$\    $$\ $$$$$$\   
+! $$ |  $$ |$$  __$$\\$$\ $$  |\$$\  $$  |\_$$  _|  
+! $$ |  $$ |$$ |  \__|\$$$$  /  \$$\$$  /   $$ |    
+! $$ |  $$ |$$ |      $$  $$<    \$$$  /    $$ |$$\ 
+! \$$$$$$  |$$ |     $$  /\$$\    \$  /     \$$$$  |
+!  \______/ \__|     \__/  \__|    \_/       \____/ 
+
+################# Variable Setting #################
+
+!urxvt*blurRadius: 5
+!urxvt*shading: 10
+!
+!URxvt.depth:                            32
+!URxvt*termName:                         screen-256color
+!URxvt*geometry:                         240x84
+!URxvt.loginShell:                       true
+!URxvt*scrollColor:                      #777777
+!URxvt.scrollStyle:                      rxvt
+!URxvt*scrollTtyKeypress:        true
+!URxvt*scrollTtyOutput:          false
+!URxvt*scrollWithBuffer:         true
+!URxvt*skipScroll:                       true
+!URxvt*scrollBar:                        false
+!URxvt*fading:                           30
+!URxvt*urgentOnBell:                     false
+!URxvt*visualBell:                       true
+!URxvt*mapAlert:                         true
+!URxvt*mouseWheelScrollPage:     true
+!URxvt.foreground:                       #ffffff
+!URxvt.background:                       rgba:0017/0018/0218/c800
+!# 171818
+!URxvt*colorUL:                          yellow
+!URxvt*underlineColor:           yellow
+!URxvt.saveLines:                        65535
+!URxvt.cursorBlink:                      false
+!URxvt.utf8:                             true
+!URxvt.locale:                           true
+!URxvt.letterSpace:              -1
+!URxvt.font:             xft:Droid Sans Mono:pixelsize=20:style=regular
+!URxvt.boldFont:         xft:Droid Sans:pixelsize=20:style=bold
+!! Perl extensions
+!URxvt.perl-ext-common:     default,matcher,font-size
+!URxvt.matcher.button:      1
+!URxvt.urlLauncher:         chromium
+!! URxvt.perl-ext-common:          ...,
+!URxvt.keysym.C-Up:              perl:font-size:increase
+!URxvt.keysym.C-Down:            perl:font-size:decrease
+!URxvt.keysym.C-S-Up:            perl:font-size:incglobal
+!URxvt.keysym.C-S-Down:          perl:font-size:decglobal
+!URxvt.keysym.Home: \033[1~
+!URxvt.keysym.End: \033[4~
+!URxvt.keysym.KP_Home: \033[1~
+!URxvt.keysym.KP_End:  \033[4~
+!Rxvt.keysym.Control-Up:     \033[1;5A
+!URxvt.keysym.Control-Down:   \033[1;5B
+!URxvt.keysym.Control-Left:   \033[1;5D
+!URxvt.keysym.Control-Right:  \033[1;5C
+!URxvt.keysym.C-BackSpace: \033[33~
+
+
+
+
+
+!! Colors
+!URxvt*background: #171818
+!URxvt*foreground: #B2B2B2
+!! black
+!URxvt*color0:  #000000
+!URxvt*color8:  #686868
+!! red
+!URxvt*color1:  #B21818
+!URxvt*color9:  #FF5454
+!! green
+!URxvt*color2:  #18B218
+!URxvt*color10: #54FF54
+!! yellow
+!URxvt*color3:  #B26818
+!URxvt*color11: #FFFF54
+!! blue
+!URxvt*color4:  #1818B2
+!URxvt*color12: #5454FF
+!! purple
+!URxvt*color5:  #B218B21
+!URxvt*color13: #FF54FF
+!! cyan
+!URxvt*color6:  #18B2B2
+!URxvt*color14: #54FFFF
+!! white
+!URxvt*color7:  #B2B2B2
+!URxvt*color15: #FFFFFF
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!! black
+*color0: #1b1918
+*color8: #766e6b
+!! red
+*color1: #f22c40
+*color9: #f22c40
+!! green
+*color2: #5ab738
+*color10: #5ab738
+!! yellow
+*color3: #d5911a
+*color11: #d5911a
+!! blue
+*color4: #407ee7
+*color12: #407ee7
+!! magenta
+*color5: #6666ea
+*color13: #6666ea
+!! cyan
+*color6: #00ad9c
+*color14: #00ad9c
+!! white
+*color7: #a8a19f
+*color15: #f1efee
+
+background: #171818
+urxvt.background:       [60]#171818
+urxvt.foreground:       #FFFFFF
+urxvt.blurRadius:       1
+urxvt.depth:		    32
+urxvt.font: 		    xft:Iosevka Term:autohint=true:size=15
+urxvt.boldFont:         xft:Iosevka Term:autohint=true:bold:size=15
+urxvt.italicFont:       xft:Iosevka Term:autohint=true:italic:size=15
+urxvt.boldItalicFont:   xft:Iosevka Term:autohint=true:bold:italic:size=15
+urxvt.scrollBar:	    false
+urxvt.cursorColor:	    white
+
+!! Extensions
+urxvt.perl-ext-common:	default,matcher,resize-font,keyboard-select
+urxvt.colorUL:		    #4682B4
+urxvt.keysym.M-u:	    perl:matcher:select
+urxvt.url-launcher:     firefox
+!! keyboard-select:
+urxvt.keysym.M-Escape:  perl:keyboard-select:activate
+!! resize-font
+urxvt.resize-font.smaller:	C-Down
+urxvt.resize-font.bigger:	C-Up
+!! Matcher
+urxvt.matcher.button:	1

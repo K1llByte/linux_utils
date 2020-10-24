@@ -1,25 +1,3 @@
-/* 
-{
-    "configs" : 
-        {
-            "i3" : [
-                {
-                    "from" : "config/i3/",
-                    "to" : "~/.config/i3/"
-                }
-            ],
-            "urxvt" : 
-            [
-                {
-                    "from" : "config/urxvt/Xresources",
-                    "to" : "~/.Xresources"
-                },
-            ]
-        }
-    
-}
-*/
-
 {
     "configs" :
     {
@@ -55,7 +33,7 @@
                 "to" : "~/.config/rofi/"
             }
         ],
-        "asd" :
+        "Thunar" :
         [
             {
                 "from" : "config/Thunar/accels.scm",
