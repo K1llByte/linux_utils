@@ -33,26 +33,27 @@ ___
 ___
 # VSCode
 
-| Keybind                      | Description         |
-| :--------------------------: | :-----------------: |
-| `Ctrl` + `K` \| `Ctrl` + `T` | Color Scheme        |
-| `Ctrl` + `,`                 | VSCode Settings     |
-| `Ctrl` + `Q`                 | Open/Close Terminal |
-| `Ctrl` + `B`                 | Toggle Side Bar     |
-| `Shift` + `º`                | Toggle Activity Bar |
-| `Alt` + `S`                  | Toggle Status Bar   |
-| `Ctrl` + `K` \| `V`          | View Markdown/PDF   |
-| `Ctrl` + `Shift` + `K`       | Delete line         |
-| `Ctrl` + `Shift` + `P`       | Command Palette     |
-| `Ctrl` + `P`                 | Open File           |
-| `Ctrl` + `W`                 | Close Window        |
-| `Ctrl` + `Tab`               | Next Tab            |
-| `Ctrl` + `Shift` + `Tab`     | Previous Tab        |
-| `Ctrl` + `Shift` + `7`       | Line Comment        |
-| `Ctrl` + `Shift` + `A`       | Multi Line Comment  |
-| `Ctrl` + `Shift` + `T`       | Reopen Closed File  |
-| `Alt` + `Z`                  | Toggle Word Wrap    |
-| `Ctrl` + `Shift` + `H`       | Find and Replace    |
+| Keybind                      | Description                  |
+| :--------------------------: | :--------------------------: |
+| `Ctrl` + `K` \| `Ctrl` + `T` | Color Scheme                 |
+| `Ctrl` + `,`                 | VSCode Settings              |
+| `Ctrl` + `Q`                 | Open/Close Terminal          |
+| `Ctrl` + `B`                 | Toggle Side Bar              |
+| `Shift` + `º`                | Toggle Activity Bar          |
+| `Alt` + `S`                  | Toggle Status Bar            |
+| `Ctrl` + `K` \| `V`          | View Markdown/PDF            |
+| `Ctrl` + `Shift` + `K`       | Delete line                  |
+| `Ctrl` + `Shift` + `P`       | Command Palette              |
+| `Ctrl` + `P`                 | Open File                    |
+| `Ctrl` + `W`                 | Close Window                 |
+| `Ctrl` + `Tab`               | Next Tab                     |
+| `Ctrl` + `Shift` + `Tab`     | Previous Tab                 |
+| `Ctrl` + `Shift` + `7`       | Line Comment                 |
+| `Ctrl` + `Shift` + `A`       | Multi Line Comment           |
+| `Ctrl` + `Shift` + `T`       | Reopen Closed File           |
+| `Alt` + `Z`                  | Toggle Word Wrap             |
+| `Ctrl` + `Shift` + `H`       | Find and Replace             |
+| `Ctrl` + `Alt` + `7`         | Line Comment Selected Text   |
 
 ___
 # Discord
