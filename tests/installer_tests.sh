@@ -12,6 +12,11 @@ install_configs()
 }
 
 
+testing()
+{
+    echo "coisas"
+}
+
 
 [ "$#" == 0 ] && usage
 while [ "$#" -gt 0 ]
