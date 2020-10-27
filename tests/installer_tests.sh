@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONFIGS="$HOME/.config/"
+CONFIGS="to/" #"$HOME/.config/"
 
 [ ! -d $CONFIGS ] && mkdir "$CONFIGS"
 
@@ -10,58 +10,13 @@ usage()
 }
 
 
-create_dir()
-{
-    while read dir
-    do
-        [ "${dir: -1}" = "/" ] && mkdir -p "$dir" || mkdir -p $(dirname "$dir");
-    done < "${1:-/dev/stdin}"
-}
-
-install_all_configs()
-{
-    local CONFIG_SRC="from/"
-    local CONFIG_DEST="to/"
-    cp -rf 
-}
-
-
-
 install_specific_configs()
 {
-    #CONFIGS=~/to/
-    #[ -f arg ] && mkdir -p $(dirname "arg");[ -d arg ] && mkdir -p arg;
-    #[ -f "" ] && mkdir -p $(dirname "");[ -d arg ] && mkdir -p "";
-
-
-
-    #MK_DIR_INE=""
-
-    
-    
-    AWK_SCRIPT='
-    /[ ]*#.*/ {}
-
-    function aux(str)
-    {
-        return "tmp=\""str"\"; [ \"${tmp: -1}\" = \"/\" ] && mkdir -p "str" || mkdir -p $(dirname "str");"
-    }
-
-    /[^:]*:[ ]+[^ ]+[ ]+[^ ]+/ {
-        print aux($3)" cp -r",$2,$3,"&& echo \"Installed "substr($1,1,length($1)-1)" config\n"
-    }
-    '
-    eval $(awk "$AWK_SCRIPT" configs_tests.txt)
-}
-
-
-testing()
-{
-    for item in $(ls -a); do
-        if [ ! $item = "." ] && [ ! $item = ".." ]; then
-            [ -d $item ] && echo "'$item' is folder" || echo "'$item' is file";
-        fi
+    for item in $(awk '/[ ]*#.*/{} /[ ]*[^:]*:[ ]*.+[ ]+.*/{ print $3 }' configs_tests.txt); do
+        [ "${item: -1}" = "/" ] && mkdir -p "$item" || mkdir -p "$(dirname $item)"
     done
+    eval "$(awk '/[ ]*#.*/{} /[ ]*[^:]*:[ ]*.+[ ]+.*/{ print "cp -rfv",$2,$3 }' configs_tests.txt)"
+
 }
 
 
@@ -75,7 +30,7 @@ do
     ;;
 
     configs)
-        install_all_configs
+        install_specific_configs
     ;;
     
     test)

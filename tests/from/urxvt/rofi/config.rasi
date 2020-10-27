@@ -1,0 +1,4 @@
+configuration {
+    theme: "flat-yellow";
+    font: "DejaVu Sans Code Regular 14";
+} 
