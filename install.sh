@@ -41,6 +41,7 @@ install_scripts()
 
 install_specific_configs()
 {
+    # TODO: Adapt to source / destination directories
     [ -z $1 ] && echo "
     i3:       from/i3/               to/
     i3blocks: from/i3blocks/         to/

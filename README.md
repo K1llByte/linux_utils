@@ -2,19 +2,18 @@
 
 Respoitory dedicated to bash scripts, dotfiles, my personal standards / guidelines and markdown manuals
 
-## ScriptsPlans
+## Scripts
 
-- [x] Auto Scripts Installer
-- [ ] Firewall Network IP automate
-- [x] Auto alias maker
+Handy scripts used as executables
 
-### Firewall Network IP automate file syntax
+Located at the [`scripts/`](scripts/) folder
 
-`[port] [ip]`
+A softlink will be ported to `$HOME`
 
-```
-6666 11.111.1.11
-6666 34.141.22.51
-```
+## Configs
 
-> Also, other easier and more manaable way is to just have a file with the ips separed by a breakline
+Located at the [`configs/`](configs/) folder
+
+## Manuals
+
+Located at the [`manuals/`](manuals/) folder

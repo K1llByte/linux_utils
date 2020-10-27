@@ -135,7 +135,19 @@ case $1 in
         homes $@
     ;;
 
+    -w|work)
+        shift
+        work $@
+    ;;
+
     *)
         echo "error: Invalid subcommand $@"
     ;;
 esac
+
+
+# alias sethome "home set"
+# alias delhome "home delete"
+# alias homes "home list"
+# alias home "home goto"
+# alias work "home work"
