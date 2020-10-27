@@ -39,11 +39,31 @@ install_scripts()
     echo "Installed scripts in $SCRIPTS"
 }
 
+install_specific_configs()
+{
+    [ -z $1 ] && echo "
+    i3:       from/i3/               to/
+    i3blocks: from/i3blocks/         to/
+    rofi:     from/rofi/             to/
+    urxvt:    from/urxvt/urxvt       to/Xresources.d/urxvt
+    urxvt:    from/urxvt/Xresources  to/.Xresources
+    Thunar:   from/Thunar/accels.scm to/Thunar/accels.scm'
+    " > /tmp/.tmp.txt
+    
+    
+    [ ! -z $1 ] && IN_CONFIG="$1" || IN_CONFIG="/tmp/.tmp.txt"
+    #[ ! -z $1 ] && echo "input" || echo "no input"
+
+    for item in $(awk '/[ ]*#.*/{} /[ ]*[^:]*:[ ]*.+[ ]+.*/{ print $3 }' $IN_CONFIG); do
+        [ "${item: -1}" = "/" ] && mkdir -p "$item" || mkdir -p "$(dirname $item)"
+    done
+    eval "$(awk '/[ ]*#.*/{} /[ ]*[^:]*:[ ]*.+[ ]+.*/{ print "cp -rfv",$2,$3 }' $IN_CONFIG)"
+}
 
 install_configs()
 {
     CONFIGS=~/.config/
-    eval "$(awk '/[ ]*#.*/{} /[^:]*:[ ]+[^ ]+[ ]+[^ ]+/{print "cp -r",$2,$3,"&& echo \"Installed ",$2,"\" config files"}' configs_tests.txt)"
+    #eval "$(awk '/[ ]*#.*/{} /[^:]*:[ ]+[^ ]+[ ]+[^ ]+/{print "cp -r",$2,$3,"&& echo \"Installed ",$2,"\" config files"}' configs_tests.txt)"
     echo "Installed configs in $CONFIGS"
 }
 
@@ -84,11 +104,11 @@ do
 
     *)
         echo "error: Tag doesn't exists"
-
+        exit 1
     ;;
     
     esac
-    exit 1
+    exit 0
 done
 
 # jq -r '.configs[] | "\(map(.from)[]) \(map(.to)[])"' config/configs.json
