@@ -5,6 +5,11 @@
 # install.sh scripts
 # install.sh configs
 
+usage()
+{
+    echo "Usage: install [all|scripts|configs]"
+}
+
 install_scripts()
 {
     # Brief: Why is this brainlet monkey installing scripts
@@ -39,16 +44,16 @@ install_scripts()
     echo "Installed scripts in $SCRIPTS"
 }
 
-install_specific_configs()
+install_configs()
 {
-    # TODO: Adapt to source / destination directories
+    # Default config files src/dest
     [ -z $1 ] && echo "
-    i3:       from/i3/               to/
-    i3blocks: from/i3blocks/         to/
-    rofi:     from/rofi/             to/
-    urxvt:    from/urxvt/urxvt       to/Xresources.d/urxvt
-    urxvt:    from/urxvt/Xresources  to/.Xresources
-    Thunar:   from/Thunar/accels.scm to/Thunar/accels.scm'
+    i3:       configs/i3/               ~/.config/
+    i3blocks: configs/i3blocks/         ~/.config/
+    rofi:     configs/rofi/             ~/.config/
+    urxvt:    configs/urxvt/urxvt       ~/.config/Xresources.d/urxvt
+    urxvt:    configs/urxvt/Xresources  ~/.config/.Xresources
+    Thunar:   configs/Thunar/accels.scm ~/.config/Thunar/accels.scm
     " > /tmp/.tmp.txt
     
     
@@ -61,29 +66,29 @@ install_specific_configs()
     eval "$(awk '/[ ]*#.*/{} /[ ]*[^:]*:[ ]*.+[ ]+.*/{ print "cp -rfv",$2,$3 }' $IN_CONFIG)"
 }
 
-install_configs()
-{
-    CONFIGS=~/.config/
-    #eval "$(awk '/[ ]*#.*/{} /[^:]*:[ ]+[^ ]+[ ]+[^ ]+/{print "cp -r",$2,$3,"&& echo \"Installed ",$2,"\" config files"}' configs_tests.txt)"
-    echo "Installed configs in $CONFIGS"
-}
+# install_configs()
+# {
+#     CONFIGS=~/.config/
+#     #eval "$(awk '/[ ]*#.*/{} /[^:]*:[ ]+[^ ]+[ ]+[^ ]+/{print "cp -r",$2,$3,"&& echo \"Installed ",$2,"\" config files"}' configs_tests.txt)"
+#     echo "Installed configs in $CONFIGS"
+# }
 
-testing()
-{
-    local STR="to/example/file.txt"
-    local PATH_TO_CREATE=$STR
-    [ -f $STR ] && PATH_TO_CREATE="$(dirname  $(realpath $STR))"
-    mkdir -p $PATH_TO_CREATE
-}
+# testing()
+# {
+#     local STR="to/example/file.txt"
+#     local PATH_TO_CREATE=$STR
+#     [ -f $STR ] && PATH_TO_CREATE="$(dirname  $(realpath $STR))"
+#     mkdir -p $PATH_TO_CREATE
+# }
 
 
-[ "$#" == 0 ] && install_scripts #echo "Usage: install [all|scripts|configs]"
+[ "$#" == 0 ] && usage #install_scripts
 while [ "$#" -gt 0 ]
 do
     case "$1" in
 
     "--help" | "")
-        echo "Usage: install [all|scripts|configs]"
+        usage
     ;;
 
     all)

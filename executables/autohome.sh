@@ -1,30 +1,40 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# sethome [tag] \ Sets current directory as a home identified by the tag
-# delhome [tag] \ Deletes a home by the tag
-# home [tag]	\ Go to a home identified by the tag 
-# homes	        \ Lists all homes avaiable
-# work [tag]	\ Open vscode editor with the specified home
+# home -s|set [tag] <path> \ Sets current directory as a home identified by the tag
+# home -d|delete [tag]     \ Deletes a home by the tag
+# home -g|goto [tag] 	   \ Go to a home identified by the tag 
+# home -l|list [tag]       \ Lists all homes avaiable
+# home -w|work [tag]       \ Open vscode editor with the specified home
 
 
 # File Format 
 # 'tag path/to/dir'
 HOMES=~/.config/homes/config
 
-# Create Homes file if not exists
+# Create file and parent folder if not exists
 [ ! -f "$HOMES" ] &&        \
 mkdir -p ~/.config/homes && \
 touch $HOMES
 
+usage()
+{
+    echo -e """
+    Usage: $0 
+        $0 -s|set [tag] <path> \ Sets current directory as a home identified by the tag
+        $0 -d|delete [tag]     \ Deletes a home by the tag
+        $0 -g|goto [tag]       \ Go to a home identified by the tag 
+        $0 -l|list [tag]       \ Lists all homes avaiable
+        $0 -w|work [tag]       \ Open vscode editor with the specified home"""
+}
+
+
 function sethome
 {
     if [ ! -z "$1" ]; then
-
-        #[[ ! -e $HOMES ]] && touch $HOMES
         
         # Check if home tag exists
         [ $(cat $HOMES | awk -v key="$1" '{ if($1 == key) print $1 }') ] && \
-        echo "Home already exists" && return
+        echo "Home already exists" && return 
 
         DIR=$(pwd)
 
@@ -40,7 +50,8 @@ function sethome
 
 function homes
 {
-    if [ ! -e $HOMES ] || [ ! -s $HOMES ]; then
+    # Checks if file
+    if [ ! -f $HOMES ] || [ ! -s $HOMES ]; then
         echo "No homes avaiable :("
         return;
     fi
@@ -79,7 +90,7 @@ function home
 
 function delhome
 {
-    if [ -z "$1" ]; then
+    if [ -z "$1" ]; then	
         echo "error: delhome [tag]"
     else
         sed -i "/$1 /d" $HOMES
@@ -100,3 +111,46 @@ function work
         echo "error: home not found"
     fi
 }
+
+
+[ "$#" == 0 ] && usage
+
+case $1 in 
+    "--help")
+        usage
+    ;;
+
+    "-s"|"set")
+        echo "Set subcommand"
+        shift
+        sethome $@
+    ;;
+
+    "-d"|"delete")
+        echo "Delete subcommand"
+        shift
+        delhome $@
+    ;;
+
+    "-l"|"list")
+        echo "List subcommand"
+        shift
+        homes $@
+    ;;
+
+    "-g"|"goto")
+        echo "Goto subcommand"
+        shift
+        home $@
+    ;;
+
+    "-w"|"work")
+        echo "Work subcommand"
+        shift
+        work $@
+    ;;
+
+    *)
+        echo "error: Invalid subcommand $@"
+    ;;
+esac

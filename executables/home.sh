@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-# home -s|set [tag] <path> \ Sets current directory as a home identified by the tag
-# home -d|delete [tag]     \ Deletes a home by the tag
-# home -g|goto [tag] 	   \ Go to a home identified by the tag 
-# home -l|list [tag]       \ Lists all homes avaiable
-# home -w|work [tag]       \ Open vscode editor with the specified home
+# autohome -s|set [tag] <path> \ Sets current directory as a home identified by the tag
+# autohome -d|delete [tag]     \ Deletes a home by the tag
+# autohome -g|goto [tag] 	   \ Go to a home identified by the tag 
+# autohome -l|list [tag]       \ Lists all homes avaiable
+# autohome -w|work [tag]       \ Open vscode editor with the specified home
 
 
 # File Format 
@@ -114,37 +114,38 @@ function work
 
 
 [ "$#" == 0 ] && usage
+
 case $1 in 
     "--help")
         usage
     ;;
 
     "-s"|"set")
-        echo "Set subcommand"
+        #echo "Set subcommand"
         shift
         sethome $@
     ;;
 
     "-d"|"delete")
-        echo "Delete subcommand"
+        #echo "Delete subcommand"
         shift
         delhome $@
     ;;
 
     "-l"|"list")
-        echo "List subcommand"
+        #echo "List subcommand"
         shift
         homes $@
     ;;
 
     "-g"|"goto")
-        echo "Goto subcommand"
+        #echo "Goto subcommand"
         shift
         home $@
     ;;
 
     "-w"|"work")
-        echo "Work subcommand"
+        #echo "Work subcommand"
         shift
         work $@
     ;;
