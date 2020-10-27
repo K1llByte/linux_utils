@@ -2,7 +2,7 @@
 
 # home -s|set [tag] <path> \ Sets current directory as a home identified by the tag
 # home -d|delete [tag]     \ Deletes a home by the tag
-# home |-g|goto [tag] 	   \ Go to a home identified by the tag 
+# home -g|goto [tag] 	   \ Go to a home identified by the tag 
 # home -l|list [tag]       \ Lists all homes avaiable
 # home -w|work [tag]       \ Open vscode editor with the specified home
 
@@ -20,7 +20,11 @@ usage()
 {
     echo -e """
     Usage: $0 
-        asdasd"""
+        $0 -s|set [tag] <path> \ Sets current directory as a home identified by the tag
+        $0 -d|delete [tag]     \ Deletes a home by the tag
+        $0 -g|goto [tag] 	     \ Go to a home identified by the tag 
+        $0 -l|list [tag]       \ Lists all homes avaiable
+        $0 -w|work [tag]       \ Open vscode editor with the specified home"""
 }
 
 
@@ -111,31 +115,36 @@ function work
 
 [ "$#" == 0 ] && usage
 case $1 in 
-    --help)
+    "--help")
         usage
     ;;
 
-    -s|set)
+    "-s"|"set")
+        echo "Set subcommand"
         shift
         sethome $@
     ;;
 
-    -d|delete)
+    "-d"|"delete")
+        echo "Delete subcommand"
         shift
         delhome $@
     ;;
 
-    -g|goto|"")
-        shift
-        home $@
-    ;;
-
-    -l|list)
+    "-l"|"list")
+        echo "List subcommand"
         shift
         homes $@
     ;;
 
-    -w|work)
+    "-g"|"goto")
+        echo "Goto subcommand"
+        shift
+        home $@
+    ;;
+
+    "-w"|"work")
+        echo "Work subcommand"
         shift
         work $@
     ;;
@@ -144,10 +153,3 @@ case $1 in
         echo "error: Invalid subcommand $@"
     ;;
 esac
-
-
-# alias sethome "home set"
-# alias delhome "home delete"
-# alias homes "home list"
-# alias home "home goto"
-# alias work "home work"
