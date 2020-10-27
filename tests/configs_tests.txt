@@ -1,7 +1,6 @@
-i3:       from/i3/               to/i3/
-i3blocks: from/i3blocks/         to/i3blocks/
-rofi:     from/rofi/             to/rofi/
+i3:       from/i3/               to/
+i3blocks: from/i3blocks/         to/
+rofi:     from/rofi/             to/
 urxvt:    from/urxvt/urxvt       to/Xresources.d/urxvt
 urxvt:    from/urxvt/Xresources  to/.Xresources
 Thunar:   from/Thunar/accels.scm to/Thunar/accels.scm
-#coisa acas
