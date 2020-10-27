@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # home -s|set [tag] <path> \ Sets current directory as a home identified by the tag
 # home -d|delete [tag]     \ Deletes a home by the tag
