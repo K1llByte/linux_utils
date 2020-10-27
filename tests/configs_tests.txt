@@ -1,6 +1,7 @@
-i3:       from/i3/               to/
-i3blocks: from/i3blocks/         to/
-rofi:     from/rofi/             to/
-urxvt:    from/urxvt/urxvt       to/Xresources.d/urxvt
-urxvt:    from/urxvt/Xresources  to/.Xresources
-Thunar:   from/Thunar/accels.scm to/Thunar/accels.scm
+i3:       configs/i3/               ~/.config/
+i3blocks: configs/i3blocks/         ~/.config/
+neofetch: configs/neofetch/         ~/.config/
+rofi:     configs/rofi/             ~/.config/
+Thunar:   configs/Thunar/accels.scm ~/.config/Thunar/accels.scm
+urxvt:    configs/urxvt/urxvt       ~/.config/Xresources.d/urxvt
+urxvt:    configs/urxvt/Xresources  ~/.config/.Xresources

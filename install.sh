@@ -50,10 +50,11 @@ install_configs()
     [ -z $1 ] && echo "
     i3:       configs/i3/               ~/.config/
     i3blocks: configs/i3blocks/         ~/.config/
+    neofetch: configs/neofetch/         ~/.config/
     rofi:     configs/rofi/             ~/.config/
+    Thunar:   configs/Thunar/accels.scm ~/.config/Thunar/accels.scm
     urxvt:    configs/urxvt/urxvt       ~/.config/Xresources.d/urxvt
     urxvt:    configs/urxvt/Xresources  ~/.config/.Xresources
-    Thunar:   configs/Thunar/accels.scm ~/.config/Thunar/accels.scm
     " > /tmp/.tmp.txt
     
     
