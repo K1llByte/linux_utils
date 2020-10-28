@@ -1,0 +1,6 @@
+alias sd="shutdown now"
+alias wifi="nmtui connect"
+alias clipboard="xclip -selection clipboard"
+alias todo="code ~/Documents/Other/todo.md "
+alias keybinds="code /home/kb/Documents/Projects/linux_utils/manuals/keybinds.md"
+alias commands="code /home/kb/Documents/Projects/linux_utils/manuals/commands.md"

@@ -59,7 +59,9 @@ install_configs()
     urxvt:    configs/urxvt/Xresources      ~/.Xresources
     xserver:  configs/.xinitrc              ~/.xinitrc
     bash:     configs/.bashrc               ~/.bashrc
+    bash:     configs/.bash_profile         ~/.bash_profile
     bash:     configs/aliases.sh            ~/.config/aliases.sh
+    git:      configs/.gitignore            ~/.config/.gitignore
     " > /tmp/.tmp.txt
     
     
