@@ -48,18 +48,22 @@ install_configs()
 {
     # Default config files src/dest
     [ -z $1 ] && echo "
-    i3:       configs/i3/               ~/.config/
-    i3blocks: configs/i3blocks/         ~/.config/
-    neofetch: configs/neofetch/         ~/.config/
-    rofi:     configs/rofi/             ~/.config/
-    Thunar:   configs/Thunar/accels.scm ~/.config/Thunar/accels.scm
-    urxvt:    configs/urxvt/urxvt       ~/.config/Xresources.d/urxvt
-    urxvt:    configs/urxvt/Xresources  ~/.config/.Xresources
+    i3:       configs/i3/                   ~/.config/
+    i3blocks: configs/i3blocks/             ~/.config/
+    neofetch: configs/neofetch/             ~/.config/
+    rofi:     configs/rofi/                 ~/.config/
+    Thunar:   configs/Thunar/accels.scm     ~/.config/Thunar/accels.scm
+    Thunar:   configs/Thunar/gtkrc-2.0.mine ~/.gtkrc-2.0.mine
+    Thunar:   configs/Thunar/gtkrc-2.0      ~/.gtkrc-2.0
+    urxvt:    configs/urxvt/urxvt           ~/.config/Xresources.d/urxvt
+    urxvt:    configs/urxvt/Xresources      ~/.Xresources
+    xserver:  configs/.xinitrc              ~/.xinitrc
+    bash:     configs/.bashrc               ~/.bashrc
+    bash:     configs/aliases.sh            ~/.config/aliases.sh
     " > /tmp/.tmp.txt
     
     
     [ ! -z $1 ] && IN_CONFIG="$1" || IN_CONFIG="/tmp/.tmp.txt"
-    #[ ! -z $1 ] && echo "input" || echo "no input"
 
     for item in $(awk '/[ ]*#.*/{} /[ ]*[^:]*:[ ]*.+[ ]+.*/{ print $3 }' $IN_CONFIG); do
         [ "${item: -1}" = "/" ] && mkdir -p "$item" || mkdir -p "$(dirname $item)"

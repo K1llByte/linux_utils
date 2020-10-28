@@ -13,18 +13,18 @@ ___
 
 ### Software
 
-- i3-gaps - Windows Manager
+- i3-gaps -       Windows Manager
 - NetworkManager (nmtui and nm-connection-editor)
-- rofi - App Launcher
-- urxvt - Terminal Emulator
-- i3lock - Lockscreen
-- feh - Image viewer
-- chromium - Browser
-- htop - Resources Manager (CPU etc ...)
+- rofi -          App Launcher
+- urxvt -         Terminal Emulator
+- i3lock -        Lockscreen
+- feh -           Image viewer
+- chromium -      Browser
+- htop -          Resources Manager (CPU etc ...)
 - picom/compton - Compositor
-- Xarchiver - Unified archives zipper and unzipper
-- maim - Screenshot tool
-- notify-send - Notification applet
+- Xarchiver -     Unified archives zipper and unzipper
+- maim -          Screenshot tool
+- notify-send -   Notification applet
 
 
 ### Extensions
@@ -169,6 +169,7 @@ This config file depends on the [X Server](#X-Server) config files
 
 ### picom
 This config file depends on the [X Server](#X-Server) config files
+
 `/etc/xdg/picom.conf`
 
 ### neofetch [Copied]
@@ -177,13 +178,15 @@ This config file depends on the [X Server](#X-Server) config files
 ### vscode
 `~/.config/Code\ -\ OSS/User/keybindings.json`
 
-### GTK
+### GTK [Copied]
 `~/.gtkrc-2.0` 
 
 `~/.gtkrc-2.0.mine`
 
 ### Thunar [Copied]
 This config file depends on the [GTK](#GTK) config files
+
+This config dependency is required for Thunar to have custom keybinds
 
 `~/.config/Thunar/accels.scm`
 
