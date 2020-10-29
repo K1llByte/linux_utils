@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # install.sh
+# install.sh --help
 # install.sh all
 # install.sh scripts
 # install.sh configs
@@ -31,6 +32,7 @@ install_scripts()
         echo "Not found Instance in .bashrc"
     fi
 
+    # If scripts folder doesn't exist will create it
     [ ! -d "$SCRIPTS" ] && mkdir $SCRIPTS && echo "Created $SCRIPTS"
 
     # Copy all scripts to default scripts folder
@@ -46,50 +48,49 @@ install_scripts()
 
 install_configs()
 {
+    # 
+
+    local AWK_SCRIPT_AUX='
+    BEGIN {FS="[,()]"}
+    /#.*/ {}
+    /[a-zA-Z_][a-zA-Z0-9_]*[ ]*\([ ]*"[a-zA-Z0-9_\/.~\- ]+"[ ]*,[ ]*"[a-zA-Z0-9_\/.~\- ]+"[ ]*\)/ {
+    gsub(/[ ]*"/,"\"");
+    gsub(/"[ ]*/,"\"");
+    gsub(/[ ]+/,"",$1);
+    $2 = substr($2,2,length($2)-2);
+    $3 = substr($3,2,length($3)-2);'
+    local AWK_SCRIPT_1="$AWK_SCRIPT_AUX print \$3 }"
+    local AWK_SCRIPT_2="$AWK_SCRIPT_AUX print \"cp -rfv\",\$2,\$3 }"
+    
     # Default config files src/dest
-    [ -z $1 ] && echo "
-    i3:       configs/i3/                   ~/.config/
-    i3blocks: configs/i3blocks/             ~/.config/
-    neofetch: configs/neofetch/             ~/.config/
-    rofi:     configs/rofi/                 ~/.config/
-    Thunar:   configs/Thunar/accels.scm     ~/.config/Thunar/accels.scm
-    Thunar:   configs/Thunar/gtkrc-2.0.mine ~/.gtkrc-2.0.mine
-    Thunar:   configs/Thunar/gtkrc-2.0      ~/.gtkrc-2.0
-    urxvt:    configs/urxvt/urxvt           ~/.config/Xresources.d/urxvt
-    urxvt:    configs/urxvt/Xresources      ~/.Xresources
-    xserver:  configs/.xinitrc              ~/.xinitrc
-    bash:     configs/.bashrc               ~/.bashrc
-    bash:     configs/.bash_profile         ~/.bash_profile
-    bash:     configs/aliases.sh            ~/.config/aliases.sh
-    git:      configs/.gitignore            ~/.config/.gitignore
-    " > /tmp/.tmp.txt
+    [ -z $1 ] && echo '
+    i3       ("configs/i3/"                   , "~/.config/"                  )
+    i3blocks ("configs/i3blocks/"             , "~/.config/"                  )
+    neofetch ("configs/neofetch/"             , "~/.config/"                  )
+    rofi     ("configs/rofi/"                 , "~/.config/"                  )
+    Thunar   ("configs/Thunar/accels.scm"     , "~/.config/Thunar/accels.scm" )
+    Thunar   ("configs/Thunar/gtkrc-2.0.mine" , "~/.gtkrc-2.0.mine"           )
+    Thunar   ("configs/Thunar/gtkrc-2.0"      , "~/.gtkrc-2.0"                )
+    urxvt    ("configs/urxvt/urxvt"           , "~/.config/Xresources.d/urxvt")
+    urxvt    ("configs/urxvt/Xresources"      , "~/.Xresources"               )
+    xserver  ("configs/.xinitrc"              , "~/.xinitrc"                  )
+    bash     ("configs/.bashrc"               , "~/.bashrc"                   )
+    bash     ("configs/.bash_profile"         , "~/.bash_profile"             )
+    bash     ("configs/aliases.sh"            , "~/.config/aliases.sh"        )
+    git      ("configs/.gitignore"            , "~/.config/.gitignore"        )
+    ' > /tmp/.tmp.txt
     
     
     [ ! -z $1 ] && IN_CONFIG="$1" || IN_CONFIG="/tmp/.tmp.txt"
 
-    for item in $(awk '/[ ]*#.*/{} /[ ]*[^:]*:[ ]*.+[ ]+.*/{ print $3 }' $IN_CONFIG); do
+    for item in $(awk "$AWK_SCRIPT_1" $IN_CONFIG); do
         [ "${item: -1}" = "/" ] && mkdir -p "$item" || mkdir -p "$(dirname $item)"
     done
-    eval "$(awk '/[ ]*#.*/{} /[ ]*[^:]*:[ ]*.+[ ]+.*/{ print "cp -rfv",$2,$3 }' $IN_CONFIG)"
+    eval "$(awk "$AWK_SCRIPT_2" $IN_CONFIG)"
 }
 
-# install_configs()
-# {
-#     CONFIGS=~/.config/
-#     #eval "$(awk '/[ ]*#.*/{} /[^:]*:[ ]+[^ ]+[ ]+[^ ]+/{print "cp -r",$2,$3,"&& echo \"Installed ",$2,"\" config files"}' configs_tests.txt)"
-#     echo "Installed configs in $CONFIGS"
-# }
 
-# testing()
-# {
-#     local STR="to/example/file.txt"
-#     local PATH_TO_CREATE=$STR
-#     [ -f $STR ] && PATH_TO_CREATE="$(dirname  $(realpath $STR))"
-#     mkdir -p $PATH_TO_CREATE
-# }
-
-
-[ "$#" == 0 ] && usage #install_scripts
+[ "$#" == 0 ] && usage
 while [ "$#" -gt 0 ]
 do
     case "$1" in
