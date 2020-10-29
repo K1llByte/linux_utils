@@ -86,7 +86,14 @@ install_configs()
     [ ! -z $1 ] && IN_CONFIG="$1" || IN_CONFIG="/tmp/.tmp.txt"
 
     for item in $(awk "$AWK_SCRIPT_1" $IN_CONFIG); do
-        [ "${item: -1}" = "/" ] && mkdir -p "$item" || mkdir -p "$(dirname $item)"
+        # Create destination parent folders
+        if [ "${item: -1}" = "/" ]; then
+            mkdir -p "$item"
+        else
+            # If file already exists rename to {name}.old
+            [ -f "$item" ] && mv "$item" "$item.old"
+            mkdir -p "$(dirname $item)"
+        fi
     done
     eval "$(awk "$AWK_SCRIPT_2" $IN_CONFIG)"
 }
