@@ -48,7 +48,9 @@ install_scripts()
 
 install_configs()
 {
-    # 
+    # This awk script string parses the config installation
+    # file and at the end performs and action in this case
+    # we have 'print $3' and 'print "cp -rfv",$2,$3'
 
     local AWK_SCRIPT_AUX='
     BEGIN {FS="[,()]"}
@@ -124,5 +126,3 @@ do
     esac
     exit 0
 done
-
-# jq -r '.configs[] | "\(map(.from)[]) \(map(.to)[])"' config/configs.json
