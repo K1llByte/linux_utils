@@ -8,7 +8,7 @@ Handy scripts used as executables
 
 Located at the [`scripts/`](scripts/) folder
 
-A softlink will be ported to `$HOME`
+A softlink (or copy) will be ported to `$HOME`
 
 ## Configs
 
