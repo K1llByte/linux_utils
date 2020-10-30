@@ -34,14 +34,14 @@ function sethome
         echo "Home set: $DIR"
 
     else
-        echo "error: sethome [tag] ([dir])"
+        >&2 echo "error: sethome [tag] <[dir]>"
     fi
 }
 
 function homes
 {
     if [ ! -e $HOMES ] || [ ! -s $HOMES ]; then
-        echo "No homes avaiable :("
+        >&2 echo "error: no homes avaiable :("
         return;
     fi
 
@@ -64,7 +64,7 @@ function homes
 function home
 {
     if [ -z "$1" ]; then
-        echo "error: home [tag]"
+        >&2 echo "error: home [tag]"
         return
     fi
 
@@ -72,7 +72,7 @@ function home
     if [ $VAL ]; then
         cd $VAL
     else
-        echo "error: home not found"
+        >&2 echo "error: home not found"
     fi
     
 }
@@ -80,7 +80,7 @@ function home
 function delhome
 {
     if [ -z "$1" ]; then
-        echo "error: delhome [tag]"
+        >&2 echo "error: delhome [tag]"
     else
         sed -i "/$1 /d" $HOMES
     fi
@@ -89,7 +89,7 @@ function delhome
 function work
 {
     if [ -z "$1" ]; then
-        echo "error: work [tag]"
+        >&2 echo "error: work [tag]"
         return
     fi
 
@@ -97,6 +97,6 @@ function work
     if [ $VAL ]; then
         code $VAL
     else
-        echo "error: home not found"
+        >&2 echo "error: home not found"
     fi
 }

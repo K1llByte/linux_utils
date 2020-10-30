@@ -23,14 +23,14 @@ function setwall
         cp $1 ~/.config/i3/wallpaper
         i3-msg -q restart
     else
-		echo "error: setwall [img_path]"
+		>&2 echo "error: setwall [img_path]"
 	fi
 }
 
 function mkfile
 {
     if [ -z $1 ]; then
-        echo "error: mkfile [file_path]"
+        >&2 echo "error: mkfile [file_path]"
     else
 		mkdir -p "$(dirname "$1")" && touch "$1"
 	fi

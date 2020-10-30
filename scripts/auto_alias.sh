@@ -22,25 +22,25 @@ source $ALIASES
 function setalias
 {
     if [ -z "$1" ] || [ -z "$2" ]; then
-        echo "error: setalias [name] [command]"
+        >&2 echo "error: setalias [name] [command]"
         return
     fi
 
-    tmp="alias $1=\"$2\""
+    tmp="alias $1="
     if ! grep -Fxq "$tmp" $ALIASES; then
 
         echo "$tmp" >> $ALIASES
 
         alias $1="$2"
     else
-        echo "error: alias already exists"
+        >&2 echo "error: alias already exists"
     fi
 }
 
 function delalias
 {
     if [ -z $1 ]; then
-        echo "error: delalias [name]"
+        >&2 echo "error: delalias [name]"
         return
     fi
     sed -i "/alias $1=\".*\"/d" $ALIASES
