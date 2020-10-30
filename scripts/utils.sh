@@ -38,9 +38,41 @@ function mkfile
 
 function battery
 {
-    # TODO: argument to check specific battery level
-    local BATTERIES=$(ls /sys/class/power_supply/BAT*/capacity)
-    cat $BATTERIES | awk -v n=$(wc -w $BATTERIES | awk '{n=$1} END {print n}') '{s+=$1} END {printf "%.0f%\n", s/n}'
+    usage()
+    {
+        echo "Usage: 
+        battery         Prints computer battery level
+        battery --help  Shows this message
+        battery -n      Prints number of batteries
+        battery [0-9]   Prints specific battery level"
+    }
+
+    number_of_batteries()
+    {
+        wc -w  $(ls /sys/class/power_supply/BAT**/capacity) | awk '{n=$1} END {print n}'
+    }
+
+    case "$1" in
+    "--help")
+        usage
+    ;;
+
+    "-n") # Prints number of batteries
+        number_of_batteries
+    ;;
+
+    "") # Prints computer battery level
+        #local BATTERIES=$(ls /sys/class/power_supply/BAT*/capacity)
+        cat $(ls /sys/class/power_supply/BAT**/capacity) | awk -v n=$(number_of_batteries) '{s+=$1} END {printf "%.0f%\n", s/n}'
+    ;;
+
+    *) # Prints specific battery level
+        [ -z $(echo "$1" | grep -Eo "^[0-9]+$" ) ] && echo "error: invalid argument" && return 1
+        [ $1 -lt $(number_of_batteries) ] && \
+        echo "$(cat /sys/class/power_supply/BAT$1/capacity)%" || \
+        >&2 echo "error: invalid battery number" && return 1
+    ;;
+    esac
 }
 
 function screenshot
