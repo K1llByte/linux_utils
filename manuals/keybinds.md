@@ -58,10 +58,17 @@ ___
 ___
 # Discord
 
-| Keybind      | Description     |
-| :----------: | :-------------: |
-| `Ctrl` + `K` | Super Find Chat |
-| `Ctrl` + `M` | Toggle Mute     |
+| Keybind                       | Description                     |
+| :---------------------------: | :-----------------------------: |
+| `Ctrl` + `K`                  | Super Find Chat                 |
+| `Ctrl` + `Shift` + `M`        | Toggle Mute                     |
+| `Alt` + `Up Arrow`            | Navigate Channels Up            |
+| `Alt` + `Down Arrow`          | Navigate Channels Down          |
+| `Ctrl` + `Alt` + `Up Arrow`   | Navigate Servers Up             |
+| `Ctrl` + `Alt` + `Down Arrow` | Navigate Servers Down           |
+| `Esc`                         | Mark Channel As Read & Go Down  |
+| `Shift` + `Esc`               | Mark Server As Read & Go Down   |
+| `Ctrl` + `P`                  | Toggle Pinned Messages          |
 
 ___
 # Chrome
