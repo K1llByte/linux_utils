@@ -43,6 +43,7 @@ function battery
         echo "Usage: 
         battery         Prints computer battery level
         battery --help  Shows this message
+        battery -a      Prints all batteries level
         battery -n      Prints number of batteries
         battery [0-9]   Prints specific battery level"
     }
@@ -56,7 +57,11 @@ function battery
     "--help")
         usage
     ;;
-
+    
+    "-a")
+        cat $(ls /sys/class/power_supply/BAT**/capacity)
+    ;;
+    
     "-n") # Prints number of batteries
         number_of_batteries
     ;;
