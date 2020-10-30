@@ -19,25 +19,27 @@ command=id=$(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}') && x
 interval=repeat
 
 [battery]
-command=BATTERIES=$(ls /sys/class/power_supply/BAT*/capacity); cat $BATTERIES | awk -v n=$(wc -w $BATTERIES | awk '{n=$1} END {print n}') '{s+=$1} END {printf "%.0f%\n", s/n}' ; unset BATTERIES
+command=~/.config/i3blocks/battery.sh
 interval=1
-label=<span color="#f0b40e"> </span>
+#label=<span color="#f0b40e"> </span>
 
-# [wifi]
-# command=iwgetid -r | tr '\n' ' ' && grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i%\n", int($3 * 100 / 70) }'
-# instance=wlp11s0f3u1
-# interval=5
-# label=<span color="#ffb86c"> </span>
+#empty
+#quarter
+#half
+#three quarters
+#full
+
+
+[wifi]
+command=iwgetid -r # iwgetid -r | tr '\n' ' ' && grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i%\n", int($3 * 100 / 70) }'
+instance=wlan0
+interval=5
+label=<span color="#f0b40e"> </span>
 
 # [new-vpn]
 # command=~/.config/i3blocks/blocks/openvpn/openvpn
 # interval=1
 # label=<span color="#8be9fd"> </span>
-
-# [home]
-# command=df -h /home | awk 'FNR==2{print $4}'
-# interval=3
-# label=<span color="#a9e185"> </span>
 
 [root]
 command=df -h / | awk 'FNR==2{print $4}'
