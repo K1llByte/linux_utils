@@ -6,7 +6,7 @@
 # battery             \ Prints battery percentage
 # screenshot
 
-function gitall 
+gitall() 
 {
     # Dependes on 'git'
     if [ ! -z "$1" ]; then
@@ -16,7 +16,7 @@ function gitall
     fi
 }
 
-function setwall
+setwall()
 {
     # Dependes on 'i3'
     if [ ! -z "$1" ]; then
@@ -27,7 +27,7 @@ function setwall
 	fi
 }
 
-function mkfile
+mkfile()
 {
     if [ -z $1 ]; then
         >&2 echo "error: mkfile [file_path]"
@@ -36,7 +36,7 @@ function mkfile
 	fi
 }
 
-function battery
+battery()
 {
     usage()
     {
@@ -80,7 +80,7 @@ function battery
     esac
 }
 
-function screenshot
+screenshot()
 {
     # Dependes on 'maim'
     [ ! -z $1 ] && [ "$1" == "-s" ] 

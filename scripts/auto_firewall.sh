@@ -4,7 +4,7 @@
 
 #IP_LIST=~/.config.wl
 
-function setfw
+setfw()
 {
     if [ -z $1 ] || [ -z $2 ] ; then
         echo "error: setfw <port> <wl_file>"

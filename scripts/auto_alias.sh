@@ -19,7 +19,7 @@ ALIASES=~/.config/aliases.sh
 
 source $ALIASES
 
-function setalias
+setalias()
 {
     if [ -z "$1" ] || [ -z "$2" ]; then
         >&2 echo "error: setalias [name] [command]"
@@ -37,7 +37,7 @@ function setalias
     fi
 }
 
-function delalias
+delalias()
 {
     if [ -z $1 ]; then
         >&2 echo "error: delalias [name]"
@@ -47,7 +47,7 @@ function delalias
     unalias $1
 }
 
-function aliases
+aliases()
 {
     case "$1" in
 

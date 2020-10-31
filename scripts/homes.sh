@@ -16,7 +16,7 @@ HOMES=~/.config/homes/config
 mkdir -p ~/.config/homes && \
 touch $HOMES
 
-function sethome
+sethome()
 {
     if [ ! -z "$1" ]; then
 
@@ -38,7 +38,7 @@ function sethome
     fi
 }
 
-function homes
+homes()
 {
     if [ ! -e $HOMES ] || [ ! -s $HOMES ]; then
         >&2 echo "error: no homes avaiable :("
@@ -61,7 +61,7 @@ function homes
     esac
 }
 
-function home
+home()
 {
     if [ -z "$1" ]; then
         >&2 echo "error: home [tag]"
@@ -77,7 +77,7 @@ function home
     
 }
 
-function delhome
+delhome()
 {
     if [ -z "$1" ]; then
         >&2 echo "error: delhome [tag]"
@@ -86,7 +86,7 @@ function delhome
     fi
 }
 
-function work
+work()
 {
     if [ -z "$1" ]; then
         >&2 echo "error: work [tag]"
