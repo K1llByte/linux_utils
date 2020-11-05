@@ -5,8 +5,8 @@
 # install.sh all           \ Installs all scripts and all config files
 # install.sh scripts       \ Installs all scripts
 # install.sh configs       \ Installs all config files
-# install.sh script [name] \ [WIP] Installs script by name
-# install.sh config [name] \ [WIP] Installs config by name
+# [WIP] install.sh script [name] \ Installs script by name
+# [WIP] install.sh config [name] \ Installs config by name
 
 usage()
 {
