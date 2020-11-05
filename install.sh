@@ -1,10 +1,12 @@
 #!/bin/bash
 
-# install.sh
-# install.sh --help
-# install.sh all
-# install.sh scripts
-# install.sh configs
+# install.sh               \ Prints Usage
+# install.sh --help        \ Prints Usage
+# install.sh all           \ Installs all scripts and all config files
+# install.sh scripts       \ Installs all scripts
+# install.sh configs       \ Installs all config files
+# install.sh script [name] \ [WIP] Installs script by name
+# install.sh config [name] \ [WIP] Installs config by name
 
 usage()
 {
@@ -28,8 +30,8 @@ install_scripts()
 
     # if string 'INSTANCE' is in bashrc then no need to append it
     if ! grep -Fxq "$INSTANCE" ~/.bashrc; then
-        echo "$INSTANCE" >> ~/.bashrc
         echo "Not found Instance in .bashrc"
+        echo "$INSTANCE" >> ~/.bashrc
     fi
 
     # If scripts folder doesn't exist will create it
@@ -98,6 +100,7 @@ install_configs()
     eval "$(awk "$AWK_SCRIPT_2" $IN_CONFIG)"
 }
 
+# Main execution
 
 [ "$#" == 0 ] && usage
 while [ "$#" -gt 0 ]
