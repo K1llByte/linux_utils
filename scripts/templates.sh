@@ -55,3 +55,15 @@ templates()
     ;;
     esac
 }
+
+deltemplate()
+{
+    if [ -z "$1" ]; then
+        >&2 echo "error: deltemplate [tag]"
+    else
+        template="$TEMPLATES$1"
+        [ $(templates | grep "^$1$") ] && \
+        rm "$template" #&&                 \
+        #echo "Removed" || echo "Template does not exist"
+    fi
+}

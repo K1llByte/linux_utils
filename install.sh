@@ -98,6 +98,7 @@ install_configs()
         fi
     done
     eval "$(awk "$AWK_SCRIPT_2" $IN_CONFIG)"
+    echo "Installed configs"
 }
 
 # Main execution
