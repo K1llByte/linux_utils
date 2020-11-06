@@ -83,8 +83,7 @@ install_configs()
     bash     ("configs/aliases.sh"            , "~/.config/aliases.sh"        )
     git      ("configs/.gitignore"            , "~/.config/.gitignore"        )
     ' > /tmp/.tmp.txt
-    
-    
+
     [ ! -z $1 ] && IN_CONFIG="$1" || IN_CONFIG="/tmp/.tmp.txt"
 
     for item in $(awk "$AWK_SCRIPT_1" $IN_CONFIG); do
