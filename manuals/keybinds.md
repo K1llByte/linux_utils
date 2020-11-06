@@ -54,6 +54,7 @@ ___
 | `Alt` + `Z`                  | Toggle Word Wrap             |
 | `Ctrl` + `Shift` + `H`       | Find and Replace             |
 | `Ctrl` + `Alt` + `7`         | Line Comment Selected Text   |
+| `Alt` + `R`                  | Toggle Regex Matching        |
 
 ___
 # Discord
