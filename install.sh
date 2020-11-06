@@ -103,8 +103,7 @@ install_configs()
 # Main execution
 
 [ "$#" == 0 ] && usage
-while [ "$#" -gt 0 ]
-do
+while [ "$#" -gt 0 ]; do
     case "$1" in
 
     "--help" | "")

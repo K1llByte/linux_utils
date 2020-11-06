@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# sethome [tag] \ Sets current directory as a home identified by the tag
-# delhome [tag] \ Deletes a home by the tag
-# home [tag]	\ Go to a home identified by the tag 
-# homes	        \ Lists all homes avaiable
-# work [tag]	\ Open vscode editor with the specified home
+# sethome [tag] (path/) \ Sets current directory (or argument) as a home identified by the tag
+# delhome [tag]         \ Deletes a home by the tag
+# home [tag]	        \ Go to a home identified by the tag 
+# homes	                \ Lists all homes avaiable
+# work [tag]	        \ Open vscode editor with the specified home
 
 
 # File Format 
@@ -12,8 +12,8 @@
 HOMES=~/.config/homes/config
 
 # Create Homes file if not exists
-[ ! -f "$HOMES" ] &&        \
-mkdir -p ~/.config/homes && \
+[ ! -f "$HOMES" ] &&              \
+mkdir -p $(dirname $TEMPLATES) && \
 touch $HOMES
 
 sethome()
@@ -34,7 +34,7 @@ sethome()
         echo "Home set: $DIR"
 
     else
-        >&2 echo "error: sethome [tag] <[dir]>"
+        >&2 echo "error: $0 [tag] <[dir]>"
     fi
 }
 
@@ -74,7 +74,6 @@ home()
     else
         >&2 echo "error: home not found"
     fi
-    
 }
 
 delhome()
