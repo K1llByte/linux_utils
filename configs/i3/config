@@ -214,9 +214,12 @@ hide_edge_borders both
 
 ################################# Bar Config #################################
 
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+
 bar {
         i3bar_command i3bar -t 
-
+        
         position top
         status_command i3blocks -c $HOME/.config/i3blocks/config
         colors {
