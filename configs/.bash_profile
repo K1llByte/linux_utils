@@ -12,6 +12,7 @@ export TERMINAL='urxvt'
 export BROWSER='chromium'
 export EDITOR='code'
 export VISUAL='code'
+export RTV_EDITOR='code'
 
 # Export locale vars (May not be needed)
 export LC_ALL=C
