@@ -84,7 +84,8 @@ install_configs()
     git      ("configs/.gitignore"            , "~/.config/.gitignore"        )
     ' > /tmp/.tmp.txt
 
-    [ ! -z $1 ] && IN_CONFIG="$1" || IN_CONFIG="/tmp/.tmp.txt"
+    [ ! -z $1 ] && (IN_CONFIG="$1" && echo "Arg exists") || (IN_CONFIG="/tmp/.tmp.txt" && echo "Arg doesnt exist")
+
 
     for item in $(awk "$AWK_SCRIPT_1" $IN_CONFIG); do
         # Create destination parent folders
@@ -103,35 +104,37 @@ install_configs()
 # Main execution
 
 [ "$#" == 0 ] && usage
-while [ "$#" -gt 0 ]; do
-    case "$1" in
+case "$1" in
 
-    "--help" | "")
-        usage
-    ;;
+"--help" | "")
+    usage
+;;
 
-    all)
-        install_scripts
-        install_configs
-    ;;
+all)
+    shift
+    install_scripts
+    install_configs
+;;
 
-    scripts)
-        install_scripts
-    ;;
+scripts)
+    shift
+    install_scripts
+;;
 
-    configs)
-        install_configs
-    ;;
+configs)
+    shift
+    install_configs $@
+;;
     
-    "test")
-        testing
-    ;;
+"test")
+    shift
+    testing
+;;
 
-    *)
-        echo "error: Tag doesn't exists"
-        exit 1
-    ;;
+*)
+    echo "error: Tag doesn't exists"
+    exit 1
+;;
     
-    esac
-    exit 0
-done
+esac
+exit 0
