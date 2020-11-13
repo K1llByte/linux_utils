@@ -65,7 +65,7 @@ install_configs()
     $3 = substr($3,2,length($3)-2);'
     local AWK_SCRIPT_1="$AWK_SCRIPT_AUX print \$3 }"
     local AWK_SCRIPT_2="$AWK_SCRIPT_AUX print \"cp -rfv\",\$2,\$3 }"
-    
+
     # Default config files src/dest
     [ -z $1 ] && echo '
     i3       ("configs/i3/"                   , "~/.config/"                  )
@@ -84,17 +84,16 @@ install_configs()
     git      ("configs/.gitignore"            , "~/.config/.gitignore"        )
     ' > /tmp/.tmp.txt
 
-    [ ! -z $1 ] && (IN_CONFIG="$1" && echo "Arg exists") || (IN_CONFIG="/tmp/.tmp.txt" && echo "Arg doesnt exist")
-
+    [ ! -z $1 ] && IN_CONFIG="$1" || IN_CONFIG="/tmp/.tmp.txt"
 
     for item in $(awk "$AWK_SCRIPT_1" $IN_CONFIG); do
         # Create destination parent folders
         if [ "${item: -1}" = "/" ]; then
-            mkdir -p "$item"
+            eval mkdir -p $item
         else
             # If file already exists rename to {name}.old
             [ -f "$item" ] && mv "$item" "$item.old"
-            mkdir -p "$(dirname $item)"
+            eval mkdir -p "$(dirname $item)"
         fi
     done
     eval "$(awk "$AWK_SCRIPT_2" $IN_CONFIG)"
