@@ -53,8 +53,9 @@ ___
 | `Ctrl` + `Shift` + `T`       | Reopen Closed File           |
 | `Alt` + `Z`                  | Toggle Word Wrap             |
 | `Ctrl` + `Shift` + `H`       | Find and Replace             |
-| `Ctrl` + `Alt` + `7`         | Line Comment Selected Text   |
+| `Ctrl` + `Shift` + `7`       | Line Comment Selected Text   |
 | `Alt` + `R`                  | Toggle Regex Matching        |
+| `Ctrl` + `H`                 | Replace                      |
 
 ___
 # Discord
