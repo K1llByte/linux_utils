@@ -65,7 +65,7 @@ install_configs()
     $3 = substr($3,2,length($3)-2);'
     local AWK_SCRIPT_1="$AWK_SCRIPT_AUX print \$3 }"
     local AWK_SCRIPT_2="$AWK_SCRIPT_AUX print \"cp -rfv\",\$2,\$3 }"
-    
+
     # Default config files src/dest
     [ -z $1 ] && echo '
     i3       ("configs/i3/"                   , "~/.config/"                  )
@@ -89,11 +89,11 @@ install_configs()
     for item in $(awk "$AWK_SCRIPT_1" $IN_CONFIG); do
         # Create destination parent folders
         if [ "${item: -1}" = "/" ]; then
-            mkdir -p "$item"
+            eval mkdir -p $item
         else
             # If file already exists rename to {name}.old
             [ -f "$item" ] && mv "$item" "$item.old"
-            mkdir -p "$(dirname $item)"
+            eval mkdir -p "$(dirname $item)"
         fi
     done
     eval "$(awk "$AWK_SCRIPT_2" $IN_CONFIG)"
@@ -103,35 +103,37 @@ install_configs()
 # Main execution
 
 [ "$#" == 0 ] && usage
-while [ "$#" -gt 0 ]; do
-    case "$1" in
+case "$1" in
 
-    "--help" | "")
-        usage
-    ;;
+"--help" | "")
+    usage
+;;
 
-    all)
-        install_scripts
-        install_configs
-    ;;
+all)
+    shift
+    install_scripts
+    install_configs
+;;
 
-    scripts)
-        install_scripts
-    ;;
+scripts)
+    shift
+    install_scripts
+;;
 
-    configs)
-        install_configs
-    ;;
+configs)
+    shift
+    install_configs $@
+;;
     
-    "test")
-        testing
-    ;;
+"test")
+    shift
+    testing
+;;
 
-    *)
-        echo "error: Tag doesn't exists"
-        exit 1
-    ;;
+*)
+    echo "error: Tag doesn't exists"
+    exit 1
+;;
     
-    esac
-    exit 0
-done
+esac
+exit 0
