@@ -119,4 +119,7 @@ find /path/to/dir -name "filename"
 
 # Find pattern in any file of the directory
 grep -rnw '/path/to/dir' -e 'pattern'
+
+# Show hardware representation
+lstopo
 ```

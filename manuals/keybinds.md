@@ -56,6 +56,7 @@ ___
 | `Ctrl` + `Shift` + `7`       | Line Comment Selected Text   |
 | `Alt` + `R`                  | Toggle Regex Matching        |
 | `Ctrl` + `H`                 | Replace                      |
+| `Alt` + `Q`                  | Toggle Breadcrumbs           |
 
 ___
 # Discord
