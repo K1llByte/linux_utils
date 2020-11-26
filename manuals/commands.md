@@ -131,4 +131,7 @@ setxkbmap -layout pt
 ```bash
 # Add a key manually if pacman has problems importing it
 gpg --keyserver pool.sks-keyservers.net --recv-keys <key>
+
+# Show window info (need to click the window with mouse)
+xprop
 ```
