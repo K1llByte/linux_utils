@@ -27,11 +27,13 @@ setalias()
     fi
 
     tmp="alias $1="
-    if ! grep -Fxq "$tmp" $ALIASES; then
+    # -x Option here should be unchecked since we will 
+    # not match the whole line
+    if ! grep -Fq "$tmp" $ALIASES; then
+        echo "$tmp\"$2\"" >> $ALIASES
 
-        echo "$tmp" >> $ALIASES
-
-        alias $1="$2"
+        eval "$tmp\"$2\""
+        #alias $1="$2"
     else
         >&2 echo "error: alias already exists"
     fi
