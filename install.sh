@@ -66,7 +66,7 @@ install_configs()
     local AWK_SCRIPT_1="$AWK_SCRIPT_AUX print \$3 }"
     local AWK_SCRIPT_2="$AWK_SCRIPT_AUX print \"cp -rfv\",\$2,\$3 }"
 
-    # Default config files src/dest
+    # Default config files src/dest # TODO EOF style string
     [ -z $1 ] && echo '
     i3       ("configs/i3/"                   , "~/.config/"                  )
     i3blocks ("configs/i3blocks/"             , "~/.config/"                  )
@@ -81,7 +81,8 @@ install_configs()
     bash     ("configs/.bashrc"               , "~/.bashrc"                   )
     bash     ("configs/.bash_profile"         , "~/.bash_profile"             )
     bash     ("configs/aliases.sh"            , "~/.config/aliases.sh"        )
-    git      ("configs/.gitignore"            , "~/.config/.gitignore"        )
+    git      ("configs/git/.gitignore"        , "~/.config/git/.gitignore"    )
+    git      ("configs/git/config"            , "~/.config/git/config"        )
     ' > /tmp/.tmp.txt
 
     [ ! -z $1 ] && IN_CONFIG="$1" || IN_CONFIG="/tmp/.tmp.txt"

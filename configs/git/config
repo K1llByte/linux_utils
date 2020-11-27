@@ -1,0 +1,12 @@
+[user]
+    email = killbyte.prototype@gmail.com
+    name = KillByte
+[core]
+    excludesfile = /home/kb/.config/git/.gitignore
+    editor = code
+[delta]
+    plus-color = "#37c734"
+    minus-color = "#b83538"
+[alias]
+    pushd = push -u origin HEAD
+    history = log --pretty=format:'(%ar) %Cred%h%Creset - %C(yellow)%d%Creset %s'
