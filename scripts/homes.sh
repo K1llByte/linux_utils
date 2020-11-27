@@ -4,7 +4,7 @@
 # delhome [tag]         \ Deletes a home by the tag
 # home [tag]            \ Go to a home identified by the tag 
 # homes	                \ Lists all homes avaiable
-# work [tag]            \ Open vscode editor with the specified home
+# work [tag]            \ Open editor with the specified home
 
 
 # File Format 
@@ -105,7 +105,7 @@ work()
 
     local VAL=$(cat $HOMES | awk -F'#' -v key="$1" '{ if($1 == key) print $2 }')
     if [ $VAL ]; then
-        code $VAL
+        $EDITOR $VAL
     else
         >&2 echo "error: home not found"
     fi
