@@ -96,3 +96,4 @@ ___
 | `Alt` + `M`  | Toggle Menu Bar    |
 | `Ctrl` + `Q` | Toggle Locator Bar |
 | `Ctrl` + `K` | Select Locator     |
+| `Ctrl` + `H` | Show Hidden Files  |

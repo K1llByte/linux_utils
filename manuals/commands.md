@@ -82,6 +82,16 @@ jq '.'
 # \(foo)                    string interpolation
 ```
 
+### Dunst
+```bash
+# Turn off notifications
+notify-send "DUNST_COMMAND_PAUSE"
+
+# Turn on notifications
+notify-send "DUNST_COMMAND_RESUME"
+```
+
+
 ### source and execute
 
 **Sourcing** a script will run the commands in the _current_ shell process. <br/>
