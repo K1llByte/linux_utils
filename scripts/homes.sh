@@ -12,33 +12,85 @@
 HOMES=~/.config/homes/config
 
 # Create Homes file if not exists
-[ ! -f "$HOMES" ] &&              \
-mkdir -p $(dirname $TEMPLATES) && \
+[ ! -f "$HOMES" ] &&          \
+mkdir -p $(dirname $HOMES) && \
 touch $HOMES
 
 sethome()
 {
     # sethome <tag>
+    # sethome -f <tag>
     # sethome <tag> <path/to/dir>
 
-    if [ ! -z "$1" ]; then
+    # Case arguments dont exist
+    # Case tag doesn't exist
+    case "$1" in
+    "-f"|"--force")
+        if [ $2 ]; then
+            DIR=$(pwd)
+            # If is file
+            [ -f "$3" ] && DIR=$(realpath $(dirname $3))
+            # If is directory
+            [ -d "$3" ] && DIR=$(realpath $3)
 
-        #[[ ! -e $HOMES ]] && touch $HOMES
-        
+            # Check if home tag exists
+            if [ $(cat $HOMES | awk -F'#' -v key="$2" '{ if($1 == key) print $1 }') ]; then
+                sed -i "s/$2[#].*/$2[#]$DIR/g" "$HOMES"
+                echo "Home reassign: $DIR"
+            else
+                echo "$1#$DIR" >> $HOMES
+                echo "Home set: $DIR"
+            fi
+        fi
+        shift
+    ;;
+    
+    "")
+        >&2 echo "error: $0 [tag] <[dir]>"
+    ;;
+
+    *)
         # Check if home tag exists
         [ $(cat $HOMES | awk -F'#' -v key="$1" '{ if($1 == key) print $1 }') ] && \
         echo "Home already exists" && return
 
         DIR=$(pwd)
 
+        # If is file
         [ -f "$2" ] && DIR=$(realpath $(dirname $2))
+        # If is directory
         [ -d "$2" ] && DIR=$(realpath $2)
         echo "$1#$DIR" >> $HOMES
         echo "Home set: $DIR"
+    ;;
 
-    else
-        >&2 echo "error: $0 [tag] <[dir]>"
-    fi
+    esac
+
+    # if [ ! -z "$1" ]; then
+
+    #     if [ "$1" -e "-f" ] || [ "$1" -e "--force" ] && [ ! -z "$2" ]; then
+    #         sed -i "/$1#/d" $HOMES # Delete home
+    #         shift
+    #     else
+    #         >&2 echo "error: $0 [tag] <[dir]>"
+    #     fi
+
+    #     # Check if home tag exists
+    #     [ $(cat $HOMES | awk -F'#' -v key="$1" '{ if($1 == key) print $1 }') ] && \
+    #     echo "Home already exists" && return
+
+    #     DIR=$(pwd)
+
+    #     # If is file
+    #     [ -f "$2" ] && DIR=$(realpath $(dirname $2))
+    #     # If is directory
+    #     [ -d "$2" ] && DIR=$(realpath $2)
+    #     echo "$1#$DIR" >> $HOMES
+    #     echo "Home set: $DIR"
+
+    # else
+    #     >&2 echo "error: $0 [tag] <[dir]>"
+    # fi
 }
 
 homes()
@@ -90,7 +142,7 @@ delhome()
     if [ -z "$1" ]; then
         >&2 echo "error: delhome [tag]"
     else
-        sed -i "/$1 /d" $HOMES
+        sed -i "/$1#/d" $HOMES
     fi
 }
 
@@ -105,7 +157,11 @@ work()
 
     local VAL=$(cat $HOMES | awk -F'#' -v key="$1" '{ if($1 == key) print $2 }')
     if [ $VAL ]; then
-        $EDITOR $VAL
+        if [ $EDITOR ]; then
+            $EDITOR $VAL
+        else
+            >&2 echo "error: EDITOR not set"
+        fi
     else
         >&2 echo "error: home not found"
     fi
