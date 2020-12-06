@@ -25,6 +25,18 @@ nm-connection-editor
 ```bash
 # Ignore case
 grep -i "[search term]"
+
+# Quiet
+grep -q "[search term]"
+
+# Print NUM lines of trailing context
+grep -A <NUM> "[search term]"
+
+# Print NUM lines of leading context
+grep -B <NUM> "[search term]"
+
+# Print NUM lines of output context
+grep -B <NUM> "[search term]"
 ```
 
 ### lspci
