@@ -156,4 +156,7 @@ gpg --keyserver pool.sks-keyservers.net --recv-keys <key>
 
 # Show window info (need to click the window with mouse)
 xprop
+
+# OpenGL renderer
+glxinfo | egrep "OpenGL vendor|OpenGL renderer"
 ```
