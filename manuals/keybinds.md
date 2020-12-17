@@ -76,14 +76,15 @@ ___
 ___
 # Chrome
 
-| Keybind                  | Description       |
-| :----------------------: | :---------------: |
-| `Ctrl` + `K`             | Select Search Bar |
-| `Ctrl` + `T`             | New Tab           |
-| `Alt` + `Left Arrow`     | Go Back           |
-| `Alt` + `Right Arrow`    | Go Forward        |
-| `Ctrl` + `Tab`           | Next Tab          |
-| `Ctrl` + `Shift` + `Tab` | Previous Tab      |
+| Keybind                  | Description          |
+| :----------------------: | :------------------: |
+| `Ctrl` + `L`             | Select URL           |
+| `Ctrl` + `K`             | Google Search        |
+| `Ctrl` + `T`             | New Tab              |
+| `Alt` + `Left Arrow`     | Go Back              |
+| `Alt` + `Right Arrow`    | Go Forward           |
+| `Ctrl` + `Tab`           | Next Tab             |
+| `Ctrl` + `Shift` + `Tab` | Previous Tab         |
 
 
 ___
