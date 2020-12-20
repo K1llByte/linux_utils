@@ -27,3 +27,34 @@
 | col 2 is |    centered   |   $12 |
 | col 3 is | right-aligned |    $1 |
 ```
+
+## HTML Extensions
+
+```md
+<!-- Colored text -->
+<span style="color:#FF00FF">Pink</span>
+
+<!-- Horizontal divided blocks -->
+<div>
+    <div style="float: left; width: 50%;">
+        Text1
+    </div>
+    <div style="float: left; width: 50%;">
+        Text2
+    </div>
+</div>
+```
+
+**Colored text**
+
+<span style="color:#FF00FF">Pink</span>
+
+**Horizontal divided blocks**
+<div>
+    <div style="float: left; width: 50%;">
+        Text1
+    </div>
+    <div style="float: left; width: 50%;">
+        Text2
+    </div>
+</div>
