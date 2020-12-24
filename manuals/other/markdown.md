@@ -72,4 +72,7 @@ Text1
         Text2
     </div>
 </div>
+
+<!-- Small characters in superior and inferior opsitions -->
+e<sup>-1</sup>
 ```
