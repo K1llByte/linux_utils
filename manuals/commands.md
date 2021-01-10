@@ -2,6 +2,15 @@
 
 Manual for some commands and utilities 
 
+## Commands
+- [fdisk](#fdisk)
+- [NetworkManager](#NetworkManager)
+- [grep](#grep)
+- [lspci](#lspci)
+- [realpath](#realpath)
+- [wc](#wc)
+- [watch](#watch)
+
 ### fdisk
 ```bash
 # List all disks
