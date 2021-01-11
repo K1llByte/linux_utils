@@ -30,22 +30,35 @@ nm-connection-editor
 ```
 
 
+### curl
+```bash
+# -L flag will follow any redirect or 3XX code
+curl -L <url>
+
+# -s is silent mode, to avoid the download info prints
+curl -s <url>
+
+```
+
 ### grep
 ```bash
-# Ignore case
+# -o Print match only
+grep -o "[search term]"
+
+# -i Ignore case
 grep -i "[search term]"
 
-# Quiet
+# -q Quiet (outputs only the process exit code)
 grep -q "[search term]"
 
-# Print NUM lines of trailing context
+# -A Print NUM lines of trailing context
 grep -A <NUM> "[search term]"
 
-# Print NUM lines of leading context
+# -B Print NUM lines of leading context
 grep -B <NUM> "[search term]"
 
-# Print NUM lines of output context
-grep -B <NUM> "[search term]"
+# -C Print NUM lines of trailing and leading context
+grep -C <NUM> "[search term]"
 ```
 
 ### lspci
