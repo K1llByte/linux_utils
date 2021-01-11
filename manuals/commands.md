@@ -1,8 +1,9 @@
 # Commands
 
-Manual for some commands and utilities 
+Manual for some useful commands / options and utilities 
 
 ## Commands
+- [ls](#ls)
 - [fdisk](#fdisk)
 - [NetworkManager](#NetworkManager)
 - [grep](#grep)
@@ -10,6 +11,16 @@ Manual for some commands and utilities
 - [realpath](#realpath)
 - [wc](#wc)
 - [watch](#watch)
+
+### ls 
+```bash
+# -h Human readable size info
+# -s Size
+# --color=auto Color files by type
+# -a List hidden files
+# -A List hidden files (except ./ and ../)
+ls
+```
 
 ### fdisk
 ```bash
