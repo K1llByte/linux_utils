@@ -19,6 +19,7 @@ Manual for some useful commands / options and utilities
 # --color=auto Color files by type
 # -a List hidden files
 # -A List hidden files (except ./ and ../)
+# -l Long listing format
 ls
 ```
 
