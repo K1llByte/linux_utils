@@ -11,7 +11,7 @@ Manual for my keybinds (some correspond to the default ones)
 - [Thunar](#Thunar)
 
 ___
-# i3-gaps
+# i3wm
  
 | Keybind                        | Description                     |
 | :----------------------------: | :-----------------------------: |
