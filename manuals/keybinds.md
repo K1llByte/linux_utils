@@ -44,6 +44,8 @@ ___
 | `Ctrl` + `K` \| `V`          | View Markdown/PDF            |
 | `Ctrl` + `Shift` + `K`       | Delete line                  |
 | `Ctrl` + `Shift` + `P`       | Command Palette              |
+| `Ctrl` + `[1-9]`             | Focus Editor Group by number |
+| `Ctrl` + `0`                 | Focus Side Bar               |
 | `Ctrl` + `P`                 | Open File                    |
 | `Ctrl` + `W`                 | Close Window                 |
 | `Ctrl` + `Tab`               | Next Tab                     |
