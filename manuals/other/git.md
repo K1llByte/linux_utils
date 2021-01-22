@@ -1,6 +1,7 @@
 # Git
 
 ## Clone
+Clone a repository into a new directory
 
 ```bash
 # Clone repository locally
@@ -11,11 +12,43 @@ git clone <git:url>
 git clone <git:url> <dir_name>
 ```
 
+### Branch
+
+List, create, or delete branches
+
+```bash
+# List branches
+git branch
+# or
+git branch -l
+
+# Create new branch
+git branch <branch_name>
+
+# Rename branch
+git branch -m <old_name> <new_name>
+
+# Delete branch
+git branch -m
+```
+
+### Checkout
+Switch branches or restore working tree files
+
+```bash
+# Switch branch
+git checkout <branch_name>
+
+# Create a new branch and switch to it
+git checkout -b <new_branch_name>
+```
+
+
 ___
 
 ## Create Repository GitHub
 
-Is required that the repository is previously create on the platform. <br/>
+It's required that the repository is previously created on the platform. <br/>
 This could also be automated with help of the GitHub cli interface `gh`.
 
 ```bash
