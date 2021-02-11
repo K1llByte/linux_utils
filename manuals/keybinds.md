@@ -35,13 +35,13 @@ ___
 
 | Keybind                      | Description                  |
 | :--------------------------: | :--------------------------: |
-| `Ctrl` + `K` \| `Ctrl` + `T` | Color Scheme                 |
+| `Ctrl` + `K` => `Ctrl` + `T` | Color Scheme                 |
 | `Ctrl` + `,`                 | VSCode Settings              |
 | `Ctrl` + `Q`                 | Open/Close Terminal          |
 | `Ctrl` + `B`                 | Toggle Side Bar              |
 | `Shift` + `º`                | Toggle Activity Bar          |
 | `Alt` + `S`                  | Toggle Status Bar            |
-| `Ctrl` + `K` \| `V`          | View Markdown/PDF            |
+| `Ctrl` + `K` => `V`          | Preview Markdown/PDF         |
 | `Ctrl` + `Shift` + `K`       | Delete line                  |
 | `Ctrl` + `Shift` + `P`       | Command Palette              |
 | `Ctrl` + `[1-9]`             | Focus Editor Group by number |
@@ -54,11 +54,16 @@ ___
 | `Ctrl` + `Shift` + `A`       | Multi Line Comment           |
 | `Ctrl` + `Shift` + `T`       | Reopen Closed File           |
 | `Alt` + `Z`                  | Toggle Word Wrap             |
-| `Ctrl` + `Shift` + `H`       | Find and Replace             |
+| `Ctrl` + `F`                 | Find                         |
+| `Ctrl` + `H`                 | Find and Replace             |
+| `Ctrl` + `Shift` + `F`       | Find in all files            |
+| `Ctrl` + `Shift` + `H`       | Find and Replace all files   |
 | `Ctrl` + `Shift` + `7`       | Line Comment Selected Text   |
 | `Alt` + `R`                  | Toggle Regex Matching        |
-| `Ctrl` + `H`                 | Replace                      |
 | `Alt` + `Q`                  | Toggle Breadcrumbs           |
+| `Alt` + `M`                  | Toggle Minimap               |
+| `Ctrl` + `K` => `Ctrl` + `0` | Fold All regions of editor   |
+| `Ctrl` + `K` => `Ctrl` + `J` | Unfold All regions of editor |
 
 ___
 # Discord
