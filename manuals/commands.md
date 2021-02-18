@@ -197,4 +197,7 @@ glxinfo | egrep "OpenGL vendor|OpenGL renderer"
 
 # Create symlink
 ln -s <file> <symlink>
+
+# Create hard link
+ln <file> <symlink>
 ```
