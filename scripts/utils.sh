@@ -16,6 +16,7 @@ gitall()
     fi
 }
 
+
 setwall()
 {
     # Dependes on 'i3'
@@ -23,18 +24,20 @@ setwall()
         cp $1 ~/.config/i3/wallpaper
         i3-msg -q restart
     else
-		>&2 echo "error: setwall [img_path]"
-	fi
+        >&2 echo "error: setwall [img_path]"
+    fi
 }
+
 
 mkfile()
 {
     if [ -z $1 ]; then
         >&2 echo "error: mkfile [file_path]"
     else
-		mkdir -p "$(dirname "$1")" && touch "$1"
-	fi
+        mkdir -p "$(dirname "$1")" && touch "$1"
+    fi
 }
+
 
 battery()
 {
@@ -80,11 +83,47 @@ battery()
     esac
 }
 
+
 screenshot()
 {
-    # Dependes on 'maim'
+    # Dependes on 'maim' and 'xclip'
     [ ! -z $1 ] && [ "$1" == "-s" ] 
     local FILENAME="$(date +%s).png"
     maim $1 ~/Pictures/Screenshots/$FILENAME && \
     cat ~/Pictures/Screenshots/$FILENAME | xclip -selection clipboard -t image/png
+}
+
+
+manual()
+{
+    MANUALS_DIR="$HOME/Documents/Projects/linux_utils/manuals"
+
+    usage()
+    {
+        echo "Usage:
+        manual            Shows this message
+        manual --help     Shows this message
+        manual -l         Prints list of manuals
+        manual <pattern>  Opens first matched manual in editor"
+    }
+
+    case "$1" in
+    "--help"|"")
+        usage
+    ;;
+
+    "-l")
+        tree -iF $MANUALS_DIR | sed '/\//d' | head -n -2
+    ;;
+
+    *)
+        VALUE=$(tree -iF $MANUALS_DIR | sed '/\//d' | head -n -2 | grep "$1")
+ 
+        if [ ! -z $VALUE ]; then
+            $EDITOR $VALUE
+        else
+            >&2 echo "error: pattern doen't match any manual" && return 1
+        fi
+    ;;
+    esac
 }
