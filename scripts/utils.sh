@@ -120,6 +120,9 @@ manual()
         VALUE=$(tree -iF $MANUALS_DIR | sed '/\//d' | head -n -2 | grep "$1")
  
         if [ ! -z $VALUE ]; then
+            # FIX: Value is a file name, 
+            # so editor open te file in the 
+            # dir the user is currently on
             $EDITOR $VALUE
         else
             >&2 echo "error: pattern doen't match any manual" && return 1
