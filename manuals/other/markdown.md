@@ -5,48 +5,67 @@ Markdown is a simple markup language for text formating
 
 ## Index
 
-
+<!-- * [Basic Syntax](#Basic-Syntax)
+ -->
 
 ## Basic Syntax
+
+Original designed syntax for markdown documents
+
+### Headers
 ```md
-<!-- Headers -->
 # Header 1
 ## Header 2
 ### Header 3
 #### Header 4
 ##### Header 5
 ###### Header 6
+```
 
-<!-- Modifiers -->
+### Modifiers
+<!-- NOT Basic Syntax -->
+<!-- <ins>Underline</ins> -->
+```md
 **Bold** or __Bold__
 *Italic* or _Italic_
-<ins>Underline</ins>
 ~~Strikethrough~~
+```
 
-<!-- Items List -->
+### Items List
+```md
 - Item 1
 - Item 2
 - Item 3
+```
 
-<!-- Horizontal Separator -->
+### Horizontal Separator
+```md
 ___
+```
 
-<!-- Line break -->
+### Line break
+
+```md
 <!-- Two spaces after text (trailing whitespace) -->
 Text1  
 Text2
 <!-- or -->
 Text1<br/>
 Text1
+```
 
-<!-- Tables -->
+### Tables
+```md
 | Tables   |      Are      |  Cool |
 |----------|:-------------:|------:|
 | col 1 is |  left-aligned | $1600 |
 | col 2 is |    centered   |   $12 |
 | col 3 is | right-aligned |    $1 |
+```
 
-<!-- Blockquotes -->
+### Blockquotes
+```md
+<!--  -->
 > ##### This is a blockquote
 >
 > This is the next paragraph of the blockquote
@@ -75,4 +94,6 @@ Text1
 
 <!-- Small characters in superior and inferior opsitions -->
 e<sup>-1</sup>
+
+<ins>Underline</ins>
 ```
