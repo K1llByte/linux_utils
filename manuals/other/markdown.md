@@ -5,8 +5,17 @@ Markdown is a simple markup language for text formating
 
 ## Index
 
-<!-- * [Basic Syntax](#Basic-Syntax)
- -->
+* [Basic Syntax](#Basic-Syntax)
+    * [Headers](#Headers)
+    * [Modifiers](#Modifiers)
+    * [Items List](#Items-List)
+    * [Horizontal Separator](#Horizontal-Separator)
+    * [Line break](#Line-break)
+    * [Tables](#Tables)
+    * [Blockquotes](#Blockquotes)
+* [HTML Extensions](#HTML-Extensions)
+    
+
 
 ## Basic Syntax
 
