@@ -104,5 +104,9 @@ Text1
 <!-- Small characters in superior and inferior opsitions -->
 e<sup>-1</sup>
 
-<ins>Underline</ins>
+<!-- Underline -->
+<ins>Hello World!</ins>
+
+<!-- Keyboard Keys -->
+<kbd>Alt</kbd> + <kbd>F4</kbd>
 ```
