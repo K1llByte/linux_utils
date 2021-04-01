@@ -4,7 +4,7 @@ Manual for my keybinds (some correspond to the default ones)
 
 ## Index
 
-- [i3-gaps](#i3-gaps)
+- [i3wm](#i3wm)
 - [VSCode](#VSCode)
 - [Discord](#Discord)
 - [Chrome](#Chrome)
@@ -32,7 +32,11 @@ ___
 
 ___
 # VSCode
-
+<!--
+User Interface
+Editor
+Find & Replace
+-->
 | Keybind                                                          | Description                  |
 | :--------------------------------------------------------------: | :--------------------------: |
 | <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>Ctrl</kbd> + <kbd>T</kbd> | Color Scheme                 |
@@ -64,7 +68,7 @@ ___
 | <kbd>Alt</kbd> + <kbd>M</kbd>                                    | Toggle Minimap               |
 | <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>Ctrl</kbd> + <kbd>0</kbd> | Fold All regions of editor   |
 | <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>Ctrl</kbd> + <kbd>J</kbd> | Unfold All regions of editor |
-
+| <kbd>Alt</kbd> + <kbd>L</kbd>                                    | Find in Selection            |
 ___
 # Discord
 
@@ -72,10 +76,10 @@ ___
 | :------------------------------------------------------: | :-----------------------------: |
 | <kbd>Ctrl</kbd> + <kbd>K</kbd>                           | Super Find Chat                 |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>        | Toggle Mute                     |
-| <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>                     | Navigate Channels Up            |
-| <kbd>Alt</kbd> + <kbd>Down Arrow</kbd>                   | Navigate Channels Down          |
-| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>   | Navigate Servers Up             |
-| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> | Navigate Servers Down           |
+| <kbd>Alt</kbd> + <kbd>&uarr;</kbd>                       | Navigate Channels Up            |
+| <kbd>Alt</kbd> + <kbd>&darr;</kbd>                       | Navigate Channels Down          |
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>&uarr;</kbd>     | Navigate Servers Up             |
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>&darr;</kbd>     | Navigate Servers Down           |
 | <kbd>Esc</kbd>                                           | Mark Channel As Read & Go Down  |
 | <kbd>Shift</kbd> + <kbd>Esc</kbd>                        | Mark Server As Read & Go Down   |
 | <kbd>Ctrl</kbd> + <kbd>P</kbd>                           | Toggle Pinned Messages          |
@@ -88,8 +92,8 @@ ___
 | <kbd>Ctrl</kbd> + <kbd>L</kbd>                      | Select URL           |
 | <kbd>Ctrl</kbd> + <kbd>K</kbd>                      | Google Search        |
 | <kbd>Ctrl</kbd> + <kbd>T</kbd>                      | New Tab              |
-| <kbd>Alt</kbd> + <kbd>Left Arrow</kbd>              | Go Back              |
-| <kbd>Alt</kbd> + <kbd>Right Arrow</kbd>             | Go Forward           |
+| <kbd>Alt</kbd> + <kbd>&larr;</kbd>                  | Go Back              |
+| <kbd>Alt</kbd> + <kbd>&rarr;</kbd>                  | Go Forward           |
 | <kbd>Ctrl</kbd> + <kbd>Tab</kbd>                    | Next Tab             |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> | Previous Tab         |
 
@@ -102,7 +106,7 @@ ___
 | <kbd>Ctrl</kbd> + <kbd>B</kbd> | Toggle Side Bar    |
 | <kbd>Alt</kbd> + <kbd>S</kbd>  | Toggle Status Bar  |
 | <kbd>Alt</kbd> + <kbd>M</kbd>  | Toggle Menu Bar    |
-| <kbd>Ctrl</kbd> + <kbd>Q</kbd> | Toggle Locator Bar |
+| <kbd>Ctrl</kbd> + <kbd>L</kbd> | Toggle Locator Bar |
 | <kbd>Ctrl</kbd> + <kbd>K</kbd> | Select Locator     |
 | <kbd>Ctrl</kbd> + <kbd>H</kbd> | Show Hidden Files  |
 
