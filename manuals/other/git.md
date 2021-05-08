@@ -1,9 +1,28 @@
 # Git
 
+<!--
+- Git commands
+- Usefull combinations
+-->
+
+## Commit
+Record changes to the repository
+
+```sh
+# Commit staged changes with a message
+git commit -m "<Commit Message>"
+
+# Stage all tracked files and commit 
+git commit -a -m "<Commit Message>"
+
+# Commit but with 
+git commit
+```
+
 ## Clone
 Clone a repository into a new directory
 
-```bash
+```sh
 # Clone repository locally
 # folder name will be the same as the repository
 git clone <git:url>
@@ -12,11 +31,10 @@ git clone <git:url>
 git clone <git:url> <dir_name>
 ```
 
-### Branch
-
+## Branch
 List, create, or delete branches
 
-```bash
+```sh
 # List branches
 git branch
 # or
@@ -29,18 +47,37 @@ git branch <branch_name>
 git branch -m <old_name> <new_name>
 
 # Delete branch
-git branch -m
+git branch -d <branch_name>
 ```
 
-### Checkout
+## Checkout
 Switch branches or restore working tree files
 
-```bash
+```sh
 # Switch branch
 git checkout <branch_name>
 
 # Create a new branch and switch to it
 git checkout -b <new_branch_name>
+```
+
+## Merge
+Merge two or more branches
+
+```sh
+# Merge current branch with <branch_name>
+git merge <branch_name>
+```
+
+## Diff
+Show changes between commits
+
+```sh
+# Difference of what changed but not yet staged
+git diff
+
+# Difference of what is staged and the last commit
+git diff --staged
 ```
 
 

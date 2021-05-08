@@ -69,6 +69,9 @@ Find & Replace
 | <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>Ctrl</kbd> + <kbd>0</kbd> | Fold All regions of editor   |
 | <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>Ctrl</kbd> + <kbd>J</kbd> | Unfold All regions of editor |
 | <kbd>Alt</kbd> + <kbd>L</kbd>                                    | Find in Selection            |
+| (Selected Text) <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + L           | Select all words equal to Selected Text |
+
+
 ___
 # Discord
 
@@ -96,6 +99,8 @@ ___
 | <kbd>Alt</kbd> + <kbd>&rarr;</kbd>                  | Go Forward           |
 | <kbd>Ctrl</kbd> + <kbd>Tab</kbd>                    | Next Tab             |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> | Previous Tab         |
+| <kbd>Ctrl</kbd> + <kbd>1-8</kbd>                    | Switch to first N tabs |
+| <kbd>Ctrl</kbd> + <kbd>9</kbd>                      | Switch to last tab     |
 
 
 ___
