@@ -19,6 +19,14 @@ git commit -a -m "<Commit Message>"
 git commit
 ```
 
+## Restore
+Restore working tree files
+
+```sh
+# Restore all tracked files to last commit state
+git restore .
+```
+
 ## Clone
 Clone a repository into a new directory
 
