@@ -27,6 +27,18 @@ Restore working tree files
 git restore .
 ```
 
+## Rm
+Remove files from the working tree and from the index
+
+```sh
+# Remove file from git and directory
+git rm <filename>
+
+# Remove file just from git
+git rm --cached <filename>
+```
+
+
 ## Clone
 Clone a repository into a new directory
 
@@ -88,6 +100,16 @@ git diff
 git diff --staged
 ```
 
+## Log
+Show commit logs
+
+```sh
+# Commit log with authors and date and commit message
+git log
+
+# Oneline verion of logs
+git log --oneline
+```
 
 ___
 
