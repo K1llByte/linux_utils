@@ -131,10 +131,10 @@ jq '.'
 ### Dunst
 ```bash
 # Turn off notifications
-notify-send "DUNST_COMMAND_PAUSE"
+dunstctl set-paused true
 
 # Turn on notifications
-notify-send "DUNST_COMMAND_RESUME"
+dunstctl set-paused false
 ```
 
 
