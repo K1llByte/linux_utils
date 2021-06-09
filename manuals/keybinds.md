@@ -116,6 +116,14 @@ ___
 | <kbd>Ctrl</kbd> + <kbd>H</kbd> | Show Hidden Files  |
 
 
+___
+# Tmux
+
+| Keybind                                       | Description           |
+| :-------------------------------------------: | :-------------------: |
+| <kbd>Ctrl</kbd> + <kbd>B</kbd> \| <kbd>D</kbd> | Dettach               |
+
+
 <!--
 | Keybind                      | Description                  |
 | :--------------------------: | :--------------------------: |
