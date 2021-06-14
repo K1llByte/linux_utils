@@ -119,9 +119,10 @@ ___
 ___
 # Tmux
 
-| Keybind                                       | Description           |
-| :-------------------------------------------: | :-------------------: |
-| <kbd>Ctrl</kbd> + <kbd>B</kbd> \| <kbd>D</kbd> | Dettach               |
+| Keybind                                                           | Description                 |
+| :---------------------------------------------------------------: | :-------------------------: |
+| <kbd>Ctrl</kbd> + <kbd>B</kbd> \| <kbd>D</kbd>                    | Dettach                     |
+| <kbd>Ctrl</kbd> + <kbd>B</kbd> \| <kbd>Shift</kbd> + <kbd>?</kbd> | Show Keybinds               |
 
 
 <!--
