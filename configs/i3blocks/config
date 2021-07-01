@@ -78,7 +78,6 @@ label=<span color="#f0b40e"> </span>
 [volume]
 command=~/.config/i3blocks/volume.sh
 interval=2
-label=<span color="#ff79c6"> </span>
 
 [date]
 command=date '+%e %b'
