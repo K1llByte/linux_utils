@@ -8,7 +8,7 @@
 
 gitall() 
 {
-    # Dependes on 'git'
+    # Depends on 'git'
     if [ ! -z "$1" ]; then
         git add .; git commit -m "$1"; git push
     else
@@ -19,7 +19,7 @@ gitall()
 
 setwall()
 {
-    # Dependes on 'i3'
+    # Depends on 'i3'
     if [ ! -z "$1" ]; then
         cp $1 ~/.config/i3/wallpaper
         i3-msg -q restart
@@ -44,11 +44,11 @@ battery()
     usage()
     {
         echo "Usage: 
-        battery         Prints computer battery level
-        battery --help  Shows this message
-        battery -a      Prints all batteries level
-        battery -n      Prints number of batteries
-        battery [0-9]   Prints specific battery level"
+        $0         Prints computer battery level
+        $0 --help  Shows this message
+        $0 -a      Prints all batteries level
+        $0 -n      Prints number of batteries
+        $0 [0-9]   Prints specific battery level"
     }
 
     number_of_batteries()
@@ -101,10 +101,10 @@ manual()
     usage()
     {
         echo "Usage:
-        manual            Shows this message
-        manual --help     Shows this message
-        manual -l         Prints list of manuals
-        manual <pattern>  Opens first matched manual in editor"
+        $0            Shows this message
+        $0 --help     Shows this message
+        $0 -l         Prints list of manuals
+        $0 <pattern>  Opens first matched manual in editor"
     }
 
     case "$1" in
@@ -130,6 +130,39 @@ manual()
             fi
         else
             >&2 echo "error: pattern doen't match any manual" && return 1
+        fi
+    ;;
+    esac
+}
+
+
+getvol()
+{
+    pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,'
+}
+
+setvol()
+{
+    usage()
+    {
+        echo "Usage:
+        $0            Shows this message
+        $0 --help     Shows this message
+        $0 <volume>   Set volume level"
+    }
+
+    case "$1" in
+    "--help"|"")
+        # Print usage
+        usage
+    ;;
+
+    *)
+        VOL=$(echo $1 | grep -E "^[0-9]{1,3}$")
+        if [ ! -z VOL ]; then
+            pactl -- set-sink-volume @DEFAULT_SINK@ $VOL%
+        else
+            >&2 echo "error: invalid volume" && return 1
         fi
     ;;
     esac

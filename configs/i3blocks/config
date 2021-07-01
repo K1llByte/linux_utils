@@ -34,7 +34,7 @@ interval=1
 command=iwgetid -r # iwgetid -r | tr '\n' ' ' && grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i%\n", int($3 * 100 / 70) }'
 instance=wlan0
 interval=5
-label=<span color="#f0b40e"> </span>
+label=<span color="#f0b40e">直 </span>
 
 # [new-vpn]
 # command=~/.config/i3blocks/blocks/openvpn/openvpn
@@ -69,16 +69,16 @@ label=<span color="#f0b40e"> </span>
 # SENSOR_CHIP="jc42-i2c-0-1a"
 # label=<span color="#8be9fd"> </span>
 
-[memory]
-command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
-interval=2
-label=<span color="#f0b40e"> </span>
+# [memory]
+# command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
+# interval=2
+# label=<span color="#f0b40e"> </span>
 # a9e185
 
-# [volume]
-# command=pulseaudio-ctl full-status | awk '{ printf "%i%\n", $1 }'
-# interval=2
-# label=<span color="#ff79c6"> </span>
+[volume]
+command=~/.config/i3blocks/volume.sh
+interval=2
+label=<span color="#ff79c6"> </span>
 
 [date]
 command=date '+%e %b'
