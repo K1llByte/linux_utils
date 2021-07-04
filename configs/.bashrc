@@ -32,15 +32,24 @@ BLINK='\e[5m'
 INVERTED='\e[7m'
 HIDDEN='\e[8m'
 RESET='\e[0m'
+OFF=$RESET
+
+# COMPOUND
+BOLD_YELLOW="\033[1;38;5;220m"
 
 # Some terminal emulators execute this argument 
 PROMPT_COMMAND='' # ='printf "\033_%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
 
-PS1="${BOLD}${YELLOW}\u${RESET}${BOLD} \W${YELLOW} >${RESET} "
+#PS1="${BOLD}${YELLOW}\u${RESET}${BOLD} \W${YELLOW} >${RESET} "
+PS1="$(__c "$BOLD_YELLOW" "\u") $(__c "$BOLD" "\W") $(__c "$BOLD_YELLOW" ">") "
+
+[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
 #TERM=rxvt-unicode-256color
 
 export PATH=$PATH:$HOME/.local/bin
+export EDITOR=code
+export BROWSER=chromium
 
 source $HOME/.config/aliases.sh
 
