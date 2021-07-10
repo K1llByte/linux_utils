@@ -88,6 +88,9 @@ Text1
 ## HTML Extensions
 
 ```md
+<!-- Underline -->
+<ins>Hello World!</ins>
+
 <!-- Colored text -->
 <span style="color:#FF00FF">Pink</span>
 
@@ -104,9 +107,17 @@ Text1
 <!-- Small characters in superior and inferior opsitions -->
 e<sup>-1</sup>
 
-<!-- Underline -->
-<ins>Hello World!</ins>
-
 <!-- Keyboard Keys -->
 <kbd>Alt</kbd> + <kbd>F4</kbd>
+
+<!-- Dropdown Box -->
+<details>
+    <summary>This is a dropdown box</summary>
+    Hello World!
+</details>
+<!--
+This box can be open by default
+with '<details open>'
+-->
+
 ```
