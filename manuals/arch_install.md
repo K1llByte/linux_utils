@@ -107,6 +107,14 @@ visudo
 pacman -S networkmanager
 
 systemctl enable NetworkManager
+
+# Optional
+pacman -S grub os-prober
+
+# MBR
+# Target device must be bootable
+grub-install target_device
+grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## Aftermath
