@@ -88,8 +88,17 @@ Text1
 ## HTML Extensions
 
 ```md
+<!-- Underline -->
+<ins>Hello World!</ins>
+
+<!-- Strikethrough -->
+<s>Hello World!</s>
+
 <!-- Colored text -->
 <span style="color:#FF00FF">Pink</span>
+
+<!-- Small text -->
+<small>Hello World!</small>
 
 <!-- Horizontal divided blocks -->
 <div>
@@ -101,12 +110,54 @@ Text1
     </div>
 </div>
 
-<!-- Small characters in superior and inferior opsitions -->
+<!-- Small characters in superior and inferior positions -->
 e<sup>-1</sup>
+x<sub>0</sub>
 
-<!-- Underline -->
-<ins>Hello World!</ins>
-
-<!-- Keyboard Keys -->
+<!-- Keyboard keys -->
 <kbd>Alt</kbd> + <kbd>F4</kbd>
+
+<!-- Dropdown box -->
+<details>
+    <summary>This is a dropdown box</summary>
+    Hello World!
+</details>
+<!--
+This box can be open by default
+with '<details open>'
+-->
+
+<!-- Marked text -->
+Hello <mark>World!</mark>
+
+<!-- Audio player -->
+<audio
+    controls
+    src="https://www.myinstants.com/media/sounds/fart-with-reverb_NcgStsA.mp3">
+	 Couldn't load audio
+</audio>
+
+<!-- Video player -->
+<video 
+    controls muted
+    width="550" height="200">
+    <source
+        src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
+        type="video/mp4">
+    Couldn't load video
+</video>
+
+<!-- Progress bar -->
+<meter id="progress"
+    min="0" max="100"
+    low="33" high="66" optimum="80"
+    value="78"/>
+<!-- Or -->
+<progress id="file" max="100" value="78"/>
+
+<!-- Fieldset box -->
+<fieldset>
+<legend>Pretty box</legend>
+This is text
+</fieldset>
 ```
