@@ -21,11 +21,15 @@ ___
 - feh -           Image viewer
 - chromium -      Browser
 - htop -          Resources Manager (CPU etc ...)
-- picom/compton - Compositor
+- picom/compton   Compositor
 - Xarchiver -     Unified archives zipper and unzipper
 - flameshot -     Screenshot tool
 - notify-send -   Notification applet
 - autorandr -     Automated display setter
+- brightnessctl   Brightness controller
+- pactl           Audio controller
+- unclutter       Mouse hidder
+- bash-completion Bash autocompletion
 
 
 ### Extensions
