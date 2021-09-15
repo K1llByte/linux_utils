@@ -73,6 +73,11 @@ Find & Replace
 | <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>Ctrl</kbd> + <kbd>J</kbd> | Unfold All regions of editor |
 | <kbd>Alt</kbd> + <kbd>L</kbd>                                    | Find in Selection            |
 | (Selected Text) <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + L           | Select all words equal to Selected Text |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>                | Open Explorer Bar            |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>                | Open Find Bar                |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd>                | Open Extensions Bar          |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgUp</kbd>             | Move Tab to Left             |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgDn</kbd>             | Move Tab to Right            |
 
 
 ___
@@ -112,27 +117,28 @@ ___
 ___
 # Firefox
 
-| Keybind                                             | Description                  |
-| :-------------------------------------------------: | :--------------------------: |
-| <kbd>Ctrl</kbd> + <kbd>L</kbd>                      | Select URL                   |
-| <kbd>Ctrl</kbd> + <kbd>K</kbd>                      | Seach Engine                 |
-| <kbd>Ctrl</kbd> + <kbd>T</kbd>                      | New Tab                      |
-| <kbd>Alt</kbd> + <kbd>&larr;</kbd>                  | Go Back                      |
-| <kbd>Alt</kbd> + <kbd>&rarr;</kbd>                  | Go Forward                   |
-| <kbd>Ctrl</kbd> + <kbd>Tab</kbd>                    | Next Tab                     |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> | Previous Tab                 |
-| <kbd>Ctrl</kbd> + <kbd>W</kbd>                      | Close Tab                    |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>   | Reopen Closed Tab            |
-| <kbd>Ctrl</kbd> + <kbd>D</kbd>                      | Bookmark This Page           |
-| <kbd>Ctrl</kbd> + <kbd>B</kbd>                      | Bookmarks Sidebar            |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>   | Toggle the Bookmarks toolbar |
-| <kbd>Ctrl</kbd> + <kbd>H</kbd>                      | History Sidebar              |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd>   | Open Extensions Tab          |
-| <kbd>Alt</kbd> + <kbd>M</kbd>                       | Mute Tab                     |
-| <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd>    | Toggle Dark Reader           |
-| <kbd>Alt</kbd> + <kbd>L</kbd>                       | Next Tab Group               |
-| <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd>    | Previous Tab Group           |
-
+| Keybind                                              | Description                  |
+| :--------------------------------------------------: | :--------------------------: |
+| <kbd>Ctrl</kbd> + <kbd>L</kbd>                       | Select URL                   |
+| <kbd>Ctrl</kbd> + <kbd>K</kbd>                       | Seach Engine                 |
+| <kbd>Ctrl</kbd> + <kbd>T</kbd>                       | New Tab                      |
+| <kbd>Alt</kbd> + <kbd>&larr;</kbd>                   | Go Back                      |
+| <kbd>Alt</kbd> + <kbd>&rarr;</kbd>                   | Go Forward                   |
+| <kbd>Ctrl</kbd> + <kbd>Tab</kbd>                     | Next Tab                     |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>  | Previous Tab                 |
+| <kbd>Ctrl</kbd> + <kbd>W</kbd>                       | Close Tab                    |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>    | Reopen Closed Tab            |
+| <kbd>Ctrl</kbd> + <kbd>D</kbd>                       | Bookmark This Page           |
+| <kbd>Ctrl</kbd> + <kbd>B</kbd>                       | Bookmarks Sidebar            |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>    | Toggle the Bookmarks toolbar |
+| <kbd>Ctrl</kbd> + <kbd>H</kbd>                       | History Sidebar              |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd>    | Open Extensions Tab          |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgUp</kbd> | Move Tab to Left             |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgDn</kbd> | Move Tab to Right            |
+| <kbd>Alt</kbd> + <kbd>M</kbd>                        | Mute Tab                     |
+| <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd>     | Toggle Dark Reader           |
+| <kbd>Alt</kbd> + <kbd>L</kbd>                        | Next Tab Group               |
+| <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd>     | Previous Tab Group           |
 
 
 ___

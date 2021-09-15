@@ -200,4 +200,7 @@ ln -s <file> <symlink>
 
 # Create hard link
 ln <file> <symlink>
+
+# List mounted devices
+findmnt
 ```
