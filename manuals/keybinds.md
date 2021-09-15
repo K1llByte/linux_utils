@@ -7,8 +7,10 @@ Manual for my keybinds (some correspond to the default ones)
 - [i3wm](#i3wm)
 - [VSCode](#VSCode)
 - [Discord](#Discord)
-- [Chrome](#Chrome)
+<!-- - [Chrome](#Chrome) -->
+- [Firefox](#Firefox)
 - [Thunar](#Thunar)
+
 
 ___
 # i3wm
@@ -29,6 +31,7 @@ ___
 | <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>          | Reload i3                       |
 | <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>          | Restart i3                      |
 | <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>          | Exit i3                         |
+
 
 ___
 # VSCode
@@ -87,6 +90,8 @@ ___
 | <kbd>Shift</kbd> + <kbd>Esc</kbd>                        | Mark Server As Read & Go Down   |
 | <kbd>Ctrl</kbd> + <kbd>P</kbd>                           | Toggle Pinned Messages          |
 
+
+<!--
 ___
 # Chrome
 
@@ -101,6 +106,33 @@ ___
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> | Previous Tab         |
 | <kbd>Ctrl</kbd> + <kbd>1-8</kbd>                    | Switch to first N tabs |
 | <kbd>Ctrl</kbd> + <kbd>9</kbd>                      | Switch to last tab     |
+-->
+
+
+___
+# Firefox
+
+| Keybind                                             | Description                  |
+| :-------------------------------------------------: | :--------------------------: |
+| <kbd>Ctrl</kbd> + <kbd>L</kbd>                      | Select URL                   |
+| <kbd>Ctrl</kbd> + <kbd>K</kbd>                      | Seach Engine                 |
+| <kbd>Ctrl</kbd> + <kbd>T</kbd>                      | New Tab                      |
+| <kbd>Alt</kbd> + <kbd>&larr;</kbd>                  | Go Back                      |
+| <kbd>Alt</kbd> + <kbd>&rarr;</kbd>                  | Go Forward                   |
+| <kbd>Ctrl</kbd> + <kbd>Tab</kbd>                    | Next Tab                     |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> | Previous Tab                 |
+| <kbd>Ctrl</kbd> + <kbd>W</kbd>                      | Close Tab                    |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>   | Reopen Closed Tab            |
+| <kbd>Ctrl</kbd> + <kbd>D</kbd>                      | Bookmark This Page           |
+| <kbd>Ctrl</kbd> + <kbd>B</kbd>                      | Bookmarks Sidebar            |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>   | Toggle the Bookmarks toolbar |
+| <kbd>Ctrl</kbd> + <kbd>H</kbd>                      | History Sidebar              |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd>   | Open Extensions Tab          |
+| <kbd>Alt</kbd> + <kbd>M</kbd>                       | Mute Tab                     |
+| <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd>    | Toggle Dark Reader           |
+| <kbd>Alt</kbd> + <kbd>L</kbd>                       | Next Tab Group               |
+| <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd>    | Previous Tab Group           |
+
 
 
 ___
