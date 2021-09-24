@@ -20,7 +20,7 @@ ___
 | <kbd>Mod</kbd> + <kbd>Enter</kbd>                         | Open Terminal                   |
 | <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>Q</kbd>          | Close App                       |
 | <kbd>Mod</kbd> + <kbd>D</kbd>                             | Open Rofi                       |
-| <kbd>Mod</kbd> + <kbd>Number</kbd>                        | Change Workspace                |
+| <kbd>Mod</kbd> + <kbd>[0-9]</kbd>                         | Change Workspace                |
 | <kbd>Mod</kbd> + <kbd>Arrow Keys</kbd>                    | Change Window Focus             |
 | <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Keys</kbd> | Move Focused Window             |
 | <kbd>Mod</kbd> + <kbd>M</kbd>                             | Move Workspace to other monitor |
@@ -31,6 +31,8 @@ ___
 | <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>          | Reload i3                       |
 | <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>          | Restart i3                      |
 | <kbd>Mod</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>          | Exit i3                         |
+| <kbd>F2</kbd>                                             | Start Browser                   |
+| <kbd>F3</kbd>                                             | Start Editor                    |
 
 
 ___
@@ -119,7 +121,8 @@ ___
 
 | Keybind                                              | Description                  |
 | :--------------------------------------------------: | :--------------------------: |
-| <kbd>Ctrl</kbd> + <kbd>L</kbd>                       | Select URL                   |
+| <kbd>Ctrl</kbd> + <kbd>L</kbd>                       | Focus URL                    |
+| <kbd>F6</kbd>                                        | Focus/Unfocus URL            |
 | <kbd>Ctrl</kbd> + <kbd>K</kbd>                       | Seach Engine                 |
 | <kbd>Ctrl</kbd> + <kbd>T</kbd>                       | New Tab                      |
 | <kbd>Alt</kbd> + <kbd>&larr;</kbd>                   | Go Back                      |
@@ -132,6 +135,7 @@ ___
 | <kbd>Ctrl</kbd> + <kbd>B</kbd>                       | Bookmarks Sidebar            |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>    | Toggle the Bookmarks toolbar |
 | <kbd>Ctrl</kbd> + <kbd>H</kbd>                       | History Sidebar              |
+| <kbd>Ctrl</kbd> + <kbd>0</kbd>                       | Reset Zoom to 100%           |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd>    | Open Extensions Tab          |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgUp</kbd> | Move Tab to Left             |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgDn</kbd> | Move Tab to Right            |

@@ -188,6 +188,9 @@ setxkbmap -layout pt
 # Add a key manually if pacman has problems importing it
 gpg --keyserver pool.sks-keyservers.net --recv-keys <key>
 
+# Update keyring (if there's problems with PGP keys)
+yay -S archlinux-keyring
+
 # Show window info (need to click the window with mouse)
 xprop
 
