@@ -41,5 +41,6 @@ cargo build --release
 ## Run
 
 ```bash
+# Compiles in debug (if not compiled) and then runs
 cargo run
 ```
