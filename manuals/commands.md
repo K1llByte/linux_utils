@@ -50,6 +50,9 @@ curl -L <url>
 # -s is silent mode, to avoid the download info prints
 curl -s <url>
 
+# Change user agent (some sites reject if none is present)
+curl --user-agent 'Chrome/79' <url>
+
 ```
 
 ### grep
@@ -206,4 +209,10 @@ ln <file> <symlink>
 
 # List mounted devices
 findmnt
+
+# Generate slides
+pandoc -t revealjs -s -i -o foo.html foo.md
+
+# Connect to eduroam with nmcli
+nmcli connection add type wifi con-name eduroam ifname wlp3s0  ssid "eduroam" -- wifi-sec.key-mgmt wpa-eap 802-1x.eap ttls 802-1x.identity a85272@alunos.uminho.pt 802-1x.phase2-auth  mschapv2
 ```

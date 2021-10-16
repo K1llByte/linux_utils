@@ -5,11 +5,11 @@ Manual for my keybinds (some correspond to the default ones)
 ## Index
 
 - [i3wm](#i3wm)
-- [VSCode](#VSCode)
-- [Discord](#Discord)
-<!-- - [Chrome](#Chrome) -->
-- [Firefox](#Firefox)
-- [Thunar](#Thunar)
+- [VSCode](#vscode)
+- [Discord](#discord)
+- [Firefox](#firefox)
+- [Thunar](#thunar)
+- [Tmux](#tmux)
 
 
 ___
