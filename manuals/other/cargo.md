@@ -44,3 +44,17 @@ cargo build --release
 # Compiles in debug (if not compiled) and then runs
 cargo run
 ```
+
+## Doc
+
+```bash
+# Generate project documentation
+cargo doc
+
+# Generate and open project documentation
+cargo doc --open
+
+# Prevents generation of docs of dependencies
+cargo doc --no-deps
+
+```
