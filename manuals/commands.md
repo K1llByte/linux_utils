@@ -214,5 +214,5 @@ findmnt
 pandoc -t revealjs -s -i -o foo.html foo.md
 
 # Connect to eduroam with nmcli
-nmcli connection add type wifi con-name eduroam ifname wlp3s0  ssid "eduroam" -- wifi-sec.key-mgmt wpa-eap 802-1x.eap ttls 802-1x.identity a85272@alunos.uminho.pt 802-1x.phase2-auth  mschapv2
+export NUM_ALUNO="a85272"; nmcli connection add type wifi con-name eduroam ifname wlp3s0  ssid "eduroam" -- wifi-sec.key-mgmt wpa-eap 802-1x.eap ttls 802-1x.identity $NUM_ALUNO@alunos.uminho.pt 802-1x.phase2-auth  mschapv2
 ```

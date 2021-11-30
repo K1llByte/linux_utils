@@ -1,11 +1,20 @@
 # Git
 
-<!--
-- Git commands
-- Usefull combinations
--->
+- [Get commands](#git-commands)
+  - [Commit](#commit)
+  - [Restore](#restore)
+  - [Rm](#rm)
+  - [Clone](#clone)
+  - [Branch](#branch)
+  - [Checkout](#checkout)
+  - [Merge](#merge)
+  - [Diff](#diff)
+  - [Log](#log)
+- [Usefull combinations](#usefull-combinations)
 
-## Commit
+## Git commands
+
+### Commit
 Record changes to the repository
 
 ```sh
@@ -15,11 +24,15 @@ git commit -m "<Commit Message>"
 # Stage all tracked files and commit 
 git commit -a -m "<Commit Message>"
 
-# Commit but with 
-git commit
+# Commit but without comment
+git commit --allow-empty-message
+
+# Commit changes to previous commit
+# Use only in local branches or local commits
+git commit --amend
 ```
 
-## Restore
+### Restore
 Restore working tree files
 
 ```sh
@@ -27,7 +40,7 @@ Restore working tree files
 git restore .
 ```
 
-## Rm
+### Rm
 Remove files from the working tree and from the index
 
 ```sh
@@ -39,7 +52,7 @@ git rm --cached <filename>
 ```
 
 
-## Clone
+### Clone
 Clone a repository into a new directory
 
 ```sh
@@ -51,7 +64,7 @@ git clone <git:url>
 git clone <git:url> <dir_name>
 ```
 
-## Branch
+### Branch
 List, create, or delete branches
 
 ```sh
@@ -70,7 +83,7 @@ git branch -m <old_name> <new_name>
 git branch -d <branch_name>
 ```
 
-## Checkout
+### Checkout
 Switch branches or restore working tree files
 
 ```sh
@@ -81,7 +94,7 @@ git checkout <branch_name>
 git checkout -b <new_branch_name>
 ```
 
-## Merge
+### Merge
 Merge two or more branches
 
 ```sh
@@ -89,7 +102,7 @@ Merge two or more branches
 git merge <branch_name>
 ```
 
-## Diff
+### Diff
 Show changes between commits
 
 ```sh
@@ -100,7 +113,7 @@ git diff
 git diff --staged
 ```
 
-## Log
+### Log
 Show commit logs
 
 ```sh
@@ -113,6 +126,7 @@ git log --oneline
 
 ___
 
+## Use
 ## Create Repository GitHub
 
 It's required that the repository is previously created on the platform. <br/>
@@ -128,13 +142,15 @@ git init
 git add .
 
 # Commit changes with a message
-git commit -m "General commit"
+git commit -m "Commit message"
 
 # Set the origin to github with the url of a new repository
 git remote add origin git@github.com:username/repo.git
 
 # Push local data on branch 'master' to remote repository
 git push -u origin master
+# or
+git push -u origin $(git branch --show')
 ```
 
 *Or*
@@ -170,3 +186,14 @@ git push
   
   ## Configurations (optional)
  -->
+
+
+<!--
+git add           | ga
+git commit        | gc
+git push          | gp
+git checkout      | gch
+git clone         | gcl
+git diff          | gd
+git diff --staged | gds
+-->

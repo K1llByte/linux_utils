@@ -1,0 +1,9 @@
+w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia
+vk: https://www.khronos.org/search/?q=%s Vulkan
+y: https://www.youtube.com/results?search_query=%s Youtube
+g: https://www.google.com/search?q=%s Google
+d: https://duckduckgo.com/?q=%s DuckDuckGo
+gh: https://github.com/search?q=%s GitHub
+aur: https://aur.archlinux.org/packages/?O=0&K=%s Aur
+rs: https://doc.rust-lang.org/std/?search=%s Rust
+crs: https://crates.io/search?q=%s Crates.io
