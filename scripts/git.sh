@@ -14,3 +14,22 @@
 # gnf \ Git new feature
 # - git checkout -b <name>
 # - git push -u origin $(git branch --show)
+
+gitall() 
+{
+    if [ ! -z "$1" ]; then
+        git add . && git commit -m "$1" && git push
+    else
+        # git add . && git commit -m "General commit" && git push
+        git add . && git commit --allow-empty-message && git push
+    fi
+}
+
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gch="git checkout"
+alias gb="git branch"
+alias gcl="git clone"
+alias gm="git merge"
+alias gpo="git push -u origin $(git branch --show)"
