@@ -10,7 +10,7 @@ Manual for my keybinds (some correspond to the default ones)
 - [Firefox](#firefox)
 - [Thunar](#thunar)
 - [Tmux](#tmux)
-- [Vimium](#Vimium)
+- [Zathura](#zathura)
 
 
 ___
@@ -177,7 +177,9 @@ ___
 
 | Keybind                                                           | Description                 |
 | :---------------------------------------------------------------: | :-------------------------: |
-| <kbd>Ctrl</kbd> + <kbd>R</kbd>                                    | Disable dark theme                     |
+| <kbd>Space</kbd>                                                  | Next Page                   |
+| <kbd>Shift</kbd> + <kbd>Space</kbd>                               | Previous Page               |
+| <kbd>Ctrl</kbd> + <kbd>R</kbd>                                    | Disable dark theme          |
 
 
 <!--
