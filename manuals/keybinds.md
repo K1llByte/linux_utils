@@ -43,44 +43,46 @@ User Interface
 Editor
 Find & Replace
 -->
-| Keybind                                                          | Description                  |
-| :--------------------------------------------------------------: | :--------------------------: |
-| <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>Ctrl</kbd> + <kbd>T</kbd> | Color Scheme                 |
-| <kbd>Ctrl</kbd> + <kbd>,</kbd>                                   | VSCode Settings              |
-| <kbd>Ctrl</kbd> + <kbd>Q</kbd>                                   | Open/Close Terminal          |
-| <kbd>Ctrl</kbd> + <kbd>B</kbd>                                   | Toggle Side Bar              |
-| <kbd>Shift</kbd> + <kbd>º</kbd>                                  | Toggle Activity Bar          |
-| <kbd>Alt</kbd> + <kbd>S</kbd>                                    | Toggle Status Bar            |
-| <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>V</kbd>                   | Preview Markdown/PDF         |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd>                | Delete line                  |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>                | Command Palette              |
-| <kbd>Ctrl</kbd> + <kbd>[1-9]</kbd>                               | Focus Editor Group by number |
-| <kbd>Ctrl</kbd> + <kbd>0</kbd>                                   | Focus Side Bar               |
-| <kbd>Ctrl</kbd> + <kbd>P</kbd>                                   | Open File                    |
-| <kbd>Ctrl</kbd> + <kbd>W</kbd>                                   | Close Window                 |
-| <kbd>Ctrl</kbd> + <kbd>Tab</kbd>                                 | Next Tab                     |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>              | Previous Tab                 |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>7</kbd>                | Line Comment                 |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd>                | Multi Line Comment           |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>                | Reopen Closed File           |
-| <kbd>Alt</kbd> + <kbd>Z</kbd>                                    | Toggle Word Wrap             |
-| <kbd>Ctrl</kbd> + <kbd>F</kbd>                                   | Find                         |
-| <kbd>Ctrl</kbd> + <kbd>H</kbd>                                   | Find and Replace             |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>                | Find in all files            |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd>                | Find and Replace all files   |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>7</kbd>                | Line Comment Selected Text   |
-| <kbd>Alt</kbd> + <kbd>R</kbd>                                    | Toggle Regex Matching        |
-| <kbd>Alt</kbd> + <kbd>Q</kbd>                                    | Toggle Breadcrumbs           |
-| <kbd>Alt</kbd> + <kbd>M</kbd>                                    | Toggle Minimap               |
-| <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>Ctrl</kbd> + <kbd>0</kbd> | Fold All regions of editor   |
-| <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>Ctrl</kbd> + <kbd>J</kbd> | Unfold All regions of editor |
-| <kbd>Alt</kbd> + <kbd>L</kbd>                                    | Find in Selection            |
+| Keybind                                                          | Description                             |
+| :--------------------------------------------------------------: | :-------------------------------------: |
+| <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>Ctrl</kbd> + <kbd>T</kbd> | Color Scheme                            |
+| <kbd>Ctrl</kbd> + <kbd>,</kbd>                                   | VSCode Settings                         |
+| <kbd>Ctrl</kbd> + <kbd>Q</kbd>                                   | Open/Close Terminal                     |
+| <kbd>Ctrl</kbd> + <kbd>B</kbd>                                   | Toggle Side Bar                         |
+| <kbd>Shift</kbd> + <kbd>º</kbd>                                  | Toggle Activity Bar                     |
+| <kbd>Alt</kbd> + <kbd>S</kbd>                                    | Toggle Status Bar                       |
+| <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>V</kbd>                   | Preview Markdown/PDF                    |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd>                | Delete line                             |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>                | Command Palette                         |
+| <kbd>Ctrl</kbd> + <kbd>[1-9]</kbd>                               | Focus Editor Group by number            |
+| <kbd>Ctrl</kbd> + <kbd>0</kbd>                                   | Focus Side Bar                          |
+| <kbd>Ctrl</kbd> + <kbd>P</kbd>                                   | Open File                               |
+| <kbd>Ctrl</kbd> + <kbd>W</kbd>                                   | Close Window                            |
+| <kbd>Ctrl</kbd> + <kbd>Tab</kbd>                                 | Next Tab                                |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>              | Previous Tab                            |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>7</kbd>                | Line Comment                            |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd>                | Multi Line Comment                      |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>                | Reopen Closed File                      |
+| <kbd>Alt</kbd> + <kbd>Z</kbd>                                    | Toggle Word Wrap                        |
+| <kbd>Ctrl</kbd> + <kbd>F</kbd>                                   | Find                                    |
+| <kbd>Ctrl</kbd> + <kbd>H</kbd>                                   | Find and Replace                        |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>                | Find in all files                       |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd>                | Find and Replace all files              |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>7</kbd>                | Line Comment Selected Text              |
+| <kbd>Alt</kbd> + <kbd>R</kbd>                                    | Toggle Regex Matching                   |
+| <kbd>Alt</kbd> + <kbd>Q</kbd>                                    | Toggle Breadcrumbs                      |
+| <kbd>Alt</kbd> + <kbd>M</kbd>                                    | Toggle Minimap                          |
+| <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>Ctrl</kbd> + <kbd>0</kbd> | Fold All regions of editor              |
+| <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>Ctrl</kbd> + <kbd>J</kbd> | Unfold All regions of editor            |
+| <kbd>Alt</kbd> + <kbd>L</kbd>                                    | Find in Selection                       |
 | (Selected Text) <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + L           | Select all words equal to Selected Text |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>                | Open Explorer Bar            |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>                | Open Find Bar                |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd>                | Open Extensions Bar          |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgUp</kbd>             | Move Tab to Left             |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgDn</kbd>             | Move Tab to Right            |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>                | Open Explorer Bar                       |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>                | Open Find Bar                           |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd>                | Open Extensions Bar                     |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgUp</kbd>             | Move Tab to Left                        |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgDn</kbd>             | Move Tab to Right                       |
+| <kbd>Alt</kbd> + <kbd>B</kbd> => <kbd>Alt</kbd> + <kbd>R</kbd>   | **LaTeX Workshop:** Build with recipe   |
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd>                  | **LaTeX Workshop:** View LaTeX pdf file |
 
 
 ___
