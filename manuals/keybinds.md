@@ -81,6 +81,7 @@ Find & Replace
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd>                | Open Extensions Bar                     |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgUp</kbd>             | Move Tab to Left                        |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgDn</kbd>             | Move Tab to Right                       |
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>                  | Clear all notifications                 |
 | <kbd>Alt</kbd> + <kbd>B</kbd> => <kbd>Alt</kbd> + <kbd>R</kbd>   | **LaTeX Workshop:** Build with recipe   |
 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd>                  | **LaTeX Workshop:** View LaTeX pdf file |
 
@@ -185,6 +186,7 @@ ___
 | <kbd>gg</kbd>                                                     | Goto first page             |
 | <kbd>G</kbd>                                                      | Goto last page              |
 | <kbd>[1-9]</kbd> + <kbd>G</kbd>                                   | Goto nth page               |
+| <kbd>D</kbd>                                                      | Double page mode            |
 
 
 <!--
