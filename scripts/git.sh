@@ -25,6 +25,13 @@ gitall()
     fi
 }
 
+gf() {
+    [ -z ] && >&2 echo "error: missing branch name" && return;
+    git add .
+    git commit -m "General commit"
+    git checkout -b $1
+}
+
 alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
@@ -33,4 +40,5 @@ alias gb="git branch"
 alias gcl="git clone"
 alias gm="git merge"
 alias gpo="git push -u origin $(git branch --show)"
+alias gss="git status --short"
 alias gs="git status --short"
