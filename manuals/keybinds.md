@@ -78,6 +78,7 @@ Find & Replace
 | (Selected Text) <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + L           | Select all words equal to Selected Text |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>                | Open Explorer Bar                       |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>                | Open Find Bar                           |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd>                | Open Replace Bar                        |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd>                | Open Extensions Bar                     |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgUp</kbd>             | Move Tab to Left                        |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>PgDn</kbd>             | Move Tab to Right                       |
