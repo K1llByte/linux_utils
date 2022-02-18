@@ -1,6 +1,6 @@
 # LinuxUtils
 
-Respoitory dedicated to bash scripts, dotfiles, my personal standards / guidelines and markdown manuals
+Respoitory dedicated to bash scripts, dotfiles and some markdown manuals with usefull tips
 
 ## Scripts
 
@@ -17,3 +17,22 @@ Located at the [`configs/`](configs/) folder
 ## Manuals
 
 Located at the [`manuals/`](manuals/) folder
+
+___
+
+## Software
+
+- **Window Manager:** i3-gaps
+- **Status Bar:** i3-bar
+- **App Launcher:** rofi
+- **Terminal:** alacritty
+- **File Manager:** Thunar / ranger
+- **Browser:** firefox
+- **Shell:** bash
+- **Task manager:** htop
+<!-- Apps -->
+- **Calendar:** calcurse
+- **Video Player:** mpv
+- **Document Viewer:** zathura
+<!-- Utils -->
+<!-- - fzf -->
