@@ -6,15 +6,33 @@
 #  $$ |$$\   $$ |      $$ |      $$ |  $$ |$$ |  $$ |$$ |      $$ |$$ |  $$ |
 #  $$ |\$$$$$$  |      \$$$$$$$\ \$$$$$$  |$$ |  $$ |$$ |      $$ |\$$$$$$$ |
 #  \__| \______/        \_______| \______/ \__|  \__|\__|      \__| \____$$ |
+#                                                                  $$\   $$ |
+#                                                                  \$$$$$$  |
+#                                                                   \______/ 
+
+################################### Index ####################################
+
+# - Variable Setting
+# - Keybinds
+# - i3 Properties
+# - Bar Config
+# - Executes
 
 ############################## Variable Setting ##############################
 
 # Custom environment colors
-set $bg-color             #2f343f
-set $inactive-bg-color    #2f343f
+#set $bg-color             #2f343f
+#set $inactive-bg-color    #2f343f
+#set $text-color           #f3f4f5
+#set $inactive-text-color  #676E7D
+#set $urgent-bg-color      #E53935
+
+set $bg-color             #919191
+set $inactive-bg-color    #3b3b3b
 set $text-color           #f3f4f5
-set $inactive-text-color  #676E7D
-set $urgent-bg-color      #E53935
+set $inactive-text-color  #828282
+set $urgent-bg-color      #f0b40e
+
 
 set $bg-color-transparent #2f343f40
 
@@ -26,21 +44,32 @@ set $grey-transparent     #171818F0
 set $mod Mod4
 
 # Workspaces names
-set $ws1  " 1  "
-set $ws2  " 2  "
-set $ws3  " 3  "
+set $ws1  " 1 "
+set $ws2  " 2 "
+set $ws3  " 3 "
 set $ws4  " 4 "
 set $ws5  " 5 "
 set $ws6  " 6 "
 set $ws7  " 7 "
 set $ws8  " 8 "
 set $ws9  " 9 "
-set $ws10 " 10  "
+set $ws10 " 10"
+
+# set $ws1  " 1  "
+# set $ws2  " 2  "
+# set $ws3  " 3  "
+# set $ws4  " 4 "
+# set $ws5  " 5 "
+# set $ws6  " 6 "
+# set $ws7  " 7 "
+# set $ws8  " 8 "
+# set $ws9  " 9 "
+# set $ws10 " 10  "
 
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Droid Sans Mono 10,FontAwesome 8
+font pango:Droid Sans Mono 10,mononoki Nerd Font 8
 
 ################################## Keybinds ##################################
 
@@ -63,11 +92,16 @@ floating_modifier $mod
 # Start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
-# Kill focused window
-bindsym $mod+Shift+q kill
+# Start apps
+bindsym $mod+F2 exec $BROWSER
+bindsym $mod+F3 exec $EDITOR
 
 # Start App launcher #rofi -show drun
-bindsym $mod+d exec rofi -modi "drun#run#work:~/.config/rofi/rofi_work.sh:" -show drun 
+bindsym $mod+d exec rofi -show drun 
+bindsym $mod+a exec rofi -show applets -modi "applets:~/.config/rofi/scripts/rofi_applets.sh"
+
+# Kill focused window
+bindsym $mod+Shift+q kill
 
 # Change focus
 bindsym $mod+Left focus left
@@ -101,6 +135,8 @@ bindsym $mod+v split v
 
 # Enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+# Enter global fullscreen mode for the focused container
+bindsym $mod+shift+f fullscreen toggle global
 
 # change container layout (stacked, tabbed, toggle split) # TODO: Delete later
 #bindsym $mod+s layout stacking
@@ -150,7 +186,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec i3-msg exit
 
 # Enter resize mode
 bindsym $mod+r mode "resize"
@@ -181,64 +217,89 @@ mode "resize" {
 }
 
 
+set $mode_launcher launch
+bindsym $mod+o mode "$mode_launcher"
+
+mode "$mode_launcher" {
+    bindsym e exec $EDITOR; mode "default"
+    bindsym b exec $BROWSER; mode "default"
+
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+
+# Move workspace to monitor on the left
 bindsym $mod+m move workspace to output left
 
+# Change to Gaps config
+bindsym $mod+c exec ./chconfig.sh gaps
+
+
 # Gaps config
-#gaps inner 10
-#gaps outer 10
+# gaps inner 8
+# gaps outer 2
 #
-#bindsym $mod+z gaps outer all plus 5
-#bindsym $mod+Shift+z gaps outer all minus 5
+# bindsym $mod+z gaps outer all plus 5
+# bindsym $mod+Shift+z gaps outer all minus 5
 
 
 # Region Screenshot (also copies to clipboard)
-bindsym Print exec FILENAME="$(date +%s).png" && maim -s ~/Pictures/Screenshots/$FILENAME && cat ~/Pictures/Screenshots/$FILENAME | xclip -selection clipboard -t image/png && unset FILENAME
+#FILENAME="$(date +%s).png" && maim -s ~/Pictures/Screenshots/$FILENAME && cat ~/Pictures/Screenshots/$FILENAME | xclip -selection clipboard -t image/png && unset FILENAME
+bindsym Print exec flameshot gui
 # TODO: Remove this train later # $(date +%d/%m/%Y_%T:%3N)
 
 # Screen Screenshot (also copies to clipboard)
-bindsym Ctrl+Print exec FILENAME="$(date +%s).png" && maim ~/Pictures/Screenshots/$FILENAME && cat ~/Pictures/Screenshots/$FILENAME | xclip -selection clipboard -t image/png && unset FILENAME
+#FILENAME="$(date +%s).png" && maim ~/Pictures/Screenshots/$FILENAME && cat ~/Pictures/Screenshots/$FILENAME | xclip -selection clipboard -t image/png && unset FILENAME
+bindsym Ctrl+Print exec flameshot full -c
 # TODO: Remove this train later # $(date +%d/%m/%Y_%T:%3N)
 
 ############################### i3 Properties ################################
 
 # window colors
 #                       border              background         text                 indicator
-# client.focused          $bg-color           $bg-color          $text-color          #ff0000
-# client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #ff0000
-# client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #ff0000
-# client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #ff0000
+client.focused          $bg-color           $bg-color          $text-color          $bg-color
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $bg-color
 
 # Remove edges and borders
 new_window pixel 0
 hide_edge_borders both
 
+# Window popups on fullscreen
+# popup_during_fullscreen leave_fullscreen
+
+# Just borders and focused borders
+#default_border pixel
+# default_border pixel 5
+
 ################################# Bar Config #################################
 
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id polybar-msg cmd hide
 
-
-bar {
-        i3bar_command i3bar -t 
+# bar {
+#         i3bar_command i3bar -t 
         
-        position top
-        status_command i3blocks -c $HOME/.config/i3blocks/config
-        colors {
-                background $grey-transparent
-                separator #757575
-                #                  border                         background                     text
-                focused_workspace  $grey-transparent              $grey-transparent              $yellow
-                inactive_workspace $grey-transparent              $grey-transparent              #dddddd
-                urgent_workspace   $urgent-bg-color               $urgent-bg-color               #000000
-        }
+#         position top
+#         status_command i3blocks -c $HOME/.config/i3blocks/config
+#         colors {
+#                 background $grey-transparent
+#                 separator #757575
+#                 #                  border                         background                     text
+#                 focused_workspace  $grey-transparent              $grey-transparent              $yellow
+#                 inactive_workspace $grey-transparent              $grey-transparent              #dddddd
+#                 urgent_workspace   $urgent-bg-color               $urgent-bg-color               #000000
+#         }
 
-        # Removes app icons in bar
-        tray_output none
-        mode hide
-        hidden_state hide
-        modifier $mod
+#         # Removes app icons in bar
+#         tray_output none
+#         mode hide
+#         hidden_state hide # Perhaps not needed
+#         modifier $mod
         
-        font pango:Droid Sans Mono 10, Font Awesome 5 Free 12
-}
+#         font pango:Droid Sans Mono 10, mononoki Nerd Font 12
+# }
 
 ################################# Executes ###################################
 
@@ -246,21 +307,24 @@ bar {
 exec setxkbmap -layout pt # TODO: remove this config later
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
+# screen before suspend. Use loginctl lock-session to lock the screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Turn off notifications
+exec dunstctl set-paused false
+
 # Execute compositor
-exec_always compton
+#exec_always compton
 
 # Set Wallapper
 exec_always feh --bg-fill ~/.config/i3/wallpaper
 
 # Default workspaces for apps
-assign [class="Chromium"] $ws2
+assign [class="firefoxdeveloperedition"] $ws2
 assign [class="code-oss"] $ws3
 assign [class="discord"] $ws10
 
