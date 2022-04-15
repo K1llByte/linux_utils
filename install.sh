@@ -77,6 +77,7 @@ alacritty() {
     print_colored "Installed alacritty"
 }
 
+# Install and configure bash utilities
 bash_utils() {
     # Configs
     cpcp configs/bash/.bashrc ~/
@@ -89,6 +90,7 @@ bash_utils() {
     print_colored "Installed bash utilities"
 }
 
+# Install and configure rofi
 rofi() {
     # Install
     [[ -z $(yay -Qi rofi) ]] && \
@@ -129,25 +131,60 @@ thunar() {
     print_colored "Installed thunar"
 }
 
+# Install and configure arandr and autorandr
 randr() {
     # Install
     [[ -z $(yay -Qi arandr) ]] && \
         yay -S --noconfirm arandr
     [[ -z $(yay -Qi autorandr) ]] && \
         yay -S --noconfirm autorandr
+    print_colored "Installed arandr"
 }
 
-# TODO: firefox
-# TODO: picom
+# Install and configure picom
+picom() {
+    # Install
+    [[ -z $(yay -Qi picom) ]] && \
+        yay -S --noconfirm picom
+    # Configs
+    cpcp configs/picom/picom.conf ~/.config/
+    print_colored "Installed picom"
+}
+
+# Install and configure flameshot
+flameshot() {
+    # Install
+    [[ -z $(yay -Qi flameshot) ]] && \
+        yay -S --noconfirm flameshot
+    # Configs
+    cpcp configs/flameshot/flameshot.ini ~/.config/flameshot/
+    print_colored "Installed flameshot"
+}
+
+# Install and configure firefox
+firefox() {
+    # Install
+    [[ -z $(yay -Qi firefox-developer-edition) ]] && \
+        yay -S --noconfirm firefox-developer-edition
+    # Configs
+    # local dest=$(echo ~/.mozilla/firefox/*dev-edition-default | awk '{print $2}')
+    # cpcp configs/firefox/userChrome.css $dest/chrome
+    # cpcp configs/firefox/userContent.css $dest/chrome
+    print_colored "Installed firefox"
+}
 
 ########### All Installs ###########
 
-# other_requirements
-# i3gaps
-# polybar
-# vscode
-# bash_utils
-# alacritty
-# rofi
-# dunst
+other_requirements
+i3gaps
+polybar
+vscode
+bash_utils
+alacritty
+rofi
+dunst
 thunar
+randr
+picom
+flameshot
+firefox
