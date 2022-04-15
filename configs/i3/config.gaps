@@ -269,8 +269,8 @@ client.urgent           $urgent-bg-color    $orange            $text-color      
 # Just borders and focused borders
 #default_border pixel
 default_border pixel 0
-# gaps inner all minus 0
-# gaps outter all minus 0
+gaps inner 0
+gaps outer 0
 for_window [class="^.*"] border pixel 4
 
 ################################# Bar Config #################################
@@ -333,6 +333,7 @@ assign [class="discord"] $ws10
 for_window [class="vlc"] floating enable
 for_window [class="obs"] floating enable
 for_window [class="feh"] floating enable
+# for_window [class="Kazan"] floating enable
 for_window [class="feh"] resize set 1720 880
 for_window [class="feh"] move position center
 
