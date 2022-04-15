@@ -4,12 +4,12 @@ source ~/.scripts/homes.sh
 
 if [ "$*" ]
 then
-    work "$*"
+    cmd=$(work "$*")
+    coproc ( $cmd > /dev/null 2>&1 )
     exit 0
 fi
 
-if [ "$@" ]
-then
+if [ "$@" ]; then
     # Override the previously set prompt.
     echo -en "\x00prompt\x1fChange prompt\n"
     echo "$@"
