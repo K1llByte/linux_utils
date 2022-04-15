@@ -19,6 +19,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
     unset f
 fi
 
-# TODO: Initiate picom in i3 config
-picom &
+picom --config  ~/.config/picom.conf &
+flameshot &
+unclutter --timeout 2 &
+setxkbmap pt -option caps:escape &
+xset r rate 300 50
 exec i3

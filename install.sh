@@ -1,11 +1,18 @@
 #!/bin/bash
 
+# Some changes might need reboot to be applied
+
 ############## Options ###############
 
 # Install bash utils for root user
 # ROOT_BASH_UTILS=1
 
 ########### Function Utils ###########
+
+check_install() {
+    [[ -z $(yay -Qi $1) ]] && \
+        yay -S --noconfirm $1
+}
 
 print_colored() {
     echo -e "\e[1;38;5;36m$1\e[0m"
@@ -29,44 +36,43 @@ cpcp() {
 other_requirements() {
     # Install
     # Fonts
-    [[ -z $(yay -Qi nerd-fonts-roboto-mono) ]] && \
-        yay -S --noconfirm nerd-fonts-roboto-mono
-    [[ -z $(yay -Qi ttf-nerd-fonts-symbols) ]] && \
-        yay -S --noconfirm ttf-nerd-fonts-symbols
-    [[ -z $(yay -Qi noto-fonts-emoji) ]] && \
-        yay -S --noconfirm noto-fonts-emoji
-    [[ -z $(yay -Qi ttf-fantasque-sans-mono) ]] && \
-        yay -S --noconfirm ttf-fantasque-sans-mono
+    check_install nerd-fonts-roboto-mono
+    check_install ttf-nerd-fonts-symbols
+    check_install noto-fonts-emoji
+    check_install ttf-fantasque-sans-mono
     print_colored "Installed fonts"
 
     # Other
     # Customize GTK GUI
-    [[ -z $(yay -Qi lxappearance) ]] && \
-        yay -S --noconfirm lxappearance
+    check_install lxappearance
     # Bash completions
-    [[ -z $(yay -Qi bash-completion) ]] && \
-        yay -S --noconfirm bash-completion
-    
-    
+    check_install bash-completion
+    # Mouse hidder
+    check_install unclutter
+    check_install mpv
 }
 
-# TODO: xorg (xinitrc)
+# Configure i3-gaps
+xorg() {
+    # Configs
+    cpcp configs/xorg/.xinitrc ~/
+    print_colored "Configured xorg"
+}
 
 # Install and configure i3-gaps
 i3gaps() {
     # Install
-    [[ -z $(yay -Qi i3-gaps) ]] && \
-        yay -S --noconfirm i3-gaps
+    check_install i3-gaps
     # Configs
     cpcpr configs/i3/ ~/.config/
+    xorg
     print_colored "Installed i3-gaps"
 }
 
 # Install and configure polybar
 polybar() {
     # Install
-    [[ -z $(yay -Qi polybar) ]] && \
-        yay -S --noconfirm polybar
+    check_install polybar
     # Configs
     cpcpr configs/polybar/ ~/.config/
     print_colored "Installed polybar"
@@ -75,8 +81,7 @@ polybar() {
 # Install and configure vscode
 vscode() {
     # Install
-    [[ -z $(yay -Qi code) ]] && \
-        yay -S --noconfirm code
+    check_install code
     # Configs
     cpcp configs/vscode/User/keybindings.json "$HOME/.config/Code - OSS/User/"
     cpcp configs/vscode/User/settings.json "$HOME/.config/Code - OSS/User/"
@@ -86,8 +91,7 @@ vscode() {
 # Install and configure polybar
 alacritty() {
     # Install
-    [[ -z $(yay -Qi alacritty) ]] && \
-        yay -S --noconfirm alacritty
+    check_install alacritty
     # Configs
     cpcpr configs/alacritty/ ~/.config/
     print_colored "Installed alacritty"
@@ -112,10 +116,8 @@ bash_utils() {
 # Install and configure rofi
 rofi() {
     # Install
-    [[ -z $(yay -Qi rofi) ]] && \
-        yay -S --noconfirm rofi
-    [[ -z $(yay -Qi rofi-emoji) ]] && \
-        yay -S --noconfirm rofi-emoji
+    check_install rofi
+    check_install rofi-emoji
     # Configs
     cpcpr configs/rofi/ ~/.config/
     print_colored "Installed rofi"
@@ -124,22 +126,16 @@ rofi() {
 # Install and configure dunst
 dunst() {
     # Install
-    [[ -z $(yay -Qi dunst) ]] && \
-        yay -S --noconfirm dunst
+    check_install dunst
     # Configs
     cpcpr configs/dunst/ ~/.config/
-    # TODO: i3 config initializes dunst
-    # but to use it on install it must be
-    # nitialized here too without being
-    # bound to the terminal
     print_colored "Installed dunst"
 }
 
 # Install and configure gtk (for thunar)
 gtk() {
     # Install
-    [[ -z $(yay -Qi gruvbox-material-gtk-theme-git) ]] && \
-        yay -S --noconfirm gruvbox-material-gtk-theme-git
+    check_install gruvbox-material-gtk-theme-git
     # Configs
     cpcp configs/gtk/.gtkrc-2.0 ~/.gtkrc-2.0
     cpcp configs/gtk/settings.ini ~/.config/gtk-3.0
@@ -149,16 +145,10 @@ gtk() {
 # Install and configure thunar
 thunar() {
     # Install
-    [[ -z $(yay -Qi thunar) ]] && \
-        yay -S --noconfirm thunar
-    [[ -z $(yay -Qi thunar-archive-plugin) ]] && \
-        yay -S --noconfirm thunar-archive-plugin
-    [[ -z $(yay -Qi tumbler) ]] && \
-        yay -S --noconfirm tumbler
-    [[ -z $(yay -Qi ultra-flat-icons-orange) ]] && \
-        yay -S --noconfirm ultra-flat-icons-orange
-    [[ -z $(yay -Qi gruvbox-material-gtk-theme-git) ]] && \
-        yay -S --noconfirm gruvbox-material-gtk-theme-git
+    check_install thunar
+    check_install thunar-archive-plugin
+    check_install tumbler
+    check_install ultra-flat-icons-orange
     # Configs
     cpcp configs/Thunar/accels.scm ~/.config/Thunar/
     gtk
@@ -168,18 +158,15 @@ thunar() {
 # Install and configure arandr and autorandr
 randr() {
     # Install
-    [[ -z $(yay -Qi arandr) ]] && \
-        yay -S --noconfirm arandr
-    [[ -z $(yay -Qi autorandr) ]] && \
-        yay -S --noconfirm autorandr
+    check_install arandr
+    check_install autorandr
     print_colored "Installed arandr"
 }
 
 # Install and configure picom
 picom() {
     # Install
-    [[ -z $(yay -Qi picom) ]] && \
-        yay -S --noconfirm picom
+    check_install picom
     # Configs
     cpcp configs/picom/picom.conf ~/.config/
     print_colored "Installed picom"
@@ -188,8 +175,7 @@ picom() {
 # Install and configure flameshot
 flameshot() {
     # Install
-    [[ -z $(yay -Qi flameshot) ]] && \
-        yay -S --noconfirm flameshot
+    check_install flameshot
     # Configs
     cpcp configs/flameshot/flameshot.ini ~/.config/flameshot/
     print_colored "Installed flameshot"
@@ -198,12 +184,11 @@ flameshot() {
 # Install and configure firefox
 firefox() {
     # Install
-    [[ -z $(yay -Qi firefox-developer-edition) ]] && \
-        yay -S --noconfirm firefox-developer-edition
+    check_install firefox-developer-edition
     # Configs
-    # local dest=$(echo ~/.mozilla/firefox/*dev-edition-default | awk '{print $2}')
-    # cpcp configs/firefox/userChrome.css $dest/chrome
-    # cpcp configs/firefox/userContent.css $dest/chrome
+    local dest=$(echo ~/.mozilla/firefox/*dev-edition-default | awk '{print $2}')
+    cpcp configs/firefox/userChrome.css $dest/chrome
+    cpcp configs/firefox/userContent.css $dest/chrome
     print_colored "Installed firefox"
 }
 
@@ -217,8 +202,7 @@ python() {
 # Install and configure zathura
 zathura() {
     # Install
-    [[ -z $(yay -Qi zathura) ]] && \
-        yay -S --noconfirm zathura
+    check_install zathura
     # Configs
     cpcpr configs/zathura/ ~/.config/
     print_colored "Installed zathura"
