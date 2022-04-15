@@ -57,6 +57,7 @@ Find & Replace
 | <kbd>Ctrl</kbd> + <kbd>[1-9]</kbd>                               | Focus Editor Group by number            |
 | <kbd>Ctrl</kbd> + <kbd>0</kbd>                                   | Focus Side Bar                          |
 | <kbd>Ctrl</kbd> + <kbd>P</kbd>                                   | Open File                               |
+| <kbd>Ctrl</kbd> + <kbd>G</kbd>                                   | Go to line                              |
 | <kbd>Ctrl</kbd> + <kbd>W</kbd>                                   | Close Window                            |
 | <kbd>Ctrl</kbd> + <kbd>Tab</kbd>                                 | Next Tab                                |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>              | Previous Tab                            |

@@ -1,0 +1,87 @@
+// Personal keybindings
+[
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quit"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+shift+[BracketRight]",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "alt+s",
+        "command": "workbench.action.toggleStatusbarVisibility"
+    },
+    {
+        "key": "shift+[Quote]",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+pagedown",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+pagedown",
+        "command": "-workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "alt+q",
+        "command": "breadcrumbs.toggle"
+    },
+    {
+        "key": "alt+m",
+        "command": "editor.action.toggleMinimap"
+    },
+    {
+        "key": "ctrl+l ctrl+0",
+        "command": "editor.foldRecursively"
+    },
+    {
+        "key": "ctrl+l ctrl+j",
+        "command": "editor.unfoldRecursively"
+    },
+    {
+        "key": "alt+b alt+r",
+        "command": "latex-workshop.recipes"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "notifications.clearAll"
+    }
+]

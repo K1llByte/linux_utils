@@ -74,6 +74,9 @@ grep -B <NUM> "[search term]"
 
 # -C Print NUM lines of trailing and leading context
 grep -C <NUM> "[search term]"
+
+# Find pattern in any file of the directory
+grep -rnw '/path/to/dir' -e 'pattern'
 ```
 
 ### lspci
@@ -176,9 +179,6 @@ shift [n]
 # Find file (filename may use wildcards)
 find /path/to/dir -name "filename"
 
-# Find pattern in any file of the directory
-grep -rnw '/path/to/dir' -e 'pattern'
-
 # Show hardware representation
 lstopo
 
@@ -188,6 +188,9 @@ setxkbmap -layout pt
 
 ## Other
 ```bash
+# Sync local file to remote machine
+rsync -a dir user@host:/path/to/remote/dir
+
 # Add a key manually if pacman has problems importing it
 gpg --keyserver pool.sks-keyservers.net --recv-keys <key>
 

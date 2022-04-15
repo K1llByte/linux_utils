@@ -1,0 +1,51 @@
+{
+    "editor.renderWhitespace": "all",
+    "workbench.startupEditor": "newUntitledFile",
+    "mesonbuild.configureOnOpen": true,
+    "workbench.colorCustomizations": {},
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "workbench.editorAssociations": {
+        "*.gol": "hexEditor.hexedit"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.workspace.trust.banner": "always",
+    "todohighlight.isEnable": true,
+    "window.menuBarVisibility": "toggle",
+    "editor.fontFamily": "\"Courier New\"",
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "gruvboxMaterial.darkWorkbench": "flat",
+    "gruvboxMaterial.italicComments": false,
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "workbench.statusBar.visible": false,
+    "latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.latex.tools": [
+        {
+          "name": "latexmk",
+          "command": "latexmk",
+          "args": [
+            "-f",
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "-outdir=%OUTDIR%",
+            "%DOC%"
+          ],
+          "env": {}
+        },
+      ],
+    "C_Cpp.default.cppStandard": "c++20",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.activityBar.visible": false,
+    "window.zoomLevel": 1,
+    "breadcrumbs.enabled": false,
+    "editor.minimap.enabled": false
+}

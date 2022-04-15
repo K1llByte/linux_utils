@@ -29,6 +29,7 @@ ___
 - brightnessctl   Brightness controller
 - pactl           Audio controller
 - unclutter       Mouse hidder
+<!-- Extras -->
 - bash-completion Bash autocompletion
 
 
@@ -154,10 +155,13 @@ cp /etc/X11/xinit/xinitrc /home/kb/.xinitrc
 
 startx
 
-# Install Audio drivers
+# Install Audio drivers utilities
 yay -S alsa-utils
 
-alsamixer
+# Install Audio Backend
+yay -S pulseaudio-alsa
+
+#alsamixer
 ```
 
 ___
