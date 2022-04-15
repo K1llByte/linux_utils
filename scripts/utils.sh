@@ -22,7 +22,8 @@ setwall()
     # Depends on 'i3'
     if [ ! -z "$1" ]; then
         cp $1 ~/.config/i3/wallpaper
-        i3-msg -q restart
+        feh --bg-fill ~/.config/i3/wallpaper
+        # i3-msg -q restart
     else
         >&2 echo "error: setwall [img_path]"
     fi
@@ -164,6 +165,28 @@ setvol()
         else
             >&2 echo "error: invalid volume" && return 1
         fi
+    ;;
+    esac
+}
+
+xmaker()
+{
+    usage()
+    {
+        echo "Usage: xmaker [target]"
+    }
+
+    case "$1" in
+    "--help"|"")
+        # Print usage
+        usage
+    ;;
+
+    *)
+        XMAKE_TARGET="$1"
+        shift
+        xmake build $XMAKE_TARGET && \
+        ./bin/$XMAKE_TARGET $@
     ;;
     esac
 }
