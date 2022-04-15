@@ -1,5 +1,10 @@
 #!/bin/bash
 
+############## Options ###############
+
+# Install bash utils for root user
+# ROOT_BASH_UTILS=1
+
 ########### Function Utils ###########
 
 print_colored() {
@@ -18,11 +23,12 @@ cpcp() {
     cp $1 "$2"
 }
 
-########### Config Installs ###########
+########### Config Installs ##########
 
 # Install other requirements
 other_requirements() {
     # Install
+    # Fonts
     [[ -z $(yay -Qi nerd-fonts-roboto-mono) ]] && \
         yay -S --noconfirm nerd-fonts-roboto-mono
     [[ -z $(yay -Qi ttf-nerd-fonts-symbols) ]] && \
@@ -32,6 +38,16 @@ other_requirements() {
     [[ -z $(yay -Qi ttf-fantasque-sans-mono) ]] && \
         yay -S --noconfirm ttf-fantasque-sans-mono
     print_colored "Installed fonts"
+
+    # Other
+    # Customize GTK GUI
+    [[ -z $(yay -Qi lxappearance) ]] && \
+        yay -S --noconfirm lxappearance
+    # Bash completions
+    [[ -z $(yay -Qi bash-completion) ]] && \
+        yay -S --noconfirm bash-completion
+    
+    
 }
 
 # TODO: xorg (xinitrc)
@@ -83,6 +99,9 @@ bash_utils() {
     cpcp configs/bash/.bashrc ~/
     cpcp configs/bash/.bash_profile ~/
     cpcp configs/bash/aliases.sh ~/.config/
+    if [[ ! -z $ROOT_BASH_UTILS ]]; then
+        sudo cp configs/bash/root_bashrc /root/.bashrc
+    fi
     # Scripts
     cpcp scripts/auto_alias.sh ~/.scripts/
     cpcp scripts/homes.sh ~/.scripts/
@@ -116,6 +135,17 @@ dunst() {
     print_colored "Installed dunst"
 }
 
+# Install and configure gtk (for thunar)
+gtk() {
+    # Install
+    [[ -z $(yay -Qi gruvbox-material-gtk-theme-git) ]] && \
+        yay -S --noconfirm gruvbox-material-gtk-theme-git
+    # Configs
+    cpcp configs/gtk/.gtkrc-2.0 ~/.gtkrc-2.0
+    cpcp configs/gtk/settings.ini ~/.config/gtk-3.0
+    print_colored "Installed gtk"
+}
+
 # Install and configure thunar
 thunar() {
     # Install
@@ -125,9 +155,13 @@ thunar() {
         yay -S --noconfirm thunar-archive-plugin
     [[ -z $(yay -Qi tumbler) ]] && \
         yay -S --noconfirm tumbler
+    [[ -z $(yay -Qi ultra-flat-icons-orange) ]] && \
+        yay -S --noconfirm ultra-flat-icons-orange
+    [[ -z $(yay -Qi gruvbox-material-gtk-theme-git) ]] && \
+        yay -S --noconfirm gruvbox-material-gtk-theme-git
     # Configs
     cpcp configs/Thunar/accels.scm ~/.config/Thunar/
-    # TODO: Missing gtk theme config
+    gtk
     print_colored "Installed thunar"
 }
 
@@ -173,7 +207,24 @@ firefox() {
     print_colored "Installed firefox"
 }
 
-########### All Installs ###########
+# Configure python
+python() {
+    # Configs
+    cpcp configs/python/pythonrc ~/.config/python
+    print_colored "Installed python"
+}
+
+# Install and configure zathura
+zathura() {
+    # Install
+    [[ -z $(yay -Qi zathura) ]] && \
+        yay -S --noconfirm zathura
+    # Configs
+    cpcpr configs/zathura/ ~/.config/
+    print_colored "Installed zathura"
+}
+
+############ All Installs ############
 
 other_requirements
 i3gaps
@@ -188,3 +239,5 @@ randr
 picom
 flameshot
 firefox
+python
+zathura

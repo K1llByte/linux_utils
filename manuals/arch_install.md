@@ -137,7 +137,7 @@ lspci -k | grep -A 2 -E "(VGA|3D)"
 # 'git'                  Version Control System
 # 'base-devel'           (Needed for package buildinng)
 # 'rxvt-unicode'         Terminal Emulator
-sudo pacman -S nvidia xorg xorg-xinit nitrogen urxvt chromium git base-devel rxvt-unicode
+sudo pacman -S nvidia xorg xorg-xinit urxvt firefox-developer-edition git base-devel alacritty
 
 # Install AUR
 git clone https://aur.archlinux.org/yay-git.git
@@ -155,13 +155,8 @@ cp /etc/X11/xinit/xinitrc /home/kb/.xinitrc
 
 startx
 
-# Install Audio drivers utilities
-yay -S alsa-utils
-
 # Install Audio Backend
-yay -S pulseaudio-alsa
-
-#alsamixer
+yay -S pulseaudio-alsa alsa-utils
 ```
 
 ___

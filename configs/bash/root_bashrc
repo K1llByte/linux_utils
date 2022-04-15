@@ -1,0 +1,5 @@
+# Set PS1
+MAIN_COLOR="\[\e[1;31m\]"
+BOLD='\[\e[1m\]'
+RESET='\[\e[0m\]'
+PS1="$MAIN_COLOR\u$RESET $BOLD\W$RESET $MAIN_COLOR>$RESET "
