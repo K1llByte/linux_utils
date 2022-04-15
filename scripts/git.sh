@@ -15,8 +15,7 @@
 # - git checkout -b <name>
 # - git push -u origin $(git branch --show)
 
-gitall() 
-{
+gitall() {
     if [ ! -z "$1" ]; then
         git add . && git commit -m "$1" && git push
     else

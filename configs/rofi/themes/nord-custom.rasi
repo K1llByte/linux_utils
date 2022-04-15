@@ -1,6 +1,7 @@
 // Gruvbox Color Scheme
 * {
     font:   "Fantasque Sans Mono 12";
+//    font:   "RobotoMono Nerd Font 12";
 
     bg0:     #282828;
     bg1:     #1d2021;

@@ -8,8 +8,8 @@ w
 # If there is no greeter, may the tty login screen automaticly luanch startx frontend
 [[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx
 
-export TERMINAL='urxvt'
-export BROWSER='chromium'
+export TERMINAL='alacritty'
+export BROWSER='firefox'
 export EDITOR='code'
 export VISUAL='code'
 export RTV_EDITOR='code'

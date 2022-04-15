@@ -18,7 +18,7 @@
     "security.workspace.trust.banner": "always",
     "todohighlight.isEnable": true,
     "window.menuBarVisibility": "toggle",
-    "editor.fontFamily": "\"Courier New\"",
+    "editor.fontFamily": "\"RobotoMono Nerd Font\"",
     "workbench.colorTheme": "Gruvbox Material Dark",
     "gruvboxMaterial.darkWorkbench": "flat",
     "gruvboxMaterial.italicComments": false,

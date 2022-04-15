@@ -1,4 +1,4 @@
-# LinuxUtils
+# Linux utils
 
 Respoitory dedicated to bash scripts, dotfiles and some markdown manuals with usefull tips
 
@@ -23,13 +23,13 @@ ___
 ## Software
 
 - **Window Manager:** i3-gaps
-- **Status Bar:** i3-bar
+- **Status Bar:** polybar
 - **App Launcher:** rofi
 - **Terminal:** alacritty
 - **File Manager:** Thunar / ranger
 - **Browser:** firefox
 - **Shell:** bash
-- **Task manager:** htop
+- **Task manager:** htop / nvtop
 <!-- Apps -->
 - **Calendar:** calcurse
 - **Video Player:** mpv
