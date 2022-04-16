@@ -49,7 +49,10 @@ other_requirements() {
     check_install bash-completion
     # Mouse hidder
     check_install unclutter
+    # Media player
     check_install mpv
+    # Image display and wallpaper setter
+    check_install feh
 }
 
 # Configure i3-gaps
