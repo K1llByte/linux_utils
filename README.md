@@ -1,26 +1,33 @@
 # Linux utils
 
-Respoitory dedicated to bash scripts, dotfiles and some markdown manuals with usefull tips
+Respoitory dedicated to bash scripts, dotfiles and some markdown manuals with usefull tips.
+This repository is mostly for personal use.
 
 ## Scripts
 
 Handy scripts used as executables
 
-Located at the [`scripts/`](scripts/) folder
+Located at the [`scripts/`](scripts/) folder.
 
-A softlink (or copy) will be ported to `$HOME`
+A copy or softlink will be placed in `$HOME/.scripts/`.
+
+> Note: Most scripts are incomplete
 
 ## Configs
 
-Located at the [`configs/`](configs/) folder
+Located at the [`configs/`](configs/) folder.
+
+Configuration files for mainly used apps.
 
 ## Manuals
 
-Located at the [`manuals/`](manuals/) folder
+Located at the [`manuals/`](manuals/) folder.
+
+A set of markdown files dedicated to describe information about a certain tool or utilities.
 
 ___
 
-## Software
+## Main apps
 
 - **Window Manager:** i3-gaps
 - **Status Bar:** polybar
@@ -34,5 +41,6 @@ ___
 - **Calendar:** calcurse
 - **Video Player:** mpv
 - **Document Viewer:** zathura
+- **Screenshots:** flameshot
 <!-- Utils -->
 <!-- - fzf -->
