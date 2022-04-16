@@ -5,7 +5,7 @@
 ############## Options ###############
 
 # Install bash utils for root user
-# ROOT_BASH_UTILS=1
+ROOT_BASH_UTILS=1
 
 ########### Function Utils ###########
 
@@ -53,6 +53,11 @@ other_requirements() {
     check_install mpv
     # Image display and wallpaper setter
     check_install feh
+    # Brightness controller
+    check_install brightnessctl
+    # Arquive zipper 
+    check_install zip
+    check_install unzip
 }
 
 # Configure i3-gaps
@@ -190,7 +195,7 @@ firefox() {
     # Install
     check_install firefox-developer-edition
     # Configs
-    local dest=$(echo ~/.mozilla/firefox/*dev-edition-default | awk '{print $2}')
+    local dest=$(echo ~/.mozilla/firefox/*dev-edition-default | awk '{print $NF}')
     cpcp configs/firefox/userChrome.css $dest/chrome
     cpcp configs/firefox/userContent.css $dest/chrome
     print_colored "Installed firefox"
