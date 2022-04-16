@@ -5,7 +5,8 @@
 ############## Options ###############
 
 # Install bash utils for root user
-ROOT_BASH_UTILS=1
+# ROOT_BASH_UTILS=1
+CONFIG_PACMAN=1
 
 ########### Function Utils ###########
 
@@ -58,6 +59,23 @@ other_requirements() {
     # Arquive zipper 
     check_install zip
     check_install unzip
+
+    if [[ ! -z $CONFIG_PACMAN ]]; then
+        # Enable pacman multilib
+        LINE_NUM=$(sudo grep -n "^#\[multilib\]$" /etc/pacman.conf | awk -v FS=":" '{print $1}')
+        if [ ! -z $LINE_NUM ]; then
+            sudo sed -i \
+                -e "${LINE_NUM}s/#\[multilib\]/\[multilib\]/g" \
+                -e "$((LINE_NUM+1))s/#Include = \/etc\/pacman\.d\/mirrorlist/Include = \/etc\/pacman\.d\/mirrorlist/g" \
+                /etc/pacman.conf
+        fi
+        # Enable pacman colors
+        sudo sed -i \
+            -e 's/#Color/Color/g' \
+            /etc/pacman.conf
+    fi
+
+    print_colored "Installed Others"
 }
 
 # Configure i3-gaps
