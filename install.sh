@@ -82,6 +82,7 @@ polybar() {
 vscode() {
     # Install
     check_install code
+    check_install code-marketplace
     # Configs
     cpcp configs/vscode/User/keybindings.json "$HOME/.config/Code - OSS/User/"
     cpcp configs/vscode/User/settings.json "$HOME/.config/Code - OSS/User/"

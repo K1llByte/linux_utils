@@ -1,4 +1,4 @@
-# Arch Install
+# Install
 
 ## Index
 
@@ -73,6 +73,10 @@ mount /dev/root_partition /mnt
 # Enable swap volume
 swapon /dev/swap_partition
 
+# (Optional) If live usb is not up to date
+# Key Ring needs update
+pacman -Sy archlinux-keyring
+
 # Install base system
 pacstrap /mnt base linux linux-firmware
 
@@ -106,8 +110,11 @@ useradd -m kb
 passwd kb
 usermod -aG wheel,audio,video,optical,storage kb
 
+# Install sudo
 pacman -S sudo
 
+# Uncomment line for wheel group to
+# use sudo with password
 visudo
 
 pacman -S networkmanager
@@ -131,13 +138,19 @@ lspci -k | grep -A 2 -E "(VGA|3D)"
 # Install Graphics drivers and some Display server
 # 'nvidia'               Graphics drivers
 # 'xorg' && 'xorg-xinit' Display server
-# 'nitrogen'             X11 wallpaper setter
-# 'picom'                Compositor
-# 'chromium'             Browser
-# 'git'                  Version Control System
 # 'base-devel'           (Needed for package buildinng)
-# 'rxvt-unicode'         Terminal Emulator
-sudo pacman -S nvidia xorg xorg-xinit urxvt firefox-developer-edition git base-devel alacritty
+# 'git'                  Version Control System
+## 'nitrogen'             X11 wallpaper setter
+## 'picom'                Compositor
+## 'chromium'             Browser
+## 'rxvt-unicode'         Terminal Emulator
+sudo pacman -S nvidia xorg xorg-xinit git openssh base-devel
+# alacritty firefox-developer-edition
+
+# Install Audio Backend
+sudo pacman -S pulseaudio-alsa alsa-utils
+
+# <install.sh script deals with the rest>
 
 # Install AUR
 git clone https://aur.archlinux.org/yay-git.git
@@ -154,53 +167,4 @@ cp /etc/X11/xinit/xinitrc /home/kb/.xinitrc
 # Edit .xinitrc to start i3 instead of X11 default WM twm and xterm
 
 startx
-
-# Install Audio Backend
-yay -S pulseaudio-alsa alsa-utils
 ```
-
-___
-
-## Config files
-
-
-### i3 [Copied]
-This config file depends on the [X Server](#X-Server) config files
-`~/.config/i3/`
-
-### i3blocks [Copied]
-`~/.config/i3blocks/`
-
-### urxvt [Copied]
-`~/.Xresources`
-
-`~/.config/Xresources/urxvt`
-
-### rofi [Copied]
-`~/.config/rofi/`
-
-### picom
-This config file depends on the [X Server](#X-Server) config files
-
-`/etc/xdg/picom.conf`
-
-### neofetch [Copied]
-`~/.config/neofetch/`
-
-### vscode
-`~/.config/Code\ -\ OSS/User/keybindings.json`
-
-### GTK [Copied]
-`~/.gtkrc-2.0` 
-
-`~/.gtkrc-2.0.mine`
-
-### Thunar [Copied]
-This config file depends on the [GTK](#GTK) config files
-
-This config dependency is required for Thunar to have custom keybinds
-
-`~/.config/Thunar/accels.scm`
-
-### X Server
-`~/.xinitrc`
