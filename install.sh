@@ -52,7 +52,7 @@ other_requirements() {
     check_install unclutter
     # Media player
     check_install mpv
-    # Image display and wallpaper setter
+    # Wallpaper setter
     check_install feh
     # Brightness controller
     check_install brightnessctl
@@ -182,6 +182,14 @@ thunar() {
     print_colored "Installed thunar"
 }
 
+sxiv() {
+    # Install
+    check_install sxiv
+    # Configs
+    cpcp configs/sxiv ~/
+    print_colored "Installed sxiv"
+}
+
 # Install and configure arandr and autorandr
 randr() {
     # Install
@@ -250,6 +258,7 @@ alacritty
 rofi
 dunst
 thunar
+sxiv
 randr
 picom
 flameshot

@@ -197,9 +197,14 @@ ___
 | Keybind                          | Description                 |
 | :------------------------------: | :-------------------------: |
 | <kbd>B</kbd>                     | Hide bar                    |
+| <kbd>Enter</kbd>                 | Toogle gallery mode         |
+| <kbd>N</kbd>                     | Next image                  |
+| <kbd>P</kbd>                     | Previous image              |
 | <kbd>+</kbd>                     | Zoom in                     |
-| <kbd>-</kbd>                     | Zoom out                     |
-
+| <kbd>-</kbd>                     | Zoom out                    |
+| <kbd><</kbd>                     | Rotate left                 |
+| <kbd>Shift</kbd> + <kbd>></kbd>  | Rotate right                |
+<!-- More keybinds at: https://github.com/muennich/sxiv/blob/master/config.def.h -->
 
 <!--
 | Keybind                      | Description                  |
