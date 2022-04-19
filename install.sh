@@ -235,6 +235,10 @@ zathura() {
     print_colored "Installed zathura"
 }
 
+configure_default_apps() {
+    
+}
+
 ############ All Installs ############
 
 other_requirements

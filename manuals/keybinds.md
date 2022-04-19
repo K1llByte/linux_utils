@@ -11,6 +11,7 @@ Manual for my keybinds (some correspond to the default ones)
 - [Thunar](#thunar)
 - [Tmux](#tmux)
 - [Zathura](#zathura)
+- [sxiv](#sxiv)
 
 
 ___
@@ -180,15 +181,24 @@ ___
 ___
 # Zathura
 
-| Keybind                                                           | Description                 |
-| :---------------------------------------------------------------: | :-------------------------: |
-| <kbd>Space</kbd>                                                  | Next Page                   |
-| <kbd>Shift</kbd> + <kbd>Space</kbd>                               | Previous Page               |
-| <kbd>Ctrl</kbd> + <kbd>R</kbd>                                    | Disable dark theme          |
-| <kbd>gg</kbd>                                                     | Goto first page             |
-| <kbd>G</kbd>                                                      | Goto last page              |
-| <kbd>[1-9]</kbd> + <kbd>G</kbd>                                   | Goto nth page               |
-| <kbd>D</kbd>                                                      | Double page mode            |
+| Keybind                              | Description                 |
+| :----------------------------------: | :-------------------------: |
+| <kbd>Space</kbd>                     | Next Page                   |
+| <kbd>Shift</kbd> + <kbd>Space</kbd>  | Previous Page               |
+| <kbd>Ctrl</kbd> + <kbd>R</kbd>       | Disable dark theme          |
+| <kbd>gg</kbd>                        | Goto first page             |
+| <kbd>G</kbd>                         | Goto last page              |
+| <kbd>[1-9]</kbd> + <kbd>G</kbd>      | Goto nth page               |
+| <kbd>D</kbd>                         | Double page mode            |
+
+___
+# Zathura
+
+| Keybind                          | Description                 |
+| :------------------------------: | :-------------------------: |
+| <kbd>B</kbd>                     | Hide bar                    |
+| <kbd>+</kbd>                     | Zoom in                     |
+| <kbd>-</kbd>                     | Zoom out                     |
 
 
 <!--
