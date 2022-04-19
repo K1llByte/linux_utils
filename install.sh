@@ -186,7 +186,7 @@ sxiv() {
     # Install
     check_install sxiv
     # Configs
-    cpcp configs/sxiv ~/
+    cpcp configs/sxiv/.Xresources ~/
     print_colored "Installed sxiv"
 }
 
@@ -243,25 +243,47 @@ zathura() {
     print_colored "Installed zathura"
 }
 
-configure_default_apps() {
-    
+setup_default_apps() {
+    # NOTE: xdg-utils will already be installed
+    cpcp configs/mimeapps.list ~/.config/
+    xrdb ~/.Xresources
+    print_colored "Configured default apps"
 }
 
-############ All Installs ############
+############# Install All ############
 
-other_requirements
-i3gaps
-polybar
-vscode
-bash_utils
-alacritty
-rofi
-dunst
-thunar
-sxiv
-randr
-picom
-flameshot
-firefox
-python
-zathura
+if [ $# -le 1 ]; then
+    other_requirements
+    i3gaps
+    polybar
+    vscode
+    bash_utils
+    alacritty
+    rofi
+    dunst
+    thunar
+    sxiv
+    randr
+    picom
+    flameshot
+    firefox
+    python
+    zathura
+    setup_default_apps
+    exit 0
+fi
+
+
+# while [ $# > 1 ]; do
+#     case $1 in
+
+#         "")
+
+#         ;;
+
+#         *)
+#             exit 1
+#         ;;
+#     esac
+#     shift
+# done
