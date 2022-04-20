@@ -250,9 +250,16 @@ setup_default_apps() {
     print_colored "Configured default apps"
 }
 
-############# Install All ############
+################ Usage ###############
 
-if [ $# -le 1 ]; then
+usage() {
+    echo "Usage: $0 [TAG]..."
+}
+
+############### Install ##############
+
+# If no alguments are received everything will be installed
+if [ $# == 0 ]; then
     other_requirements
     i3gaps
     polybar
@@ -273,17 +280,25 @@ if [ $# -le 1 ]; then
     exit 0
 fi
 
+# Otherwise the arguments will correspond to the functions to be called
+# to install and configure the corresponding programs
+while [ $# -ge 1 ]; do
+    case $1 in
+        "--help")
+            usage
+            exit 1
+        ;;
 
-# while [ $# > 1 ]; do
-#     case $1 in
-
-#         "")
-
-#         ;;
-
-#         *)
-#             exit 1
-#         ;;
-#     esac
-#     shift
-# done
+        *)
+            # Check if argument exists as a function
+            FUNCTION_EXISTS=$(type $1 2>/dev/null | grep "function")
+            if [ -z "$FUNCTION_EXISTS" ]; then
+                >&2 echo -e "\e[1;31merror:\e[0m invalid argument"
+                exit 1
+            else
+                $1
+            fi
+        ;;
+    esac
+    shift
+done
