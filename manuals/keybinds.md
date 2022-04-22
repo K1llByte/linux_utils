@@ -11,7 +11,7 @@ Manual for my keybinds (some correspond to the default ones)
 - [Thunar](#thunar)
 - [Tmux](#tmux)
 - [Zathura](#zathura)
-- [sxiv](#sxiv)
+- [Sxiv](#sxiv)
 
 
 ___
@@ -192,7 +192,7 @@ ___
 | <kbd>D</kbd>                         | Double page mode            |
 
 ___
-# Zathura
+# Sxiv
 
 | Keybind                          | Description                 |
 | :------------------------------: | :-------------------------: |

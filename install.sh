@@ -59,6 +59,13 @@ other_requirements() {
     # Arquive zipper 
     check_install zip
     check_install unzip
+    # WPA supplicant to be able to connect to eduroam
+    check_install wpa_supplicant
+    # TUI Greeter 
+    # check_install greetd
+    # check_install greetd-tuigreet-bin
+    # sudo systemctl enable greetd.service
+    
 
     if [[ ! -z $CONFIG_PACMAN ]]; then
         # Enable pacman multilib

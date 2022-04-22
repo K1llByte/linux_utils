@@ -1,5 +1,5 @@
 # ~/.bash_profile
-w
+
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # Vars
