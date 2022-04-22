@@ -4,9 +4,16 @@
 
 ############## Options ###############
 
-# Install bash utils for root user
+## Install some bash utils for root user
 # ROOT_BASH_UTILS=1
-CONFIG_PACMAN=1
+
+## Configure pacman colored output
+## and enable multilib repository
+# CONFIG_PACMAN=1
+
+## Enable sxiv GIF animation preview
+# ENABLE_SXIV_GIF_ANIMATION=1
+
 
 ########### Function Utils ###########
 
@@ -181,7 +188,16 @@ thunar() {
     # Install
     check_install thunar
     check_install thunar-archive-plugin
+    # Thumbnails
+    # NOTE: Reboot needed
     check_install tumbler
+    check_install tumbler-extra-thumbnailers
+    check_install ffmpegthumbnailer
+    # Extensions
+    # Trash support, mounting with udisk and remote filesystems
+    check_install gvfs
+    # Removable device management
+    check_install thunar-volman
     check_install ultra-flat-icons-orange
     # Configs
     cpcp configs/Thunar/accels.scm ~/.config/Thunar/
@@ -194,6 +210,9 @@ sxiv() {
     check_install sxiv
     # Configs
     cpcp configs/sxiv/.Xresources ~/
+    if [ ! -z $ENABLE_SXIV_GIF_ANIMATION ]; then
+        sudo sed -i "s/Exec=sxiv %F/Exec=sxiv -a %F/g" /usr/share/applications/sxiv.desktop
+    fi
     print_colored "Installed sxiv"
 }
 
@@ -245,6 +264,7 @@ python() {
 zathura() {
     # Install
     check_install zathura
+    check_install zathura-pdf-poppler
     # Configs
     cpcpr configs/zathura/ ~/.config/
     print_colored "Installed zathura"
