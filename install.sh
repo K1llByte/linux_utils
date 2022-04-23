@@ -46,6 +46,7 @@ other_requirements() {
     # Fonts
     check_install nerd-fonts-roboto-mono
     check_install ttf-nerd-fonts-symbols
+    check_install ttf-iosevka-nerd
     check_install noto-fonts-emoji
     check_install ttf-fantasque-sans-mono
     print_colored "Installed fonts"
