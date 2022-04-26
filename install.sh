@@ -54,6 +54,8 @@ other_requirements() {
     # Other
     # Customize GTK GUI
     check_install lxappearance
+    # Clipboard xorg util
+    check_install xclip
     # Bash completions
     check_install bash-completion
     # Mouse hidder
