@@ -273,6 +273,16 @@ zathura() {
     print_colored "Installed zathura"
 }
 
+# Install and configure bluetooth deamons and frontend
+bluetooth() {
+    # Install
+    check_install bluez
+    check_install bluez-utils
+    # Setup
+    systemctl start bluetooth.service
+    systemctl enable bluetooth.service
+}
+
 setup_default_apps() {
     # NOTE: xdg-utils will already be installed
     cpcp configs/mimeapps.list ~/.config/
@@ -306,6 +316,7 @@ if [ $# == 0 ]; then
     firefox
     python
     zathura
+    bluetooth
     setup_default_apps
     exit 0
 fi
