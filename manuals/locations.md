@@ -1,6 +1,6 @@
 # Locations
 
-Some Unix directories or file locations
+Some Unix directories or file locations useful to remember
 
 | Path                | Description               |
 |:-------------------:|:-------------------------:|
