@@ -204,6 +204,7 @@ ___
 | <kbd>-</kbd>                     | Zoom out                    |
 | <kbd><</kbd>                     | Rotate left                 |
 | <kbd>Shift</kbd> + <kbd>></kbd>  | Rotate right                |
+| <kbd>A</kbd>                     | Toggle anti-aliasing        |
 <!-- More keybinds at: https://github.com/muennich/sxiv/blob/master/config.def.h -->
 
 <!--
