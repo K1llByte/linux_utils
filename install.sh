@@ -44,7 +44,7 @@ cpcp() {
 other_requirements() {
     # Install
     # Fonts
-    check_install nerd-fonts-roboto-mono
+    check_install ttf-nerd-fonts-hack-complete-git
     check_install ttf-nerd-fonts-symbols
     check_install ttf-iosevka-nerd
     check_install noto-fonts-emoji
