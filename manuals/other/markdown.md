@@ -12,6 +12,7 @@ Markdown is a simple markup language for text formating
     * [Horizontal Separator](#Horizontal-Separator)
     * [Line break](#Line-break)
     * [Tables](#Tables)
+    * [Images](#Images)
     * [Blockquotes](#Blockquotes)
 * [HTML Extensions](#HTML-Extensions)
     
@@ -70,6 +71,15 @@ Text1
 | col 1 is |  left-aligned | $1600 |
 | col 2 is |    centered   |   $12 |
 | col 3 is | right-aligned |    $1 |
+```
+
+### Images
+```md
+![Alt Text][image_url]
+
+<!-- Or -->
+
+<img src="image_url" alt="Alt Text" width="200" height="200"/>
 ```
 
 ### Blockquotes

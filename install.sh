@@ -162,6 +162,7 @@ rofi() {
     # Install
     check_install rofi
     check_install rofi-emoji
+    check_install rofi-bluetooth-git
     # Configs
     cpcpr configs/rofi/ ~/.config/
     print_colored "Installed rofi"

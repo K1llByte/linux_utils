@@ -10,7 +10,6 @@ if [ "$*" ]
 then
     killall rofi
     case "$*" in
-    
         "home")
             rofi -show home -modi "home:~/.config/rofi/scripts/rofi_home.sh"
         ;;
@@ -25,6 +24,9 @@ then
         ;;
         "emojis")
             rofi -show emoji
+        ;;
+        "bluetooth")
+            rofi-bluetooth
         ;;
     esac
     # work "$*"
@@ -42,5 +44,6 @@ else
     echo "drun"
     echo "find"
     echo "emojis"
+    echo "bluetooth"
     echo "quit"
 fi
