@@ -123,15 +123,27 @@ homes()
 home()
 {
     # home <tag>
+    # home -p <tag>
     
     if [ -z "$1" ]; then
-        >&2 echo "error: home [tag]"
+        >&2 echo "error: home [-p] [tag]"
         return
     fi
 
-    local VAL=$(cat $HOMES | awk -F'#' -v key="$1" '{ if($1 == key) print $2 }')
+    local ARG_CMD=cd
+    local ARG_HOME=$1
+    if [ "$1" == "-p" ]; then
+        ARG_CMD=echo
+        ARG_HOME=$2
+        if [ -z "$2" ]; then
+            >&2 echo "error: home -p [tag]"
+            return
+        fi
+    fi
+
+    local VAL=$(cat $HOMES | awk -F'#' -v key="$ARG_HOME" '{ if($1 == key) print $2 }')
     if [ $VAL ]; then
-        cd $VAL
+        $ARG_CMD $VAL
     else
         >&2 echo "error: home not found"
     fi

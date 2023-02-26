@@ -1,6 +1,6 @@
 # Linux utils
 
-Respoitory dedicated to bash scripts, dotfiles and some markdown manuals with usefull tips.
+Respoitory dedicated to bash scripts, dotfiles and some markdown manuals with usefull stuff to remember.
 This repository is mostly for personal use.
 
 ## Scripts
@@ -27,7 +27,7 @@ A set of markdown files dedicated to describe information about a certain tool o
 
 ___
 
-## Main apps
+## Applications
 
 - **Window Manager:** i3-gaps
 - **Status Bar:** polybar
