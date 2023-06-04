@@ -50,7 +50,7 @@ Find & Replace
 | <kbd>Ctrl</kbd> + <kbd>,</kbd>                                   | VSCode Settings                         |
 | <kbd>Ctrl</kbd> + <kbd>Q</kbd>                                   | Open/Close Terminal                     |
 | <kbd>Ctrl</kbd> + <kbd>B</kbd>                                   | Toggle Side Bar                         |
-| <kbd>Shift</kbd> + <kbd>º</kbd>                                  | Toggle Activity Bar                     |
+| <kbd>Alt</kbd> + <kbd>B</kbd>                                    | Toggle Activity Bar                     |
 | <kbd>Alt</kbd> + <kbd>S</kbd>                                    | Toggle Status Bar                       |
 | <kbd>Ctrl</kbd> + <kbd>K</kbd> => <kbd>V</kbd>                   | Preview Markdown/PDF                    |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd>                | Delete line                             |

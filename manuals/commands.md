@@ -221,4 +221,7 @@ export NUM_ALUNO="a85272"; nmcli connection add type wifi con-name eduroam ifnam
 
 # Nvidia GPU Usage and other info
 nvidia-smi
+
+# Burn ISO to device
+sudo dd bs=4M if=/path/to/file.iso of=/dev/sda status=progress oflag=sync
 ```
